@@ -3228,6 +3228,31 @@ input, select, textarea {
 
 /* Wrapper */
 
+	#wrapper-area {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		-moz-justify-content: space-between;
+		-webkit-justify-content: space-between;
+		-ms-justify-content: space-between;
+		justify-content: space-between;
+		position: relative;
+		min-height: 100vh;
+		width: 100%;
+		z-index: 3;
+	}
+
+
+
 	#wrapper-solid > header {
 		padding: 11em 0 2.25em 0 ;
 	}
@@ -3306,7 +3331,7 @@ input, select, textarea {
 
 	.wrapper-solid {
 		background-color: rgba(0, 0, 0, .3);
-		margin: 6.5em 0;
+		margin: 2em 0;
 		position: relative;
 	}
 
