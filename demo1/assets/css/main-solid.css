@@ -178,6 +178,7 @@ input, select, textarea {
 		border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
 		color: #ffffff;
 		text-decoration: none;
+		font-weight: bold;
 	}
 
 		a:hover {
@@ -253,7 +254,7 @@ input, select, textarea {
 	h1, h2, h3, h4, h5, h6 {
 		color: #ffffff;
 		font-family: Raleway, Helvetica, sans-serif;
-		font-weight: 700;
+		font-weight: bold;
 		letter-spacing: 0.1em;
 		margin: 0 0 1em 0;
 		text-transform: uppercase;
@@ -273,6 +274,10 @@ input, select, textarea {
 			padding-bottom: 1em;
 			border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 		}
+
+	h1 {
+		font-size: 2em;
+	}
 
 	h2 {
 		font-size: 1.2em;
