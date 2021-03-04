@@ -3300,7 +3300,7 @@ input, select, textarea {
 	}
 
 	.wrapper-solid {
-		background-color: #2e3141;
+		background-color: rgba(0, 0, 0, .5);
 		margin: 6.5em 0;
 		position: relative;
 	}
