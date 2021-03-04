@@ -2774,7 +2774,7 @@ input, select, textarea {
 
 			ul.pagination li:last-child {
 				width: calc(50% - 2px);
-				text-align: right;
+				text-align: left;
 				padding-left: 0.325em;
 			}
 
@@ -3305,10 +3305,6 @@ input, select, textarea {
 		position: relative;
 	}
 
-		
-
-		
-
 		.wrapper-solid:after {
 			-moz-transform: scaleY(-1);
 			-webkit-transform: scaleY(-1);
@@ -3460,7 +3456,7 @@ input, select, textarea {
 				-webkit-flex-direction: row-reverse;
 				-ms-flex-direction: row-reverse;
 				flex-direction: row-reverse;
-				text-align: right;
+				text-align: left;
 			}
 
 			.wrapper-solid.spotlight:nth-child(2n - 1) .image {
