@@ -1,0 +1,55 @@
+/* ************************************************** */
+/* ************************************************** */
+/* FONDO DEL MAPA PARA SIGLO12 GUERREROS*/
+/* ************************************************** */
+/* ************************************************** */
+#areamapa .fondomapa {
+width: 618px;
+height: 530px;
+background:  url(../images/siglo12/fondo_vestimenta.jpg) no-repeat ; 
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* IDENTIFICADORES DE LOS SIMBOLOS DEL MAPA           */
+/* ************************************************** */
+/* ************************************************** */
+
+/* ************************************************** */
+/* CAMBIA EL ANCHO DE LUGARES MARCADOS EN EL MAPA     */
+/* ************************************************** */
+/* ************************************************** */
+dl.mapa.on a	{width: 200px;}
+
+a.item          {background: transparent url(../images/vineta.png) no-repeat scroll 0px 0px;}
+
+
+/* *************************************************** */
+/* IDENTIFICADORES DE COORDENADAS DE LUGARES           */
+/* *************************************************** */
+#coord_nino	            	{top: 100px;left:275px;}
+#coord_varones            	{top: 126px;left:275px;}
+#coord_monje            	{top: 152px;left:275px;}
+#coord_monja            	{top: 178px;left:275px;}
+#coord_dama             	{top: 204px;left:275px;}
+#coord_capa             	{top: 230px;left:275px;}
+#coord_calzado            	{top: 256px;left:275px;}
+#coord_gorro            	{top: 282px;left:275px;}
+#coord_toca              	{top: 308px;left:275px;}
+#coord_telas            	{top: 334px;left:275px;}
+#coord_vaina            	{top: 360px;left:275px;}
+#coord_escudo            	{top: 386px;left:275px;}
+#coord_lanza            	{top: 412px;left:275px;}
+#coord_pendon            	{top: 438px;left:275px;}
+
+/* *************************************************** */
+/* IDENTIFICADORES DE BOTONES DEL MENU INFERIOR*/
+/* *************************************************** */
+#menu_inferior .uno   {width:180px;left:0px;top:10px;}
+#menu_inferior .dos   {width:180px;left:150px;top:10px;}
+#menu_inferior .tres  {width:180px;left:360px;top:10px;}
+#menu_inferior .cuatro {width:180px;left:510px;top:10px;}
+#menu_inferior .cinco {width:200px;left:720px;top:10px;}
+
+
+

@@ -1,0 +1,171 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Maderuelo: Galería de Hornuez</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_comun.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_cabecera.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_secciones.css">
+<link href="../stylesheet/estilo_galleria.css" rel="stylesheet" type="text/css" media="screen">
+<script type="text/javascript" src="../javascripts/jquery.js"></script>
+<script type="text/javascript" src="../javascripts/jquery_002.js"></script>
+
+<script type="text/javascript">
+	
+	jQuery(function($) {
+		
+		$('.gallery_demo_unstyled').addClass('gallery_demo'); // adds new class name to maintain degradability
+		
+		$('ul.gallery_demo').galleria({
+			history   : true, // activates the history object for bookmarking, back-button etc.
+			clickNext : true, // helper for making the image clickable
+			insert    : '#main_image', // the containing selector for our main image
+			onImage   : function(image,caption,thumb) { // let's add some image effects for demonstration purposes
+				
+				// fade in the image & caption
+				if(! ($.browser.mozilla && navigator.appVersion.indexOf("Win")!=-1) ) { // FF/Win fades large images terribly slow
+					image.css('display','none').fadeIn(1000);
+				}
+				caption.css('display','none').fadeIn(1000);
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// fade out inactive thumbnail
+				_li.siblings().children('img.selected').fadeTo(500,0.3);
+				
+				// fade in active thumbnail
+				thumb.fadeTo('fast',1).addClass('selected');
+
+				
+				// add a title for the clickable image
+				image.attr('title','Next image >>');
+			},
+			onThumb : function(thumb) { // thumbnail effects goes here
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// if thumbnail is active, fade all the way.
+				var _fadeTo = _li.is('.active') ? '1' : '0.3';
+				
+				// fade in the thumbnail when finnished loading
+				thumb.css({display:'none',opacity:_fadeTo}).fadeIn(1500);
+				
+				// hover effects
+				thumb.hover(
+					function() { thumb.fadeTo('fast',1); },
+					function() { _li.not('.active').children('img').fadeTo('fast',0.3); } // don't fade out if the parent is active
+				)
+			}
+		});
+	});
+	
+	</script>
+
+</script>
+</head>
+<body>
+<!-- INICIO FONDO -->
+<div id="fondo">
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** INICIO CABECERA                      ****** -->
+<!-- ************************************************** -->
+
+<div id="cabecera">
+  <a class="escudo" href="/inicio.html"></a>
+  <div class="maderuelocom"></div>
+  <!-- MENU GRAFICO: DEFINIR BOTONES EN ORDEN DRCHA a IZDA -->
+  <ul id="menu_btn_grafico">
+    <li><a href="http://www.aemet.es/es/eltiempo/prediccion/localidades?l=40408"       class="icono_clima"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://webmail.maderuelo.com/"                                        class="icono_arroba" 
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://madeforum.maderuelo.com/"                                      class="icono_foro"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/naturaleza/parque_natural/presen_ficha.html" class="icono_parque"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/principal/360/entrada.html"            class="icono_360"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="/siglo12/siglo12.html"                        class="icono_siglo12"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+  </ul>
+<!-- MENU TEXTUAL DE CABECERA: DEFINIR BOTONES EN ORDEN IZDA A DRCHA -->
+  <ul id="menu_btn_horiz">
+    <li><a href="/turismo/turismo_visitando.html"  class="btn_turismo"     >Turismo<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_historia"    >Historia<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_arte"        >Arte<span></span></a></li>
+    <li><a href="/naturaleza/ind_natural.html"     class="btn_naturaleza"  >Naturaleza<span></span></a></li>
+    <li><a href="/festejos/ind_fiesta.html" class="btn_festejos"    >Festejos<span></span></a></li>
+    <li><a href="/ayuntamiento/ayto.html" class="btn_ayuntamiento">Ayuntamiento<span></span></a></li>
+    <li><a href=" " class="btn_anuncios"    >Anuncios<span></span></a></li>
+    <li><a href=" " class="btn_web"         >Web<span></span></a></li>
+  </ul>
+<!-- SUBMENU DE BOTONES TEXTO     -->
+<!-- ************************* -->
+<div id="submenu_texto" ></div>
+</div><!-- FIN CABECERA  -->
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA MAPA CENTRAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areamapa">
+
+<!-- ***** FONDO MAPA *****-->
+<div class="fondomapa">
+
+<h3 class="tit_galeria">Hornuez (II)</h3>
+<div class="demo">
+<div id="main_image"></div>
+<ul class="gallery_demo_unstyled">
+    <li class="active"><img src="/images/turismo/galeria/hornuez_21.jpg" alt="Hornuez" title="Zona de juego de niños con la ermita al fondo"></li>
+    <li class="active"><img src="/images/turismo/galeria/hornuez_22.jpg" alt="Hornuez" title="Vista de Maderuelo desde Hornuez"></li>
+</ul>
+
+<p class="nav_galeria"><a href=" " onclick="$.galleria.prev(); return false;">&laquo; Anterior</a> | <a href="#texto"> Más INFO</a> | <a href=" " onclick="$.galleria.next(); return false;">Siguiente &raquo;</a></p>
+</div>
+
+
+
+</div> <!-- FIN FONDOMAPA  -->
+
+</div> <!-- FIN AREAMAPA -->
+
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA TEXTO FINAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areatexto"><a NAME = "texto"></a>
+
+<p class="big">
+  <h3><span class="letracapital">H</span>ornuez</h3>
+</p>
+<br><br><br><br>
+<p>
+Despoblado en el término de Moral de Hornuez que linda con la carretera de Moral a Montejo de la Vega de la Serrezuela, entre la carretera y la cañada ganadera, donde hoy se alza el santuario de Hornuez. La tradición conserva en la memoria la existencia de este pueblo con casas junto a la iglesia. 
+<br><br>
+Durante la reconquista existió una aldea, que tomaría el nombre del caballero que la repobló, ya que su nombre parece derivar de Fortúnez. Fue asolada por los musulmanes y se abandonó. El santuario de Nuestra Señora de Hornuez fue construido entre 1683 y 1692 ocupando el lugar de un antiguo templo medieval que se levantó poco después de la aparición de la Virgen a unos pastores subida a un enebro o sabina. Este hecho, según la tradición, tuvo lugar el 28 de mayo de 1246. Fue nombrada abogada y patrona de la Villa y Tierra de Maderuelo en el año 1695. Con esta ermita tienen varias poblaciones del contorno contraído voto de villa. La romería se celebra el último fin de semana de mayo.
+</p>
+
+<p class="pie_galeria">
+<a href="/inicio.html">Maderuelo Home Page</a> | <a href="/inicio.html">Made by nosotros, de Maderuelo</a>
+</p>
+
+</div> <!-- FIN AREA TEXTO FINAL PAGINA -->
+
+
+</div><!-- FIN FONDO -->
+</body>
+
+
+</html>
+

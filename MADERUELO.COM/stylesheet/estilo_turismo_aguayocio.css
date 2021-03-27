@@ -1,0 +1,74 @@
+/* ************************************************** */
+/* ************************************************** */
+/* FONDO DEL MAPA PARA AGUA y OCIO */
+/* ************************************************** */
+/* ************************************************** */
+#areamapa .fondomapa {
+width: 652px;
+height: 551px;
+background:  url(/images/turismo/aguayocio.jpg) no-repeat ; 
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* IDENTIFICADORES DE LOS SIMBOLOS DEL MAPA           */
+/* ************************************************** */
+/* ************************************************** */
+a.agua                 {background: transparent url(/images/b_verde.png) no-repeat scroll 0px 0px;}
+a.deporte              {background: transparent url(/images/b_rojo.png) no-repeat scroll 0px 0px;}
+a.pesca                {background: transparent url(/images/b_morado.png) no-repeat scroll 0px 0px;}
+a.bici                 {background: transparent url(/images/b_azul.png) no-repeat scroll 0px 0px;}
+a.lugar_oficinaturismo {background: transparent url(/images/b_info.png) no-repeat scroll 0px 0px;}
+
+/* *************************************************** */
+/* IDENTIFICADORES DE COORDENADAS DE LUGARES           */
+/* *************************************************** */
+#coord_canadas          {top: 155px;left: 280px;}
+#coord_estacion          {top: 215px;left: 125px;}
+#coord_hazas             {top: 270px;left: 590px;}
+#coord_veracruz          {top: 380px;left: 360px;}
+#coord_milagrosa         {top: 400px;left: 510px;}
+#coord_sanandres         {top: 245px;left: 370px;}
+#coord_penalba           {top: 455px;left: 250px;}
+#coord_fronton           {top: 385px;left: 130px;}
+#coord_vegapalacio       {top: 230px;left: 170px;}
+#coord_estacion          {top: 155px;left: 150px;}
+#coord_paramo            {top: 320px;left: 600px;}
+#coord_oficinaturismo    {top: 230px;left:280px;}
+#coord_aldehuela         {top: 120px;left: 450px;}
+#coord_cercona           {top: 210px;left: 510px;}
+
+/* *************************************************** */
+/* IDENTIFICADORES DE SIMBOLOS DE LA LEYENDA           */
+/* *************************************************** */
+#leyenda .leyenda_natacion   {width: 50px;height: 56px; left:0px;top:px; background: url(/images/turismo/icono_natacion.png) no-repeat;}
+#leyenda .leyenda_natacion span { width: 109px;height: 27px;   background: url('/images/turismo/txt_natacion.png') no-repeat;}
+
+#leyenda .leyenda_vela { width: 52px; height: 56px; left:130px;top:0px; background: url(/images/turismo/icono_vela.png) no-repeat;}
+#leyenda .leyenda_vela   span { width: 109px; height: 27px;   background: url('/images/turismo/txt_vela.png') no-repeat;}
+
+#leyenda .leyenda_pesca { width: 51px; height: 56px; left:230px;top:0px; background: url(/images/turismo/icono_pesca.png) no-repeat;}
+#leyenda .leyenda_pesca   span { width: 109px; height: 27px;   background: url('/images/turismo/txt_pesca.png') no-repeat;}
+
+#leyenda .leyenda_remo { width: 69px; height: 46px; left:350px;top:0px; background: url(/images/turismo/icono_remo.png) no-repeat;}
+#leyenda .leyenda_remo   span { width: 109px; height: 27px;   background: url('/images/turismo/txt_remo.png') no-repeat;}
+
+#leyenda .leyenda_futbol { width: 52px; height: 56px; left:480px;top:0px; background: url(/images/turismo/icono_balon.png) no-repeat;}
+#leyenda .leyenda_futbol   span { width: 109px; height: 27px;   background: url('/images/turismo/txt_futbol.png') no-repeat;}
+
+#leyenda .leyenda_fronton { width: 56px; height: 56px; left:640px;top:0px; background: url(/images/turismo/icono_fronton.png) no-repeat;}
+#leyenda .leyenda_fronton   span { width: 108px; height: 31px;   background: url('/images/turismo/txt_fronton.png') no-repeat;}
+
+#leyenda .informacion { width: 45px; height: 46px;   left:800px;top:0px; background: url(/images/informacion.png) no-repeat;}
+#leyenda .informacion   span { width: 109px; height: 27px;   background: url('/images/txt_mas_info.png') no-repeat;}
+
+
+/* *************************************************** */
+/* IDENTIFICADORES DE BOTONES DEL MENU INFERIOR*/
+/* *************************************************** */
+#menu_inferior .uno   {width:180px;left:0px;top:10px;}
+#menu_inferior .dos   {width:180px;left:180px;top:10px;}
+#menu_inferior .tres  {width:180px;left:360px;top:10px;}
+#menu_inferior .cuatro {width:180px;left:540px;top:10px;}
+#menu_inferior .cinco {width:200px;left:720px;top:10px;}
+

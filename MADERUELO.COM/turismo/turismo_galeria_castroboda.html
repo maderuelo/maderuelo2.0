@@ -1,0 +1,182 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Maderuelo: Galería de la ermita de castroboda</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_comun.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_cabecera.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_secciones.css">
+<link href="../stylesheet/estilo_galleria.css" rel="stylesheet" type="text/css" media="screen">
+<script type="text/javascript" src="../javascripts/jquery.js"></script>
+<script type="text/javascript" src="../javascripts/jquery_002.js"></script>
+
+<script type="text/javascript">
+	
+	jQuery(function($) {
+		
+		$('.gallery_demo_unstyled').addClass('gallery_demo'); // adds new class name to maintain degradability
+		
+		$('ul.gallery_demo').galleria({
+			history   : true, // activates the history object for bookmarking, back-button etc.
+			clickNext : true, // helper for making the image clickable
+			insert    : '#main_image', // the containing selector for our main image
+			onImage   : function(image,caption,thumb) { // let's add some image effects for demonstration purposes
+				
+				// fade in the image & caption
+				if(! ($.browser.mozilla && navigator.appVersion.indexOf("Win")!=-1) ) { // FF/Win fades large images terribly slow
+					image.css('display','none').fadeIn(1000);
+				}
+				caption.css('display','none').fadeIn(1000);
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// fade out inactive thumbnail
+				_li.siblings().children('img.selected').fadeTo(500,0.3);
+				
+				// fade in active thumbnail
+				thumb.fadeTo('fast',1).addClass('selected');
+
+				
+				// add a title for the clickable image
+				image.attr('title','Next image >>');
+			},
+			onThumb : function(thumb) { // thumbnail effects goes here
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// if thumbnail is active, fade all the way.
+				var _fadeTo = _li.is('.active') ? '1' : '0.3';
+				
+				// fade in the thumbnail when finnished loading
+				thumb.css({display:'none',opacity:_fadeTo}).fadeIn(1500);
+				
+				// hover effects
+				thumb.hover(
+					function() { thumb.fadeTo('fast',1); },
+					function() { _li.not('.active').children('img').fadeTo('fast',0.3); } // don't fade out if the parent is active
+				)
+			}
+		});
+	});
+	
+	</script>
+
+</script>
+</head>
+<body>
+<!-- INICIO FONDO -->
+<div id="fondo">
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** INICIO CABECERA                      ****** -->
+<!-- ************************************************** -->
+
+<div id="cabecera">
+  <a class="escudo" href="/inicio.html"></a>
+  <div class="maderuelocom"></div>
+  <!-- MENU GRAFICO: DEFINIR BOTONES EN ORDEN DRCHA a IZDA -->
+  <ul id="menu_btn_grafico">
+    <li><a href="http://www.aemet.es/es/eltiempo/prediccion/localidades?l=40408"       class="icono_clima"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://webmail.maderuelo.com/"                                        class="icono_arroba" 
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://madeforum.maderuelo.com/"                                      class="icono_foro"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/naturaleza/parque_natural/presen_ficha.html" class="icono_parque"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/principal/360/entrada.html"            class="icono_360"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="/siglo12/siglo12.html"                        class="icono_siglo12"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+  </ul>
+<!-- MENU TEXTUAL DE CABECERA: DEFINIR BOTONES EN ORDEN IZDA A DRCHA -->
+  <ul id="menu_btn_horiz">
+    <li><a href="/turismo/turismo_visitando.html"  class="btn_turismo"     >Turismo<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_historia"    >Historia<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_arte"        >Arte<span></span></a></li>
+    <li><a href="/naturaleza/ind_natural.html"     class="btn_naturaleza"  >Naturaleza<span></span></a></li>
+    <li><a href="/festejos/ind_fiesta.html" class="btn_festejos"    >Festejos<span></span></a></li>
+    <li><a href="/ayuntamiento/ayto.html" class="btn_ayuntamiento">Ayuntamiento<span></span></a></li>
+    <li><a href=" " class="btn_anuncios"    >Anuncios<span></span></a></li>
+    <li><a href=" " class="btn_web"         >Web<span></span></a></li>
+  </ul>
+<!-- SUBMENU DE BOTONES TEXTO     -->
+<!-- ************************* -->
+<div id="submenu_texto" ></div>
+</div><!-- FIN CABECERA  -->
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA MAPA CENTRAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areamapa">
+
+<!-- ***** FONDO MAPA *****-->
+<div class="fondomapa">
+
+<h3 class="tit_galeria">Ermita de la Virgen de Castroboda y de San Roque</h3>
+<div class="demo">
+<div id="main_image"></div>
+<ul class="gallery_demo_unstyled">
+    <li class="active"><img src="/images/turismo/galeria/castroboda_1.jpg" alt="castroboda" title="Ermita de la Virgen de Castroboda, vista lateral Norte"></li>
+    <li class="active"><img src="/images/turismo/galeria/castroboda_2.jpg" alt="castroboda" title="De estilo neoclásico, destaca por su altura y, especialmente, por las dos torres"></li>
+    <li class="active"><img src="/images/turismo/galeria/castroboda_3.jpg" alt="castroboda" title="Arco e Iglesia de San Miguel en un segundo plano"></li>
+    <li class="active"><img src="/images/turismo/galeria/castroboda_4.jpg" alt="castroboda" title="Ermita y Camposanto a la derecha, vista lateral Sur"></li>
+    <li class="active"><img src="/images/turismo/galeria/castroboda_5.jpg" alt="castroboda" title="Torres del campanario desde el cerro de los Cotos"></li>
+    <li class="active"><img src="/images/turismo/galeria/castroboda_6.jpg" alt="castroboda" title="Una de las campanas orientada al Norte"></li>
+    <li class="active"><img src="/images/turismo/galeria/castroboda_7.jpg" alt="castroboda" title="Vista de Maderuelo desde la Torre Norte"></li>
+    <li class="active"><img src="/images/turismo/galeria/castroboda_8.jpg" alt="castroboda" title="Interior  de la Ermita, coro y entrada principal"></li>
+    <li class="active"><img src="/images/turismo/galeria/castroboda_9.jpg" alt="castroboda" title="Interior  de la Ermita, retablo e imagen de la Virgen"></li>
+    <li class="active"><img src="/images/turismo/galeria/castroboda_10.jpg" alt="castroboda" title="Interior  de la Ermita, retablo e imagen de la Virgen"></li>
+    <li class="active"><img src="/images/turismo/galeria/castroboda_11.jpg" alt="castroboda" title="Imagen de la Virgen de Castroboda y el Niño Jesús"></li>
+    <li class="active"><img src="/images/turismo/galeria/castroboda_12.jpg" alt="castroboda" title="Detalle de imagen de la Patrona de Maderuelo"></li>
+    <li class="active"><img src="/images/turismo/galeria/castroboda_13.jpg" alt="castroboda" title="Detalle del rostro de la Virgen de Castroboda"></li>
+    <li class="active"><img src="/images/turismo/galeria/castroboda_14.jpg" alt="castroboda" title="Detalle del rostro del Niño Jesús"></li>
+    <li class="active"><img src="/images/turismo/galeria/castroboda_15.jpg" alt="castroboda" title=" Fachada Norte de Iglesia de San Miguel, al fondo la Ermita de Castroboda"></li>
+
+</ul>
+<p class="nav_galeria"><a href=" " onclick="$.galleria.prev(); return false;">&laquo; Anterior</a> | <a href="#texto"> Más INFO</a> | <a href=" " onclick="$.galleria.next(); return false;">Siguiente &raquo;</a></p>
+</div>
+
+
+
+</div> <!-- FIN FONDOMAPA  -->
+
+</div> <!-- FIN AREAMAPA -->
+
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA TEXTO FINAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areatexto"><a NAME = "texto"></a>
+
+<p class="big">
+  <span class="letracapital"><h7>L</h7></span>
+a ermita se construyó finales del siglo XVIII y bendecida en 1804. El concejo y los vecinos la levantaron con su esfuerzo para albergar a la patrona de Maderuelo, que moraba en el cerro de Castroboda.  Fué edificada sobre una ermita anterior dedicada a San Roque, protector de la peste.<br>
+De estilo neoclásico, destaca por poseer dos torres, una excepción dentro de dicho estilo arquitectónico.
+
+<br><br>Un agradable paseo para los maderolenses, que acuden cada tarde a visitar a su patrona. 
+</p>
+
+<p class="pie_galeria">
+<a href="/inicio.html">Maderuelo Home Page</a> | <a href="/inicio.html">Made by nosotros, de Maderuelo</a>
+</p>
+
+</div> <!-- FIN AREA TEXTO FINAL PAGINA -->
+
+
+</div><!-- FIN FONDO -->
+</body>
+
+
+</html>
+

@@ -1,0 +1,556 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Visitando la Villa de Maderuelo</title>
+
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_comun.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_cabecera.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_secciones.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_mapa.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_turismo_visitando.css">
+
+<script type="text/javascript" src="../javascripts/eventos_mapa.js"> </script>
+</head>
+<body>
+<!-- INICIO FONDO -->
+<div id="fondo">
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** INICIO CABECERA                      ****** -->
+<!-- ************************************************** -->
+
+<div id="cabecera">
+  <a class="escudo" href="/inicio.html"></a>
+  <div class="maderuelocom"></div>
+  <!-- MENU GRAFICO: DEFINIR BOTONES EN ORDEN DRCHA a IZDA -->
+  <ul id="menu_btn_grafico">
+    <li><a href="http://www.aemet.es/es/eltiempo/prediccion/municipios/maderuelo-id40115"       class="icono_clima"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com"                                        class="icono_arroba" 
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com"                                      class="icono_foro"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="/naturaleza/parque_natural/presen_ficha.html" class="icono_parque"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/principal/360/entrada.html"            class="icono_360"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="/siglo12/siglo12.html"                        class="icono_siglo12"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+  </ul>
+<!-- MENU TEXTUAL DE CABECERA: DEFINIR BOTONES EN ORDEN IZDA A DRCHA -->
+  <ul id="menu_btn_horiz">
+    <li><a href="/turismo/turismo_visitando.html"  class="btn_turismo"     >Turismo<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"         class="btn_historia"    >Historia<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"         class="btn_arte"    >Arte<span></span></a></li>
+    <li><a href="/naturaleza/ind_natural.html"     class="btn_naturaleza"  >Naturaleza<span></span></a></li>
+    <li><a href="/festejos/ind_fiesta.html"         class="btn_festejos"    >Festejos<span></span></a></li>
+    <li><a href="/ayuntamiento/ayto.html" class="btn_ayuntamiento">Ayuntamiento<span></span></a></li>
+    <li><a href=""         class="btn_anuncios"    >Anuncios<span></span></a></li>
+    <li><a href=""         class="btn_web"         >Web<span></span></a></li>
+  </ul>
+<!-- SUBMENU DE BOTONES TEXTO     -->
+<!-- ************************* -->
+<div id="submenu_texto" ></div>
+</div><!-- FIN CABECERA  -->
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA MAPA CENTRAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areamapa">
+
+<!-- ***** FONDO MAPA *****-->
+<div class="fondomapa">
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** LEYENDA                              ****** -->
+<!-- ************************************************** -->
+<ul id="leyenda">
+<li><a class="bandera_iglesia" href="" ><span></span></a></li>
+<li><a class="bandera_civil"   href="" ><span></span></a></li>
+<li><a class="bandera_museo"   href="" ><span></span></a></li>
+<li><a class="bandera_paseo"   href="" ><span></span></a></li>
+<li><a class="informacion"     href="#texto" ><span></span></a></li>
+</ul> <!-- FIN LEYENDA -->
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** MENU INFERIOR                        ****** -->
+<!-- ************************************************** -->
+<ul id="menu_inferior">
+<li><a class="uno"    href="/turismo/turismo_comollegar.html"><span>¿Cómo llegar?      </span></a></li>
+<li><a class="dos"    href="/turismo/turismo_hosteleria.html"><span>Hostelería         </span></a></li>
+<li><a class="tres"   href="/turismo/turismo_senderismo.html"><span>Senderismo    </span></a></li>
+<li><a class="cuatro" href="/turismo/turismo_aguayocio.html"><span>Agua y Ocio        </span></a></li>
+<li><a class="cinco"  href="/turismo/turismo_tierramaderuelo.html"><span>Tierra de Maderuelo</span></a></li>
+
+</ul> <!-- FIN MENU INFERIOR -->
+
+
+
+<!-- ***** MAPA *****-->
+<dl class="mapa">
+<!-- ***************************************************************************** -->
+<!--  OFICINA DE TURISMO -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria.html" class="lugar_oficinaturismo" id="coord_oficinaturismo" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/oficinaturismo.gif" id="img_oficinaturismo" >
+   <h7>Oficina de Turismo</h7>
+Maderuelo dispone de Oficina de Turismo donde podrá ser informado de qué visitar en esta Villa y sus alrededores.
+Los horarios de apertura son de Miércoles a Sábado,de 10h a 17h<br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Visitas concertadas</li>
+      <li>Tfno: 921 55 60 89</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Para saber más de Maderuelo...</lh>
+      <li><a href="turismo_galeria.html" class="enlaceweb" 
+           onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+   </ul>
+</dd>
+
+
+
+<!-- ***************************************************************************** -->
+<!--  ERMITA DE CASTROBODA -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_castroboda_1.html" class="lugar_iglesia" id="coord_castroboda" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/castroboda.jpg" id="img_castroboda" >
+   <h7>Ermita de Castroboda</h7><br>
+Ermita neoclásica de finales del siglo XVIII que el Ayuntamiento levantó a sus costas para dar jornales a la empobrecida población, tras las guerra civil de Sucesión.  Se erigió sobre ermita anterior dedicada a San Roque, para albergar a la patrona de Maderuelo, la Virgen de Castroboda, imagen venerada por toda la comarca desde la Edad Media en el cercano cerro y cuyo culto había decaído a partir del XVI y sólo era sostenido con fervor por Maderuelo y algunos pueblos de la comunidad de Villa y Tierra.<br>Es destacable su singularidad al tratarse de una ermita neoclásica dotada de dos torres cuadradas.
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Ermita del XVIII</li>
+      <li>Estilo Neoclásico</li>
+   </ul>
+   <ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_castroboda_1.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+      <li><a href="turismo_galeria_castroboda_2.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes (II)</a></li>
+      <li><a href="turismo_galeria_castroboda_3.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes (III)</a></li>
+   </ul>
+</dd>
+<!-- ***************************************************************************** -->
+<!--  PUERTA DE LA VILLA -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_puertavilla.html"  class="lugar_civil" id="coord_puertavilla" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/puertavilla.jpg" id="img_puertavilla" >
+   <h7>Puerta de la Villa</h7><br>
+Entrada emblemática de Maderuelo que protege el acceso Oeste.  Aún conserva los cerrojos, la poterna y unas gruesas puertas de madera acorazada, con blindaje del siglo XV y restos de policromía. Aunque perdió los torreones que la flanqueaban, hasta principios del siglo XX disponía de foso y puente.<br>La puerta es una entrada abovedada cuya abertura intramuros es un alto arco de medio punto y biselado, típico del XVI mientras que la abertura exterior es apuntada y muy anterior, del XIII.  Adosado al arco exterior hay otro de medio punto, más alto, que presenta un gran hueco central y realiza la función de buhera para proteger el acceso. <br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Arco del XIII. Reformas del XVI</li>
+      <li>Puertas blindadas del XV</li>
+      <li>Buhera y antiguo foso</li>
+   </ul>
+   <ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_puertavilla.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+      <li><a href="turismo_galeria_puertavilla_2.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes (II)</a></li>
+      <li><a href="turismo_galeria_puertavilla_3.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes (III)</a></li>
+   </ul>
+</dd>
+<!-- ***************************************************************************** -->
+<!--  PLAZA DE SAN MIGUEL -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_plazasanmiguel_1.html"  class="lugar_civil" id="coord_plazasanmiguel" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/plazasanmiguel.jpg" id="img_plazasanmiguel" >
+   <h7>Plaza de San Miguel</h7><br>
+Pequeña plaza cónica que bifurca la entrada a Maderuelo. Tras cruzar el arco, se abre al frente la escalinata de subida al atrio elevado de la ermita de S. MIguel, que preside el conjunto.
+Los altos edificios que circundan la plaza, conservan la atmósfera medieval original destacando dos portadas románicas y una gótica.  
+Sobre una de ellas figura el escudo de estilo rococó, de los Enríquez, señores de Maderuelo, marqueses de Villena y condes de San Esteban. <br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Casonas del XIII</li>
+      <li>Blasón del SXVI</li>
+   </ul>
+   <ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_plazasanmiguel_1.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+      <li><a href="turismo_galeria_plazasanmiguel_2.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes (II)</a></li>
+   </ul>
+</dd>
+<!-- ***************************************************************************** -->
+<!--  TORREON DEL OESTE -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_torreonoeste.html"  class="lugar_civil" id="coord_torreonoeste" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/torreonoeste.jpg" id="img_torreonoeste" >
+   <h7>Torreon del oeste</h7><br>
+Torreón semiderruido que defendía el foso por su flanco Oeste.  Reformas posteriores en la muralla eliminaron uno de los tacones, seguramente para dar mayor resitencia ante la aparición de la artillería. Dada la pertenencia de Maderuelo al Condado de San Esteban, en manos del Marqués de Villena en el siglo XV y que perdió la guerra civil contra los partidarios de Isabel La Católica, es muy probable que estas defensas de Maderuelo fuesen derrocadas como represalia.<br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Torreón del XIII</li>
+      <li>Probablemente derrocado por los RR.CC.</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_torreonoeste.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  IGLESIA DE SAN MIGUEL -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_sanmiguel_1.html" class="lugar_iglesia" id="coord_sanmiguel" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/sanmiguel.jpg" id="img_sanmiguel" >
+   <h7>Iglesia de San Miguel</h7><br>
+Antigua iglesia-palacio ermita románica de ábside semicircular. Sus muros formaron parte del conjunto defensivo oeste y ha sufrido profundas remodelaciones.  En el siglo XV se adosó una segunda nave rectangular, rematada con una pequeña espadaña, que albergó una valiosa campanilla.  El campanario-torreón de la primitiva iglesia se incendió y se convirtió en vivienda.  En su sobrio interior existen varios enterramientos enmarcados en arcos góticos, destacando la lápida de los Hermosa.<br>Inventariada en el Catastro de Madoz del SXIX como ermita perteneciente al municipio, se abandonó su uso y quedó muy deteriorada. Reconstruida en 1981 gracias a la labor conjunta del Ayuntamiento y la Junta de Castilla y León, se ha convertido en un edificio muy importante para la actividad social y cultural de la Villa. 
+<br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Iglesia del XIII.  Reformada en XVI y XVII</li>
+      <li>Atrio elevado y recinto defensivo</li>
+   </ul>
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_sanmiguel_1.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+      <li><a href="turismo_galeria_sanmiguel_2.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes (II)</a></li>
+</ul>
+</dd>
+<!-- ***************************************************************************** -->
+<!--  IGLESIA DE SANTA MARIA -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_santamaria_1.html" class="lugar_iglesia" id="coord_santamaria" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/santamaria.jpg" id="img_santamaria" >
+   <h7>Santa Maria del Castillo</h7><br>
+Iglesia que destaca por su tamaño y por la diversidad de estilos que conserva, siendo el único templo segoviano con restos de estilo califal.<br>
+Reconstruida parcialmente tras el incendio del SXVI, en sus muros se aprecian numerosas remodelaciones y materiales procedentes de las antiguas trece iglesias y conventos de la villa.  
+En el siglo XVIII se demolió la vieja espadaña de ladrillo y se erigió la alta espadaña actual, con cinco campanas, cuyo tañir se escucha a distancias increíbles.<br>
+Sorprende la altura de la nave principal, rematada por un ábside semicircular y una elegante techumbre de madera, así como las cúpulas y ventanas mudéjares en ladrillo de la nave lateral.<br>
+<ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Iglesia del XIII.  Reformada del XVI al XVII</li>
+      <li>Arcos mudéjares</li>
+   </ul>
+   <ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_santamaria_1.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+      <li><a href="turismo_galeria_santamaria_2.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes (II)</a></li>
+      <li><a href="turismo_galeria_santamaria_3.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes (III)</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  PUERTA DEL BARRIO -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_puertabarrio_1.html"  class="lugar_civil" id="coord_puertabarrio" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/puertabarrio.jpg" >
+   <h7>Puerta del Barrio</h7>
+<br><br>
+Puerta y torre defensiva que protege el único acceso desde la muralla de la umbría, al que asciende el camino desde el valle del arroyo Moralejos.
+Es una entrada abovedada enmarcada entre dos sólidos arcos de medio punto, del SXVI, a los que se adosa una casa que fue un antiguo torreón.  
+Posteriormente se utilizó como hospital o albergue de peregrinos y gentes necesitadas.  
+Se denomina Puerta del Barrio por ubicarse aquí la judería o barrio judío de Maderuelo.<br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Arco del XVI</li>
+      <li>Paseo recomendado</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_puertabarrio_1.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+      <li><a href="turismo_galeria_puertabarrio_2.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes (II)</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  TORREON DEL CASTILLO -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_torreoncastillo.html" class="lugar_civil" id="coord_torreoncastillo" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/torreoncastillo.jpg" id="img_torreoncastillo" >
+   <h7>Torreón del Castillo</h7>
+<br><br>
+Vestigio más relevante del castillo que protegía el acceso norte y residencia señorial.  A pesar de ser alcanzado por dos rayos en el SXX, este torreón conserva una gran altura y 
+desde él se divisa parte del valle del Riaza.  El derrocamiento total de una de las esquinas sugiere que fué demolido a conciencia, posiblemente 
+junto con el resto del castillo, del que sólo se conserva el aljibe subterráneo y parte de la muralla.
+<br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Torreón del XV</li>
+      <li>Castillo derrocado posiblemente por RR.CC.</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_torreoncastillo.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  PLAZA DEL BAILE -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_plazabaile.html" class="lugar_civil" id="coord_plazabaile" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/plazabaile.jpg">
+   <h7>Plaza del Baile</h7>
+<br><br>
+Céntrica plaza de Maderuelo.  Posiblemente lugar de mercado desde tiempos remotos pero que ha sido profundamente remodelado durante el SXIX.  Las casa más antigua data de finales del SXVIII y otra casona conserva restos de arcos del SXVI.  Perdío gran parte de su tipismo cuando la gran olma se seco a causa de la grafiosis.  Recientemente ha sido repuesta por otra para que devuelva la estampa castellana a esta plaza.
+<br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Casa porticada</li>
+      <li>Olma</li>
+   </ul>
+   <ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_plazabaile.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  PASEO DE LA SOLANA -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_solana_1.html" class="lugar_paseo" id="coord_solana" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/solana.jpg" id="img_solana" >
+   <h7>Paseo de la Solana</h7>
+<br><br>
+Partiendo de la Puerta de la Villa, daremos un tranquilo paseo por el camino de la solana, permite descender hacia los puentes del valle del Riaza y contemplar las casas y murallas que serpentean sobre la línea de abruptos riscos que coronan el cerro.
+<br><br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Buenos accesos y firme asfaltado</li>
+      <li>Vistas Panorámicas</li>
+      <li>Iluminación Nocturna</li>
+   </ul>
+   <ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_solana_1.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+      <li><a href="turismo_galeria_solana_2.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes (II)</a></li>
+   </ul>
+</dd>
+<!-- ***************************************************************************** -->
+<!--  PUENTE VIEJO -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_puenteviejo_1.html" class="lugar_civil" id="coord_puenteviejo" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/puenteviejo.jpg"  >
+   <h7>Puente Viejo</h7>
+<br><br>
+Cuando las aguas descienden en Agosto, dejan ver esta obra de sólida sillería, que algunos creen de origen romano.
+Sus cinco ojos semienterrados por el lodo del embalse y sus recios tajamares muestran la fuerza de las crecidas del Riaza, que derribó sus pretiles a mediados del S.XIX.
+Este puente pagó pontazgo al Marqués de Villena y une el pueblo con su querida ermita de la Veracruz y las  tierras del páramo. <br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Puente Románico sumergido</li>
+      <li>Pontazgo del Marqués de Villena</li>
+      <li>Posible origen romano</li>
+   </ul>
+   <ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_puenteviejo_1.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+      <li><a href="turismo_galeria_puenteviejo_2.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes (II)</a></li>
+   </ul>
+</dd>
+<!-- ***************************************************************************** -->
+<!--  ERMITA DE LA VERACRUZ -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_veracruz_1.html" class="lugar_iglesia" id="coord_veracruz" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/veracruz.jpg"  >
+   <h7>Ermita de la Veracruz</h7>
+<br><br>
+Declarada monumento nacional en 1924, esta sencilla ermita del XII sorprendió al mundo por albergar uno de los más completos frescos  románicos hispanos.  En 1950, el embalse del Riaza dió lugar a su expropiación y traslado de los frescos al Museo del Prado, dejando unas débiles improntas en los muros, hoy restauradas y consolidadas.  Tras varios años de reclamaciones, en 2009 se ha instalado una réplica de las pinturas.<br>Junto a Santa Coloma, es el más antiguo templo de Maderuelo.  Sobre culto a la Vera Cruz, parece más probable que perviviese un antiguo culto godo a la cruz de un templo anterior, que un  origen templario, pues algunos autores sostienen que los templarios custodiaron aquí un lignum crucis. Por otro lado, la Historia sitía aquí la Hermandad de la Caridad, disuelta a mediados del XX<br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Iglesia del XII y Monumento Nacional</li>
+      <li>Frescos únicos en España</li>
+   </ul>
+   <ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_veracruz_1.html"  class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+      <li><a href="turismo_galeria_veracruz_2.html"  class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes (I)</a></li>
+      <li><a href="turismo_galeria_veracruz_3.html"  class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes (III)</a></li>
+   </ul>
+   </ul>
+
+   </ul>
+</dd>
+<!-- ***************************************************************************** -->
+<!--  PUENTE NUEVO -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_puentenuevo.html" class="lugar_paseo" id="coord_puentenuevo" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/puentenuevo.jpg" id="img_puentenuevo" >
+   <h7>Paseo del Puente Nuevo</h7>
+<br><br>
+Desde cualquiera de las bajadas de la Solana, podemos cruzar las aguas del embalse sobre el Puente Nuevo, construido a mediados del SXX ya que el Puente Viejo quedó sumergido. Paseo muy recomendable tanto de día como de noche ya que está elegantemente iluminado y nos conduce hasta la cercana Ermita de la Veracruz.
+Las viasta de Maderuelo son impresionantes, en cualquier época del año.
+<br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Vistas panorámicas</li>
+      <li>Fácil acceso</li>
+      <li>Iluminación nocturna</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_puentenuevo.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  SAN ANDRES  -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_sanandres.html" class="lugar_paseo" id="coord_sanandres" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/sanandres.jpg" id="img_sanandres" >
+   <h7>San Andrés</h7>
+<br><br>
+Aquí se fundó un convento medieval, cerca de la confluencia del arroyo Moralejos y el Riaza.  Debió ser influyente, ya que en Maderuelo, casi todos llamamos al Moralejos, el arroyo de San Andrés.<br>
+Generalmente inundado no se puede acceder por la antigua carretera sino siguiendo la "senda Larga" del parque que conduce a la Rivilla o desde la carretera que circunvala Maderuelo.<br>
+<br>
+Bien merece la pena, un paseo hasta San Andrés, pues nos regala vistas de Maderuelo a las que no solemos estar acostumbrados.
+<br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Vistas panorámicas</li>
+      <li>Antiguo convento</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_sanandres.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  ALCARCEL -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_alcarcel.html" class="lugar_civil" id="coord_arcarcel" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/arcarcel.jpg"  >
+   <h7>Alcarcel</h7>
+<br><br>
+Mirador espectacular que se extiende entre la muralla y el Pórtico de Santa María.  
+Aunque sirvió de osario de la parroquia hasta épocas recientes, es un misterio su función defensiva, sobre todo en la época de dominio musulmán. <br>
+El nombre de Alcarcel deriva del árabe e indica que esta extensión de terreno se usó para sembrar cebada que se segaba verde y servía de forraje.
+Junto a la muralla, se han levantado armas de asedio (almajeneque) guardando el paso del río.
+<br><br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Armas de asedio</li>
+      <li>Vistas panorámicas</li>
+      <li>Atrio del XIII al XVI</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_alcarcel.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+   </ul>
+</dd>
+<!-- ***************************************************************************** -->
+<!--  CARCEL Y ARGOLLA -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_carcel.html" class="lugar_civil" id="coord_carcel" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/carcel.jpg"  >
+   <h7>Carcel</h7>
+<br><br>
+Durante siglos los recios muros del actual ayuntamiento sirvieron de Cárcel.  Como Villa, el concejo de Maderuelo administraba la baja Justicia, según el Fuero de la Villa y las posteriores Ordenanzas del XV.
+Ahora rehabilitada como local público, conserva la portada del XVI y las ventanas enrrejadas.
+<br><br>
+Entre la cárcel y la muralla, se abre un amplio patio sobre el antiguo paso de ronda, con vistas al embalse y que se accede desde unas estrechas callejas.  Este espacio lo llaman argolla.  Palabra que deriva del árabe y significa "lugar de desagüe".  En los recintos amurallados era necesario dejar aberturas para que escapara el agua de las correntías provocadas por las lluvias. 
+<br><br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Carcel del XVI</li>
+      <li>Vistas panorámicas</li>
+   </ul>
+   <ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_carcel.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Carcel y Ayuntamiento</a></li>
+      <li><a href="turismo_galeria_argolla.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Argolla</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  PLAZA DEL CASTILLO -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_plazacastillo.html" class="lugar_civil" id="coord_plazacastillo" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/plazacastillo.jpg"  >
+   <h7>Plaza del Castillo</h7>
+<br><br>
+Esta plaza ocupa un espacio que se mantuvo sin edificar hasta entrado el siglo XX.  Toma el nombre por ser la explanada que se extendía ante el castillo, hoy csai enteramente derruido.
+<br><br>
+Esta plaza es el punto donde convergen las calles de arriba y abajo, con una salida en curva cerrada hacia la solana. 
+<br><br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Arquitectura popular</li>
+      <li>Vistas panorámicas</li>
+   </ul>
+   <ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_plazacastillo.html" class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Fotos</a></li>
+   </ul>
+</dd>
+
+
+</dl><!-- FIN MAPA  -->
+</div> <!-- FIN FONDO MAPA  -->
+
+
+
+
+</div> <!-- FIN AREACENTRAL -->
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA TEXTO FINAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areatexto"><a NAME="texto"></a>
+<p class="big">
+  <h3><span class="letracapital">E</span>l transcurrir del tiempo...</h3>
+</p>
+<p>
+<br><br><br><br>
+ha dado a Maderuelo un creciente atractivo, por su encanto como Villa amurallada rodeada de un espacio natural difícil de encontrar en nuestro mundo moderno y urbano.<br>
+Villa monumental, edificada sobre un alargado espolón rocoso, para dominar los meandros del Riaza en su descenso hacia el Duero. Aunque poblada con anterioridad, fue el Medievo el que dejó su más profunda huella. Reconquistada a comienzos del siglo XI, pasó a formar parte de la primera línea defensiva de la margen izquierda del Duero.<br>Esta época nos legó sus murallas y trazado sinuoso de callejas y plazuelas.
+Igualmente medievales son los origenes de varios templos, aunque fueron adaptándose a los gustos artísticos posteriores.<br>
+<br>Las posibilidades para el turista, como se refleja en esta sección, son muy amplias: arte, historia, naturaleza, deportes...Sin olvidar la oferta hostelera, moderna y creciente, que abre las puertas de un turismo de calidad, tanto a la mesa, como en lo relativo al alojamiento.<br>
+<br>
+La gastronomía típica de la zona es el lechazo o lechal asado, siendo el cordero de esta zona muy apreciado por su exquisito sabor y suavidad, fruto de los aromáticos arbustos y pastizales en los que se alimenta el ganado. El buen chorizo de matanza, amén de otras viandas, era una de las costumbres más arraigadas, que reunían vecinos y familias para llevar a cabo la preparación de los sabrosos embutidos, entre los que destacaba el buen jamón curado.<br>
+<br>
+Esta tierra también gusta del buen vino, como atestiguan la gran cantidad de bodegas excavadas en la roca que rodean nuestra Villa.  No en vano, Maderuelo linda con la demarcación de la D.O. de Ribera del Duero, donde se producen muchos de los mejores caldos de nuestro país.<br>
+<br>Así pues, debemos alabar el buen gusto de nuestros antepasados, pioneros en una tierra que fue la Extremadura castellana, allá por el Siglo X , donde nadie se atrevía a habitar en aquella fronteriza y peligrosa tierra de nadie.  
+</p>
+</div> <!-- FIN AREA TEXTO FINAL PAGINA -->
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA LOGOS VALIDACION                ****** -->
+<!-- ************************************************** -->
+<!-- FIN AREALOGOS -->
+</div><!-- FIN FONDO -->
+</body>
+</html>

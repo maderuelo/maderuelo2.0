@@ -1,0 +1,301 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>MSXII: Alistamiento</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8856-15">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_comun.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_cabecera.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_secciones.css">
+<link href="../stylesheet/estilo_galleria.css" rel="stylesheet" type="text/css" media="screen">
+<script type="text/javascript" src="../javascripts/jquery.js"></script>
+<script type="text/javascript" src="../javascripts/jquery_002.js"></script>
+
+<script type="text/javascript">
+	
+	jQuery(function($) {
+		
+		$('.gallery_demo_unstyled').addClass('gallery_demo'); // adds new class name to maintain degradability
+		
+		$('ul.gallery_demo').galleria({
+			history   : true, // activates the history object for bookmarking, back-button etc.
+			clickNext : true, // helper for making the image clickable
+			insert    : '#main_image', // the containing selector for our main image
+			onImage   : function(image,caption,thumb) { // let's add some image effects for demonstration purposes
+				
+				// fade in the image & caption
+				if(! ($.browser.mozilla && navigator.appVersion.indexOf("Win")!=-1) ) { // FF/Win fades large images terribly slow
+					image.css('display','none').fadeIn(1000);
+				}
+				caption.css('display','none').fadeIn(1000);
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// fade out inactive thumbnail
+				_li.siblings().children('img.selected').fadeTo(500,0.3);
+				
+				// fade in active thumbnail
+				thumb.fadeTo('fast',1).addClass('selected');
+
+				
+				// add a title for the clickable image
+				image.attr('title','Next image >>');
+			},
+			onThumb : function(thumb) { // thumbnail effects goes here
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// if thumbnail is active, fade all the way.
+				var _fadeTo = _li.is('.active') ? '1' : '0.3';
+				
+				// fade in the thumbnail when finnished loading
+				thumb.css({display:'none',opacity:_fadeTo}).fadeIn(1500);
+				
+				// hover effects
+				thumb.hover(
+					function() { thumb.fadeTo('fast',1); },
+					function() { _li.not('.active').children('img').fadeTo('fast',0.3); } // don't fade out if the parent is active
+				)
+			}
+		});
+	});
+	
+	</script>
+
+</script>
+</head>
+<body>
+<!-- INICIO FONDO -->
+<div id="fondo">
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** INICIO CABECERA                      ****** -->
+<!-- ************************************************** -->
+
+<div id="cabecera">
+  <a class="escudo" href="/inicio.html"></a>
+  <div class="maderuelocom"></div>
+  <!-- MENU GRAFICO: DEFINIR BOTONES EN ORDEN DRCHA a IZDA -->
+  <ul id="menu_btn_grafico">
+    <li><a href="http://www.aemet.es/es/eltiempo/prediccion/localidades?l=40408"       class="icono_clima"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/correoweb/"                                        class="icono_arroba" 
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://madeforum.maderuelo.com/"                                      class="icono_foro"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/naturaleza/parque_natural/presen_ficha.html" class="icono_parque"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/turismo/callejero/callejero.html"            class="icono_360"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="siglo12.html"                        class="icono_siglo12"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+  </ul>
+<!-- MENU TEXTUAL DE CABECERA: DEFINIR BOTONES EN ORDEN IZDA A DRCHA -->
+  <ul id="menu_btn_horiz">
+    <li><a href="/turismo/turismo_visitando.html"  class="btn_turismo"     >Turismo<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_historia"    >Historia<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_arte"        >Arte<span></span></a></li>
+    <li><a href="/naturaleza/ind_natural.html"     class="btn_naturaleza"  >Naturaleza<span></span></a></li>
+    <li><a href="/festejos/ind_fiesta.html" class="btn_festejos"    >Festejos<span></span></a></li>
+    <li><a href="/ayuntamiento/ayto.html" class="btn_ayuntamiento">Ayuntamiento<span></span></a></li>
+    <li><a href=" " class="btn_anuncios"    >Anuncios<span></span></a></li>
+    <li><a href=" " class="btn_web"         >Web<span></span></a></li>
+  </ul>
+<!-- SUBMENU DE BOTONES TEXTO     -->
+<!-- ************************* -->
+<div id="submenu_texto" ></div>
+</div><!-- FIN CABECERA  -->
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA MAPA CENTRAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areamapa">
+
+<!-- ***** FONDO MAPA *****-->
+<div class="fondomapa">
+
+<h3 class="tit_galeria">Alistamiento para la Algarada y Asalto a la Puerta</h3>
+<div class="demo">
+<div id="main_image"></div>
+<ul class="gallery_demo_unstyled">
+    <li class="active"><img src="../images/siglo12/galeria/alistamiento_0.jpg" alt="msxii" title="La Algarada de Maderuelo es una teatralización de un combate que sigue un guión prefijado.  Todos los participantes contarán con las protecciones adecuadas y su atuendo se ajustará a la moda del siglo XII. En esta página se han incluido algunos ejemplos ilustrativos."></li>   
+ <li class="active"><img src="../images/siglo12/galeria/alistamiento_1.jpg" alt="msxii" title="Yelmo cónico y loriga. Protecciones correctas salvo las manos descubiertas. La cabeza se protege con yelmo, cofia y almófar. Bajo la loriga de manga larga , un gambax acolchado. Sobre las piernas, calzas de tela y cordajes de cuero.
+Correcto para Siglo XII. Loriga al descubierto y escudo transicional entre almendrado y triangular. La heráldica del escudo es poco elaborada como corresponde a este siglo"></li>
+    <li class="active"><img src="../images/siglo12/galeria/alistamiento_2.jpg" alt="msxii" title="Calva plana, almófar y loriga. Protecciones correctas. Bajo la loriga de manga corta , un gambax acolchado. Sobre las piernas, calzas de tela. Inadecuado para el Siglo XII. El escudo pequeño con canto superior recto y el yelmo cerrado de calva plana lo sitúan en la segunda mitad del XIII.  Cubre la loriga con una saya, también una costumbre propia del XIII."></li>
+    <li class="active"><img src="../images/siglo12/galeria/alistamiento_3.jpg" alt="msxii" title="Yelmo con facial y lorigón.  Protecciones correctas. La cabeza se protege con yelmo semiesférico con facial y almófar. Bajo la loriga de manga larga y maniquetes , una saya de tela gruesa. Sobre las piernas, calzas de tela. Adecuado para el SXII. El escudo redondo y oblongo fué muy usado en el XII hispano y el yelmo semiesférico con facial también. Los maniquetes aparecen muy tardíamente en el XII."></li>
+    <li class="active"><img src="../images/siglo12/galeria/alistamiento_4.jpg" alt="msxii" title="Almófar sin yelmo y gambax.  Protecciones adecuadas. Mejorable para adecuarse al SXII ya que usa medias ajustadas negras en vez de calzas y botos camperos en vez de escarpes."></li>
+    <li class="active"><img src="../images/siglo12/galeria/alistamiento_5.jpg" alt="msxii" title="Sin yelmo ni gambax.  inhábil para esgrima. La cabeza se protege sólo con una capucha de tela. Bajo la saya de tela,carece de gambax acolchado. Sobre las piernas, medias ajustadas negras
+Inadecuado para el SXII pues la heráldica de la saya no pertenece a ninguna orden del XII."></li>
+    <li class="active"><img src="../images/siglo12/galeria/alistamiento_6.jpg" alt="msxii" title="Yelmo arcaico y gambax.  Protecciones inadecuadas pues deja las manos al descubierto. Sobre las piernas, calzas de tela y cordajes de cuero.
+Inadecuado para el Siglo XII pues el yelmo con carrilleras es altomedieval bizantino o tardorromano, 6-7 siglos anterior al XII.  La espada de pomo polilobulado tambien sugiere una época anterior al XI."></li>
+    <li class="active"><img src="../images/siglo12/galeria/alistamiento_7.jpg" alt="msxii" title="(1) Calva plana con facial.  Correcto para la última década del XII. (2) Semiesférico con refuerzo y nasal. Correcto hasta mediados del XIII. (3) Semiesférico con anteojos. Incorrecto ya que es arcaico (usado en paises nórdicos) y pervive sólo entre los Rus y Este europeo. (4) Correcto. El refuerzo puede ser de bronce. (5) Correcto hasta mediados del XIII. (6) Incorrecto. Surge a mediados del XIII.  
+"></li>
+</ul>
+<p class="nav_galeria"><a href=" " onclick="$.galleria.prev(); return false;">&laquo; Anterior</a> | <a href="#texto"> Más INFO</a> | <a href=" " onclick="$.galleria.next(); return false;">Siguiente &raquo;</a></p>
+</div> <!--demo -->
+
+
+
+</div> <!-- FIN FONDOMAPA  -->
+
+</div> <!-- FIN AREAMAPA -->
+
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA TEXTO FINAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areatexto"><a NAME = "texto"></a>
+
+<p class="big">
+  <span class="letracapital"><h7>A</h7></span>
+<h3>viso para el alistamiento</h3>
+<br><br>
+<p>
+En la Algarada  se tratará de alinear juntos a los hombres de armas que pertenezcan a la misma hueste o mesnada. Por ello, aquellas personas que acudan englobados en un grupo, deberán solicitar su alistamiento colectivamente, según se detalla en el apartado acerca de la Leva de Mesnadas.  Aquellos que pretenda alistarse individualmente deberán solicitarlo a la organización según se detalla en el apartado acerca de la Leva de Infantes
+<br><br>
+El listado provisional de admitidos se actualiza en esta web.
+<br><br>
+<h3>Leva de Mesnadas para el año 2012</h3>
+<ul class="l_rombo">
+      <lh>Milicia concejil de Maderuelo</lh>
+      <li>Basilio Cáceres</li>
+      <li>Ataulfo Merino</li>
+      <li>Miguel García Hernando</li>
+      <li>Juan Carlos Lopez</li>
+      <li>Juan Luis Carbón</li>
+      <li>Jose Provencio</li>
+      <li>Alberto Carnicero</li>
+</ul>
+<ul class="l_rombo">
+      <lh>Hueste de los Lara</lh>
+      <li>Rodrigo González </li>
+      <li>Fernando de Gabriel</li>
+      <li>Alberto Bomprezzi</li>
+      <li>Jaime Quiles</li>
+      <li>Daniel Fernández</li>
+      <li>Fernando Romero</li>
+      <li>Juan Carlos Llauradó</li>
+      <li>Andrea Abad</li>
+</ul>
+<ul class="l_rombo">
+      <lh>Templarios de la Vera Cruz</lh>
+      <li>Santiago Bayo</li>
+      <li>Cristophe Gaudoz</li>
+      <li>Antonio Baciero </li>
+      <li>Carlos Lorenzo</li>
+      <li>Alberto Sanz</li>
+</ul>
+<ul class="l_rombo">
+      <lh>Templarios de Seseña</lh>
+      <li>Francisco Javier Cecilia</li>
+      <li>Tito Blanco</li>
+</ul>
+<ul class="l_rombo">
+      <lh>Hospitalarios</lh>
+      <li>Mario López</li>
+      <li>Jesús López</li>
+      <li>Manuel Aguilar</li>
+      <li>Oscar Torres</li>
+</ul>
+<ul class="l_rombo">
+      <lh>Infanzones de Ferruza</lh>
+      <li>Roberto Casas</li>
+      <li>Pepe Luis Zaborras</li>
+      <li>Alberto Rubio</li>
+ </ul>
+<ul class="l_rombo">
+      <lh>Mesnada de las Tres Estrellas</lh>
+      <li>Julian Bermejo</li>
+      <li>Ramón Gómez </li>
+      <li>Diego de Tena</li>
+      <li>el corcel Tristán</li>
+      <li>Antonio Cano</li>
+      <li>Rosendo Espinalt</li>
+      <li>Verónica Lasala</li>
+      <li>Ramón Valero</li>
+ </ul>
+<ul class="l_rombo">
+      <lh>Orden de la Sagrada Cruz de Languedoc </lh>
+      <li>Xavier Mas</li>
+       <li>Aleix Basullas</li>
+      <li>Oriol Marquínez</li>
+ </ul>
+<br><br>
+En esta edición, se informará a los capitanes o sargentos del plan de la batalla, así como los equipamientos mínimos requeridos.  Serán ellos los que expliquen el plan y las reglas a sus gentes de armas, siendo responsables del comportamiento de sus gentes ante la organización.
+<br><br>
+Igualmente, la panoplia de armas queda limitada a espada, daga y escudo.  El uso de flechas, mazas,  hachas, lanzas, hondas, fustíbalos y otras armas enastadas será dispuesto arbitrariamente por la organización, segun lo requiera el guión de la batalla.
+<br><br>
+No obstante, la organización hará un último control en el propio campo de batalla para revisar las protecciones, armas y la adecuación histórica del atuendo.  En esta página se han incluído algunos ejemplos ilustrativos.
+<br><br>
+Por ello, la organización se reserva el derecho de introducir cambios en el despliegue de las distintas facciones así como también se reserva el ejercicio del derecho de admisión en aras de la seguridad general o de la fidelidad histórica de esta evocación teatralizada de una algarada de la frontera castellana.
+<br>
+Para ediciones venideras, a tenor del comportamiento exhibido en el campo durante la batalla, se señalarán aquellos individuos o grupos poco gratos, lo cual pesará a la hora de ser admitido de nuevo.
+</p>
+<h3>Reglas para la Leva de Mesnadas</h3>
+<p>
+Aquel grupo interesado en alistarse para tomar parte en la Algarada deberá solicitarlo a la organización y deberá enviar un correo a msxii@maderuelo.com, con los siguientes datos: 
+</p>
+<ul class="l_rombo">
+      <li>Nombre de la mesnada, hueste o compañía</li>
+      <li>Seña o estandarte, si lo hubiere</li>
+      <li>Sargento o Capitán</li>
+      <li>Total de Hombres de armas de la Hueste</li>
+      <li>nombre de cada participante: nombre y apellidos</li>
+      <li>destreza de dada uno: ¿experiencia en esgrima, sea escénica o tradicional?</li>
+</ul>
+<p>
+Por último, el responsable deberá recopilar estos datos y una fotografía reciente de cada hombre, vestido en armas, con calidad suficiente para juzgar su vestimenta y panoplia de armas.
+</p>
+<h3> Reglas para la Leva de infantes</h3>
+<p>
+Aquella persona interesado en alistarse para tomar parte en la Algarada del 2008 deberá solicitarlo a la organización y deberá aportar los siguientes datos: 
+</p>
+<ul class="l_rombo">
+      <li>Nombre de participante: : nombre y apellidos</li>
+      <li>destreza de dada uno: ¿experiencia en esgrima, sea escénica o tradicional?</li>
+</ul>
+<p>
+Además debe mostrar una fotografía reciente, vestido en armas, con calidad suficiente para juzgar su equipamiento, vestimenta, protecciones y panoplia de armas
+<br><br>
+Todo ello, se debe remitir por correo electrónico a msxii@maderuelo.com
+
+<h3>Nuestras sugerencias para mejorar el atavío</h3>
+<p>
+Continuamente nos llegan preguntas de gentes interesadas en participar en la Algarada sobre cómo vestir adecuadamente.  En la sección Guerreros mostramos algunas ideas.
+<br><br>
+También hemos adjuntado imágenes de algunos participantes reales, a las que añadimos algunos comentarios ilustrativos de su adecuación o no.
+<br>  
+Vaya por delante nuestras disculpas si alguién se considera aludido ya que no se pretende hacer una crítica personal si no aprovechar una imagen en la que aparezcan detalles dignos de ser resaltados.
+</p>
+
+
+
+
+<p class="pie_galeria">
+<a href="../inicio.html">Maderuelo Home Page</a> | <a href="../inicio.html">Made by nosotros, de Maderuelo</a>
+</p>
+
+</div> <!-- FIN AREA TEXTO FINAL PAGINA -->
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA LOGOS VALIDACION                ****** -->
+<!-- ************************************************** -->
+<!-- FIN AREALOGOS -->
+
+</div><!-- FIN FONDO -->
+</body>
+
+
+</html>
+

@@ -1,0 +1,62 @@
+/* ************************************************** */
+/* ************************************************** */
+/* FONDO DEL MAPA PARA SENDERISMO */
+/* ************************************************** */
+/* ************************************************** */
+#areamapa .fondomapa {
+width: 652px;
+height: 551px;
+background:  url(../images/turismo/senderismo.jpg) no-repeat ; 
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* IDENTIFICADORES DE LOS SIMBOLOS DEL MAPA           */
+/* ************************************************** */
+/* ************************************************** */
+a.senda_facil          {background: transparent url(../images/b_verde.png) no-repeat scroll 0px 0px;}
+a.senda_media          {background: transparent url(../images/b_beige.png) no-repeat scroll 0px 0px;}
+a.senda_dificil        {background: transparent url(../images/b_rojo.png) no-repeat scroll 0px 0px;}
+a.lugar_oficinaturismo {background: transparent url(../images/b_info.png) no-repeat scroll 0px 0px;}
+
+/* *************************************************** */
+/* IDENTIFICADORES DE COORDENADAS DE LUGARES           */
+/* *************************************************** */
+#coord_paramo            {top: 320px;left: 600px;}
+#coord_vayunquera        {top: 210px;left: 650px;}
+#coord_estacion          {top: 155px;left: 280px;}
+#coord_canadas           {top: 230px;left: 150px;}
+#coord_mariparda         {top: 240px;left: 210px;}
+#coord_vegapalacio       {top: 230px;left: 170px;}
+#coord_vega              {top: 220px;left: 120px;}
+#coord_hazas             {top: 270px;left: 590px;}
+#coord_cercona           {top: 210px;left: 510px;}
+#coord_aldehuela         {top: 120px;left: 450px;}
+#coord_milagrosa         {top: 400px;left: 510px;}
+#coord_sanandres         {top: 245px;left: 370px;}
+#coord_penalba           {top: 455px;left: 250px;}
+#coord_oficinaturismo      {top: 230px;left:280px;}
+
+/* *************************************************** */
+/* IDENTIFICADORES DE SIMBOLOS DE LA LEYENDA           */
+/* *************************************************** */
+#leyenda .bandera_verde   {width: 54px;height: 55px; left:0px;top:0px; background: url(../images/turismo/bandera_verde.png) no-repeat;}
+#leyenda .bandera_verde span { width: 63px;height: 26px;   background: url('../images/turismo/txt_senda_1h.png') no-repeat;}
+
+#leyenda .bandera_amarilla { width: 54px; height: 55px; left:137px;top:0px;  background: url(../images/turismo/bandera_amarilla.png) no-repeat;}
+#leyenda .bandera_amarilla span { width: 69px; height: 26px;   background: url('../images/turismo/txt_senda_3h.png') no-repeat;}
+
+#leyenda .bandera_roja { width: 54px; height: 55px; left:280px;top:0px; background: url(../images/turismo/bandera_roja.png) no-repeat;}
+#leyenda .bandera_roja   span { width: 69px; height: 26px;   background: url('../images/turismo/txt_senda_dificil.png') no-repeat;}
+#leyenda .informacion { width: 45px; height: 46px;   left:423px;top:0px; background: url(../images/informacion.png) no-repeat;}
+#leyenda .informacion   span { width: 109px; height: 27px;   background: url('/images/txt_mas_info.png') no-repeat;}
+
+/* *************************************************** */
+/* IDENTIFICADORES DE BOTONES DEL MENU INFERIOR*/
+/* *************************************************** */
+#menu_inferior .uno   {width:180px;left:0px;top:10px;}
+#menu_inferior .dos   {width:180px;left:180px;top:10px;}
+#menu_inferior .tres  {width:180px;left:360px;top:10px;}
+#menu_inferior .cuatro {width:180px;left:540px;top:10px;}
+#menu_inferior .cinco {width:200px;left:720px;top:10px;}
+

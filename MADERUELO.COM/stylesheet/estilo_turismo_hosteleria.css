@@ -1,0 +1,65 @@
+/* ************************************************** */
+/* ************************************************** */
+/* FONDO DEL MAPA PARA HOSTELERIA*/
+/* ************************************************** */
+/* ************************************************** */
+#areamapa .fondomapa {
+width: 640px;
+height: 460px;
+background:  url(../images/turismo/hosteleria.jpg) no-repeat ; 
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* IDENTIFICADORES DE LOS SIMBOLOS DEL MAPA           */
+/* ************************************************** */
+/* ************************************************** */
+a.lugar_restaurante    {background: transparent url(../images/b_azul.png) no-repeat scroll 0px 0px;}
+a.lugar_bar            {background: transparent url(../images/b_verde.png) no-repeat scroll 0px 0px;}
+a.lugar_artesania      {background: transparent url(../images/b_beige.png) no-repeat scroll 0px 0px;}
+a.lugar_alojamiento    {background: transparent url(../images/b_rojo.png) no-repeat scroll 0px 0px;}
+a.lugar_oficinaturismo {background: transparent url(../images/b_info.png) no-repeat scroll 0px 0px;}
+
+/* *************************************************** */
+/* IDENTIFICADORES DE COORDENADAS DE LUGARES           */
+/* *************************************************** */
+
+#coord_alfoz_bar           {top: 320px; left: 180px;}
+#coord_alfoz_restaurante   {top: 350px;left: 185px;}
+#coord_mirador             {top: 205px;left: 200px;}
+#coord_medievo_posada      {top: 200px;left: 90px;}
+#coord_medievo_restaurante {top: 210px;left: 115px;}
+#coord_capitulo13          {top: 140px;left: 180px;}
+#coord_castillo_posada     {top: 36px;left: 482px;}
+#coord_maderolum           {top: 90px;left: 253px;}
+#coord_casaaurora          {top: 105px;left: 291px;}
+#coord_casabotica          {top: 130px;left: 315px;}
+#coord_l_abad              {top: 240px;left: 150px;}
+#coord_puertavilla         {top: 306px;left:37px;}
+#coord_oficinaturismo      {top: 90px;left:315px;}
+#coord_veracruz_rest       {top: 275px;left:610px;}
+#coord_veracruz_bar        {top: 275px;left:620px;}
+
+/* *************************************************** */
+/* IDENTIFICADORES DE SIMBOLOS DE LA LEYENDA           */
+/* *************************************************** */
+#leyenda .bandera_restaurante {      width: 54px; height: 55px; left:0px;top:0px;   background: url(../images/turismo/bandera_restaurante.png) no-repeat;}
+#leyenda .bandera_restaurante span { width: 94px; height: 13px;   background: url('../images/turismo/txt_restaurante.png') no-repeat;}
+#leyenda .bandera_bar {              width: 54px; height: 55px; left:168px;top:0px;   background: url(../images/turismo/bandera_bar.png) no-repeat;}
+#leyenda .bandera_bar         span { width: 81px;height: 28px;   background: url('../images/turismo/txt_bar.png') no-repeat;}
+#leyenda .bandera_casa {             width: 54px; height: 55px; left:323px;top:0px;   background: url('../images/turismo/bandera_casa.png') no-repeat;}
+#leyenda .bandera_casa        span { width: 99px; height: 19px;   background: url('../images/turismo/txt_alojamiento.png') no-repeat;}
+#leyenda .bandera_artesania {        width: 54px; height: 55px; left:496px;top:0px;   background: url('../images/turismo/bandera_artesania.png') no-repeat;}
+#leyenda .bandera_artesania   span { width: 84px; height: 30px;   background: url('../images/turismo/txt_artesania.png') no-repeat;}
+#leyenda .informacion {              width: 45px; height: 46px; left:654px;top:0px;   background: url('../images/informacion.png') no-repeat;}
+#leyenda .informacion   span { width: 109px; height: 27px;   background: url('/images/txt_mas_info.png') no-repeat;}
+
+
+/* *************************************************** */
+/* IDENTIFICADORES DE BOTONES DEL MENU INFERIOR*/
+/* *************************************************** */
+#menu_inferior .uno   {width:180px;left:0px;top:10px;}
+#menu_inferior .dos   {width:180px;left:180px;top:10px;}
+#menu_inferior .tres  {width:180px;left:360px;top:10px;}
+#menu_inferior .cuatro {width:180px;left:540px;top:10px;}
+#menu_inferior .cinco {width:200px;left:720px;top:10px;}

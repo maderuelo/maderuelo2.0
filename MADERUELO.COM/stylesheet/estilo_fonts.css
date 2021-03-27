@@ -1,0 +1,177 @@
+
+/* ***************************************** */
+/* DEFINICION DE FONTS LOCALES DE LETRAS     */
+/* ***************************************** */
+@font-face {
+	font-family: 'FloranteatLauraRegular';
+	src: url('../fonts/../fonts/FLORLRG_-webfont.eot');
+	src: local('?'), url('../fonts/../fonts/FLORLRG_-webfont.woff') format('woff'), url('../fonts/../fonts/FLORLRG_-webfont.ttf') format('truetype'), url('../fonts/../fonts/FLORLRG_-webfont.svg#webfontUdYh0Pqr') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FloranteatLauraItalic';
+	src: url('../fonts/../fonts/FLORLI__-webfont.eot');
+	src: local('?'), url('../fonts/../fonts/FLORLI__-webfont.woff') format('woff'), url('../fonts/../fonts/FLORLI__-webfont.ttf') format('truetype'), url('../fonts/../fonts/FLORLI__-webfont.svg#webfontOfCJeJ9u') format('svg');
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'KingthingsFlourishesRegular';
+	src: url('../fonts/Kingthings_Flourishes-webfont.eot');
+	src: local('☺'), url('../fonts/Kingthings_Flourishes-webfont.woff') format('woff'), url('../fonts/Kingthings_Flourishes-webfont.ttf') format('truetype'), url('../fonts/Kingthings_Flourishes-webfont.svg#webfont3O69OgkT') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+@font-face {
+	font-family: 'CloisterBlackLight';
+	src: url('../fonts/CloisterBlack-webfont.eot');
+	src: local('☺'), url('../fonts/CloisterBlack-webfont.woff') format('woff'), url('../fonts/CloisterBlack-webfont.ttf') format('truetype'), url('../fonts/CloisterBlack-webfont.svg#webfontFrKKDeui') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'CombiNumeralsLtdRegular';
+	src: url('../fonts/CombiNumeralsLtd-webfont.eot');
+	src: local('☺'), url('../fonts/CombiNumeralsLtd-webfont.woff') format('woff'), url('../fonts/CombiNumeralsLtd-webfont.ttf') format('truetype'), url('../fonts/CombiNumeralsLtd-webfont.svg#webfontOqm9vl02') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'GondolaSDRegular';
+	src: url('../fonts/Gondola_SD-webfont.eot');
+	src: local('☺'), url('../fonts/Gondola_SD-webfont.woff') format('woff'), url('../fonts/Gondola_SD-webfont.ttf') format('truetype'), url('../fonts/Gondola_SD-webfont.svg#webfontAOKTlZ8N') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GondolaSDSwashRegular';
+	src: url('../fonts/Gondola_SD-Swash-webfont.eot');
+	src: local('☺'), url('../fonts/Gondola_SD-Swash-webfont.woff') format('woff'), url('../fonts/Gondola_SD-Swash-webfont.ttf') format('truetype'), url('../fonts/Gondola_SD-Swash-webfont.svg#webfontZ8B7mJG8') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+@font-face {
+	font-family: 'KingthingsFoundationRegular';
+	src: url('../fonts/Kingthings_Foundation-webfont.eot');
+	src: local('☺'), url('../fonts/Kingthings_Foundation-webfont.woff') format('woff'), url('../fonts/Kingthings_Foundation-webfont.ttf') format('truetype'), url('../fonts/Kingthings_Foundation-webfont.svg#webfontcpYJfTM9') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+@font-face {
+	font-family: 'KingthingsItaliquescript';
+	src: url('../fonts/Kingthings_Italique-webfont.eot');
+	src: local('☺'), url('../fonts/Kingthings_Italique-webfont.woff') format('woff'), url('../fonts/Kingthings_Italique-webfont.ttf') format('truetype'), url('../fonts/Kingthings_Italique-webfont.svg#webfont9YiVQywM') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'KingthingsPetrockRegular';
+	src: url('../fonts/Kingthings_Petrock-webfont.eot');
+	src: local('☺'), url('../fonts/Kingthings_Petrock-webfont.woff') format('woff'), url('../fonts/Kingthings_Petrock-webfont.ttf') format('truetype'), url('../fonts/Kingthings_Petrock-webfont.svg#webfontsDl1KU8Z') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'KingthingsPetrockLightRegular';
+	src: url('../fonts/Kingthings_Petrock_light-webfont.eot');
+	src: local('☺'), url('../fonts/Kingthings_Petrock_light-webfont.woff') format('woff'), url('../fonts/Kingthings_Petrock_light-webfont.ttf') format('truetype'), url('../fonts/Kingthings_Petrock_light-webfont.svg#webfontevu5DYTf') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+@font-face {
+	font-family: 'KingthingsVersalisRegular';
+	src: url('../fonts/Kingthings_Versalis-webfont.eot');
+	src: local('☺'), url('../fonts/Kingthings_Versalis-webfont.woff') format('woff'), url('../fonts/Kingthings_Versalis-webfont.ttf') format('truetype'), url('../fonts/Kingthings_Versalis-webfont.svg#webfont6t0UqzcY') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'NymphetteRegular';
+	src: url('../fonts/Nymphette-webfont.eot');
+	src: local('☺'), url('../fonts/Nymphette-webfont.woff') format('woff'), url('../fonts/Nymphette-webfont.ttf') format('truetype'), url('../fonts/Nymphette-webfont.svg#webfont5JEt5CCX') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'OrotundHeavy';
+	src: url('../fonts/Orotund-webfont.eot');
+	src: local('☺'), url('../fonts/Orotund-webfont.woff') format('woff'), url('../fonts/Orotund-webfont.ttf') format('truetype'), url('../fonts/Orotund-webfont.svg#webfontDvUUiWiM') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OrotundCapitalsHeavy';
+	src: url('../fonts/OrotundCaps-webfont.eot');
+	src: local('☺'), url('../fonts/OrotundCaps-webfont.woff') format('woff'), url('../fonts/OrotundCaps-webfont.ttf') format('truetype'), url('../fonts/OrotundCaps-webfont.svg#webfont7Lfq87Ci') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'ProclamateLight';
+	src: url('../fonts/proclamate_light-webfont.eot');
+	src: local('☺'), url('../fonts/proclamate_light-webfont.woff') format('woff'), url('../fonts/proclamate_light-webfont.ttf') format('truetype'), url('../fonts/proclamate_light-webfont.svg#webfontMsqDQS7i') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ProclamateHeavy';
+	src: url('../fonts/proclamate_heavy-webfont.eot');
+	src: local('☺'), url('../fonts/proclamate_heavy-webfont.woff') format('woff'), url('../fonts/proclamate_heavy-webfont.ttf') format('truetype'), url('../fonts/proclamate_heavy-webfont.svg#webfont9DJyZeNu') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ProclamateIncisedHeavy';
+	src: url('../fonts/proclamate_incised-webfont.eot');
+	src: local('☺'), url('../fonts/proclamate_incised-webfont.woff') format('woff'), url('../fonts/proclamate_incised-webfont.ttf') format('truetype'), url('../fonts/proclamate_incised-webfont.svg#webfontRz2nL42A') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'RomanCapsRegular';
+	src: url('../fonts/Roman_SD-webfont.eot');
+	src: local('☺'), url('../fonts/Roman_SD-webfont.woff') format('woff'), url('../fonts/Roman_SD-webfont.ttf') format('truetype'), url('../fonts/Roman_SD-webfont.svg#webfontyzaKTs7D') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+
+
+

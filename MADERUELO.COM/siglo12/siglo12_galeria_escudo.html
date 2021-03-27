@@ -1,0 +1,271 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>MSXII: Galería de escudo</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_comun.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_cabecera.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_secciones.css">
+<link href="../stylesheet/estilo_galleria.css" rel="stylesheet" type="text/css" media="screen">
+<script type="text/javascript" src="../javascripts/jquery.js"></script>
+<script type="text/javascript" src="../javascripts/jquery_002.js"></script>
+
+<script type="text/javascript">
+	
+	jQuery(function($) {
+		
+		$('.gallery_demo_unstyled').addClass('gallery_demo'); // adds new class name to maintain degradability
+		
+		$('ul.gallery_demo').galleria({
+			history   : true, // activates the history object for bookmarking, back-button etc.
+			clickNext : true, // helper for making the image clickable
+			insert    : '#main_image', // the containing selector for our main image
+			onImage   : function(image,caption,thumb) { // let's add some image effects for demonstration purposes
+				
+				// fade in the image & caption
+				if(! ($.browser.mozilla && navigator.appVersion.indexOf("Win")!=-1) ) { // FF/Win fades large images terribly slow
+					image.css('display','none').fadeIn(1000);
+				}
+				caption.css('display','none').fadeIn(1000);
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// fade out inactive thumbnail
+				_li.siblings().children('img.selected').fadeTo(500,0.3);
+				
+				// fade in active thumbnail
+				thumb.fadeTo('fast',1).addClass('selected');
+
+				
+				// add a title for the clickable image
+				image.attr('title','Next image >>');
+			},
+			onThumb : function(thumb) { // thumbnail effects goes here
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// if thumbnail is active, fade all the way.
+				var _fadeTo = _li.is('.active') ? '1' : '0.3';
+				
+				// fade in the thumbnail when finnished loading
+				thumb.css({display:'none',opacity:_fadeTo}).fadeIn(1500);
+				
+				// hover effects
+				thumb.hover(
+					function() { thumb.fadeTo('fast',1); },
+					function() { _li.not('.active').children('img').fadeTo('fast',0.3); } // don't fade out if the parent is active
+				)
+			}
+		});
+	});
+	
+	</script>
+
+</script>
+</head>
+<body>
+<!-- INICIO FONDO -->
+<div id="fondo">
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** INICIO CABECERA                      ****** -->
+<!-- ************************************************** -->
+
+<div id="cabecera">
+  <a class="escudo" href="/inicio.html"></a>
+  <div class="maderuelocom"></div>
+  <!-- MENU GRAFICO: DEFINIR BOTONES EN ORDEN DRCHA a IZDA -->
+  <ul id="menu_btn_grafico">
+    <li><a href="http://www.aemet.es/es/eltiempo/prediccion/localidades?l=40408"       class="icono_clima"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://webmail.maderuelo.com/"                                        class="icono_arroba" 
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://madeforum.maderuelo.com/"                                      class="icono_foro"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/naturaleza/parque_natural/presen_ficha.html" class="icono_parque"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/principal/360/entrada.html"            class="icono_360"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="siglo12.html"                        class="icono_siglo12"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+  </ul>
+<!-- MENU TEXTUAL DE CABECERA: DEFINIR BOTONES EN ORDEN IZDA A DRCHA -->
+  <ul id="menu_btn_horiz">
+    <li><a href="/turismo/turismo_visitando.html"  class="btn_turismo"     >Turismo<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_historia"    >Historia<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_arte"        >Arte<span></span></a></li>
+    <li><a href="/naturaleza/ind_natural.html"     class="btn_naturaleza"  >Naturaleza<span></span></a></li>
+    <li><a href="/festejos/ind_fiesta.html" class="btn_festejos"    >Festejos<span></span></a></li>
+    <li><a href="/ayuntamiento/ayto.html" class="btn_ayuntamiento">Ayuntamiento<span></span></a></li>
+    <li><a href=" " class="btn_anuncios"    >Anuncios<span></span></a></li>
+    <li><a href=" " class="btn_web"         >Web<span></span></a></li>
+  </ul>
+<!-- SUBMENU DE BOTONES TEXTO     -->
+<!-- ************************* -->
+<div id="submenu_texto" ></div>
+</div><!-- FIN CABECERA  -->
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA MAPA CENTRAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areamapa">
+
+<!-- ***** FONDO MAPA *****-->
+<div class="fondomapa">
+
+<h3 class="tit_galeria">Escudo, Adarga y Blocas</h3>
+<div class="demo">
+<div id="main_image"></div>
+<ul class="gallery_demo_unstyled">
+    <li class="active"><img src="/images/siglo12/galeria/escudo_1.jpg" alt="escudo" title="Embrace de tres correas, una para fijar el antebrazo y dos en aspa para asir con la mano"></li>
+    <li class="active"><img src="/images/siglo12/galeria/escudo_2.jpg" alt="escudo" title="Embrace de tres correas, una para fijar el antebrazo y dos en aspa para asir con la mano.  Nótese el detalle del acolchado (de cuero o tela recia) que evita que el antebrazo sufra impactos fuertes."></li>
+    <li class="active"><img src="/images/siglo12/galeria/escudo_3.jpg" alt="escudo" title="doble correa se ajusta al antebrazo y correas en aspa que se sujetan con la mano.  Existen imágenes en las que se aprecia que el portador lo embraza al revés, quedando el puño hacia la punta.  Este estilo se llamó posteriormente a la borgoñona"></li>
+    <li class="active"><img src="/images/siglo12/galeria/escudo_4.jpg" alt="escudo" title="Embrace de 4 correas dispuestas en rectángulo.  Existen numerosas representaciones (Tapiz de Bayeux, 1066).  Este agarre confiere gran flexibilidad y múltiples posibilidades de agarre."></li>
+    <li class="active"><img src="/images/siglo12/galeria/escudo_5.jpg" alt="escudo" title="Adarga con penachos. Típico ibérico, usado tanto por guerreros musulmanes como cristianos, sean infantes o jinetes. "></li>
+    <li class="active"><img src="/images/siglo12/galeria/escudo_6.jpg" alt="escudo" title="Adarga con 3 penachos. Siempre se colocan por encima del centro de la adarga. Existen muchas referencias en lso sXI y SXII"></li>
+    <li class="active"><img src="/images/siglo12/galeria/escudo_7.jpg" alt="escudo" title="Almendrado con el canto superior rebajado. Mejora la visibilidad del portador. De grandes dimensiones, sin puntas aguzadas y  ligeramente convexo, lo que sugiere un uso defensivo o de escolta. carece de bloca y canteles"></li>
+    <li class="active"><img src="/images/siglo12/galeria/escudo_8.jpg" alt="escudo" title="Almendrado con el canto superior rebajado. Conserva un pequeño umbo o bloca. Además se aprecia un aguzado refuerzo metálico en la punta inferior.  Esto indica un posible uso ofensivo mediante golpes propinados con la bloca y punta"></li>
+    <li class="active"><img src="/images/siglo12/galeria/escudo_9.jpg" alt="escudo" title=" Almendrado rebajado y curvado (1). Conserva un pequeño umbo o bloca, y no es plano sino convexo, mejorando la protección (Beato de San Pedro de Cardeña)"></li>
+    <li class="active"><img src="/images/siglo12/galeria/escudo_10.jpg" alt="escudo" title="Almendrado rebajado y curvado (2) Se ha rectificado el canto superior. Este escudo tiene un pequeño umbo o bloca, pero lo más destacado es que presenta una acusada curvatura."></li>
+    <li class="active"><img src="/images/siglo12/galeria/escudo_11.jpg" alt="escudo" title="Almendrado con truncado el canto superior truncado. No es de grandes dimensiones y ligeramente curvo. Esto le confiere posibilidades para esgrimir activamente con él.  Presenta una bloca central y refuerzos metálicos en los ejes vertical y horizontal, que lo dividen en cuatro cuarteles (capitel del palacio de los Duques de Granada de Ega   (Navarra)"></li>
+    <li class="active"><img src="/images/siglo12/galeria/escudo_12.jpg" alt="escudo" title=" Almendrado con arista central (cabriado). Desconocemos si se construía con madera o cuero, así como el modo de construcción pero no parece que existan refuerzos metálicos.Genuinamente hispano (capitel de Tiermes (Soria)"></li>
+    <li class="active"><img src="/images/siglo12/galeria/escudo_13.jpg" alt="escudo" title=" Adarga blocada con tachones y profusamente decorada. Al ser plana y con bloca, debe tener un base de tablillas.  Los tachones metálicos unirían con mayor solidez las piezas y correas."></li>
+    <li class="active"><img src="/images/siglo12/galeria/escudo_14.jpg" alt="escudo" title="Adarga con tachones. De reducidas dimensiones ha sido muy representada en imágenes, en manos de jinetes ligeros especialmente.  Probablemente de cuero, presenta exteriormente 4 tachones o remaches que fijarían las correas de embrace."></li>
+    <li class="active"><img src="/images/siglo12/galeria/escudo_15.jpg" alt="escudo" title="Rectangular de grandes dimensiones y sin puntas.  Está concebido para escuderos  que protegen y apoyan a otros combatientes (arqueros, nobles, jinetes en apuros, etc)
+El canto inferior recto sugiere que podría apoyarse en el suelo durante prolongados periodos de tiempo."></li>
+    <li class="active"><img src="/images/siglo12/galeria/escudo_16.jpg" alt="escudo" title="Almendrado plano. Muy común y mantiene un pequeño umbo ornamental y un refuerzo metálico perimetral que esta retrancado unos tres o cuatro centímetros.  Esto prueba que la base del escudo era madera y permite que las hojas enemigas queden embutidas en la madera"></li>
+    <li class="active"><img src="/images/siglo12/galeria/escudo_17.jpg" alt="escudo" title="Blocas más sofisticadas.  Válidas para escudos y adargas."></li>
+    <li class="active"><img src="/images/siglo12/galeria/escudo_18.jpg" alt="escudo" title="blocas sencillas"></li>
+    <li class="active"><img src="/images/siglo12/galeria/escudo_19.jpg" alt="escudo" title="Refuerzo central de adarga.  No se puede considerar una bloca sino una protección que alberga los remaches que sujetan las correas y está adornada con motivos geométricos, típicamente islámicos"></li>
+</ul>
+<p class="nav_galeria"><a href=" " onclick="$.galleria.prev(); return false;">&laquo; Anterior</a> | <a href="#texto"> Más INFO</a> | <a href=" " onclick="$.galleria.next(); return false;">Siguiente &raquo;</a></p>
+</div>
+
+
+
+</div> <!-- FIN FONDOMAPA  -->
+
+</div> <!-- FIN AREAMAPA -->
+
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA TEXTO FINAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areatexto"><a NAME = "texto"></a>
+
+<p class="big">
+  <span class="letracapital"><h7>E</h7></span>
+scudos, adargas y tarjas.<br>
+<br>
+En el siglo XII el escudo sigue siendo la protección más básica, dado que las corazas de platas o placas metálicas tardarían muchos años en desarrollarse.
+<br><br>
+<h5>Tipología de los escudos</h5>
+Dentro de los distintos tipos, durante el XII el escudo almendrado, de forma de cometa o lágrima sigue siendo predominante allende los pirineos.  Es tan común que el arte románico suele usarlo para designar guerreros cristianos mientras que el escudo redondo representaría guerreros paganos.
+<br><br>
+Tras la generalización del uso del estribo, la caballería comenzó a usar la táctica de carga con lanza , bien acostada sobre la cadera o sujeta bajo la axila.  Esto obliga al jinete a girarse hacia la derecha, exponiendo su lado izquierdo.  Los escudos almendrados, estilización de los escudos ovalados, permiten proteger al jinete desde la cara hasta los pies tanto si avanza como si retrocede y lo cuelga a la espalda. 
+<br><br>
+Muchos escudos de tipo cometa conservan la bloca, un pequeño umbo metálico, un mero adorno,  reminiscencia de los escudos que se agarraban y poco útil en los que se embrazan.  A finales del siglo XII, los escudos tipo lágrima se acortan y se rectifica el canto superior, debido a la mejora de los yelmos, que hacen menos necesario proteger el rostro. 
+<br><br>
+En la península ibérica, también se usan con profusión los escudos redondos, llamados adargas, comúnmente entre 70 y 90cm de diámetro .  Los escudos redondos de menor dimensión se llaman tarjas, según el historiador Riquer.  En los siglos posteriores, adarga quedó para designar sólamente escudos de cuero sean redondos, ovalados o acorazonados, estós últimos con una arista central.
+<br><br>
+Los escudos planos son menos sofisticados que los curvos (algunos autores les llaman adargados y en lengua franca se les dió nombre distinto, bouclier, similar al vocablo buckler, en inglés.
+<br><br>
+<h5>Partes de un escudo</h5>
+Sólo se pretende dar una simple aproximación a algunos de los escudos más comunes de este periodo, generalmente sobre base de madera o de cuero.  De hierro no se fabricará ningun escudo hasta siglos posteriores.
+<br><br>
+Los basados en madera, más pesados se sólían construir con tablas de madera dura y resistente a rajar (cedro, haya, etc..).  Externamente se forraba con una o más capas de cuero o pergamino, que se pegaba con engrudo de origen animal (queso, tendones derretidos, etc...).  Los más sofisticados disponían varias capas de finas tablillas, en distinta orientación, para evitar arpaduras.
+<br><br>
+Los de cuero, muy influenciados por los escudos magrebíes, se construían enteramente de cuero engrudado.  Para darle mayor convexidad se solían unir dos mitades que se cosían formando una arista central.  Era muy apreciado el cuero de un antílope subsahariano, muy resistente al corte.
+<br><br>
+El borde superior se llamaba cantón o cantel y a menudo se reforzaba con molduras metálicas, pues es la zona más golpeada.  Siglos más tarde cantón designa cada uno de los cuartos superiores del escudo.  Si el escudo se asía con la mano, se dejaba un hueco central para alojar los nudillos.  Por el exterior se reforzaba esta zona con un umbo o bloca.
+<br><br>
+<h5>Decoración de los escudos</h5>
+En el siglo XII, la mayoría de los escudos iban pintados aunque no se puede hablar de heráldica en el sentido que la conocemos a partir del XIII y sus reglas de tintes, figuras y simbología.
+<br><br>
+En los escudos del Norte peninsular son frecuentes las decoraciones con esvásticas, discos solares y otros símbolos pre-cristianos, al menos hasta finales del XI (Beato de Gerona y Beato de Fernando I el Magno, siglo XI).  Igualmente, un autor anónimo describe el escudo del Cid Campi Doctor decorado con un fiero dragón (..."in quo depictus ferus erat draco.."). 
+<br><br>
+En los escudos musulmanes no habría figuras sino dibujos geométricos y versículos del Corán.
+<br><br>
+<h5>Embrace de un escudo</h5>
+Los escudos se portan agarrados, embrazados o colgados.
+<br><br>
+En el siglo XII, la mayoría de los escudos se portan embrazados con correas o brazal.  Para agarrarlos suelen dispone de un asa vertical y rígida en el centro. Además, unos y otros suelen disponen del tiracuello o tiracol, una correa adicional para colgarlo del cuello y proteger el pecho, costado o espalda, dependiendo de la amenaza o para su mejor transporte.
+<br><br>
+Arriba mostramos algunos tipos de embrazaduras aunque tambien existieron muchos escudos con un simple par de correas o incluso una correa única.  Los tachones que asoman en la cara externa suelen indicar donde se fijan las correas.
+<br><br>
+   <ul class="l_rombo">
+      <lh>Algunos tipos de embrace:</lh> 
+      <li>Embrazadura de tres correas, una para fijar el antebrazo y dos en aspa para asir con la mano.</li>
+      <li>Embrazadura de tres correas, una para fijar el antebrazo y dos en aspa para asir con la mano.  Nótese el detalle del acolchado (de cuero o tela recia) que evita que el antebrazo sufra impactos fuertes.</li>
+      <li>Una doble correa se ajusta al antebrazo y correas en aspa que se sujetan con la mano.  Existen imágenes en las que se aprecia que el portador lo embraza al revés, quedando el puño hacia la punta.  Este estilo se llamó posteriormente "a la borgoñona"</li>
+      <li>Embrazadura de 4 correas dispuestas en rectángulo.  Existen numerosas representaciones (Tapiz de Bayeux, 1066).  Este agarre confiere gran flexibilidad y múltiples posibilidades de agarre.</li>
+   </ul>
+<br><br>
+<h5>Tipos de los escudos</h5>
+Arriba mostramos algunos ejemplos de escudos usados en el siglo XII:
+
+<ul class="l_rombo">
+      <lh>Algunos tipos de embrace:</lh> 
+      <li>Adarga con penachos. Típico escudo ibérico, usado tanto por guerreros musulmanes como cristianos. Y se representa tanto entre infantes como jinetes.  Cuando hay 3 penachos se colocan por encima del centro de la adarga.<br>
+Existen muchas referencias con 3 o 4 penachos.  Del siglo XII, un Beato del Monasterio de las Huelgas (Burgos). Del XI, frescos murales de San Baudelio de Berlanga (Soria)</li>
+      <li>Almendrado rebajado (1)<br>
+Aquí vemos la evolución del escudo almendrado al que se ha rectificado el canto superior,  mejorando la visibilidad del portador. Es de grandes dimensiones, sin puntas aguzadas y es ligeramente convexo, lo que sugiere un uso defensivo o de escolta (por ejemplo apoyo a jinetes o ballesteros). No se aprecia cantel metálico ni bloca central.</li>
+      <li>Almendrado rebajado (2)<br>
+Otro ejemplo de escudo evolucionado a partir del almendrado.  Este conserva un pequeño umbo o bloca. Además se aprecia un aguzado refuerzo metálico en la punta inferior.  Esto indica un posible uso ofensivo mediante golpes propinados con la bloca y punta</li>
+      <li>Almendrado rebajado y curvado (1)<br>
+También este escudo conserva un pequeño umbo o bloca, y no es plano sino convexo, mejorando la protección. Encontramos muchas imágenes de este modelo.  Por ejemplo en 1180, en el Beato de San Pedro de Cardeña</li>
+      <li>Almendrado rebajado y curvado (2)<br>
+En este modelo se aprecia mejor cómo se ha rectificado el canto superior. Este escudo tiene un pequeño umbo o bloca, pero lo más destacado es que presenta una acusada curvatura. Este modelo fue ampliamente usado durante el XIII aunque generalmente han abandonado el uso de la bloca.</li>
+      <li>Almendrado rebajado y blocado<br>
+Otro ejemplo de escudo almendrado al que se le ha truncado. el canto superior.  No es de grandes dimensiones y es ligeramente curvo. Esto le confiere posibilidades para esgrimir activamente con él.  Los hay con esquinas mas o menos puntiagudas. Presenta una bloca central y refuerzos metálicos en los ejes vertical y horizontal, que lo dividen en cuatro cuarteles. En la península,  lo encontramos en un capitel en el palacio de los Duques de Granada de Ega, en Estella (Navarra)</li>
+      <li>Almendrado con arista central (cabriado)<br>
+Este escudo es genuinamente hispano.  Existe esculturas en varios capiteles de Tiermes (Soria), monasterio de SªMaría de Aguilar de Campoo(Palencia),  Sangüesa (Navarra). En imágenes se puede adivinar uno similar en el Comentario al Apocalipsis del Beato de Liébana. Desconocemos si se construia con madera o cuero, así como el modo de construcción pero no parece que existan refuerzos metálicos. Algunas las imágenes sugieren que este escudo se asía frontalmente, no que se embrazara lateralmente.  Sin embargo en la miniatura de los citados Comentarios se aprecian 10 tachones asimétricamente dispuestos que sujetarían unas correas</li>
+      <li>Adarga blocada con tachones<br>
+Adarga profusamente decorada. Al ser plana y con bloca, debe tener un base de tablillas.  Los tachones metálicos unirían con mayor solidez las piezas y correas</li>
+      <li>Adarga circular con refuerzos<br>
+En el Beato de Gerona (SXI) aparece un escudo redondo con un amplio refuerzo cruciforme muy simétrico, muy similar a la cruz de la orden de Calatrava, que se fundaría muchos años después.</li>
+      <li>Adarga con tachones<br>
+Esta adarga de reducidas dimensiones ha sido muy representada en imágenes, en manos de jinetes ligeros especialmente.  Probablemente de cuero, presenta exteriormente 4 tachones o remaches que fijarían las correas de embrace</li>
+      <li>Rectangular<br>
+Este escudo de grandes dimensiones y sin puntas está concebido para ser usado por infantes que protegen y apoyan a otros combatientes (arqueros, nobles, jinetes en apuros, etc) El canto inferior recto sugiere que podría apoyarse en el suelo durante prolongados periodos de tiempo</li>
+      <li>Almendrado<br>
+El escudo plano de lágrima es muy común pues su manufactura es simple y barata. 
+Este modelo, mantiene un pequeño umbo ornamental y un refuerzo metálico perimetral. 
+Nótese que el refuerzo no rodea el cantel sino que esta retrancado unos tres o cuatro centímetros.  Esto prueba que la base del escudo era madera y permite que las hachas o espadas enemigas queden embutidas en la madera cuando el oponente lanza tajos potentes sobre el canto del escudo.  Esto supone una oportunidad para el defensor, que puede intentar desarmar con un brusco giro del escudo.<br>
+Otras imágenes del escudo de lágrima típico encontramos en el Libro de los Testamentos (Catedral de Oviedo, 1129) y en un Beato de la Escuela de Gerona, del XI aparece un escudo de lágrima con una escotadura en el flanco derecho, para poder encajar la lanza.</li>
+</ul>	
+<br><br>
+
+<h5>Tipos de Blocas</h5>
+Arriba mostramos algunos ejemplos de blocas usadas en el siglo XII:
+<br><br>
+Dado que este estudio es muy superficial, no se harán claras distinciones entre blocas o umbos específicos de escudos cristianos o musulmanes, ya que muchos son válidos para un gran número de escudos blocados.
+<br><br>
+En general se puede decir que las blocas andalusíes suelen estar más adornadas y elaboradas, dado el mayor refinamiento de Al-Andalus.  Las tropas magrebíes solía portar adargas sin blocas.
+
+</p>
+
+<p class="pie_galeria">
+<a href="/inicio.html">Maderuelo Home Page</a> | <a href="/inicio.html">Made by nosotros, de Maderuelo</a>
+</p>
+
+</div> <!-- FIN AREA TEXTO FINAL PAGINA -->
+
+
+
+</div><!-- FIN FONDO -->
+</body>
+
+
+</html>
+

@@ -1,0 +1,245 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>MSXII: Campamentos Históricos</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-15">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_comun.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_cabecera.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_secciones.css">
+<link href="../stylesheet/estilo_galleria.css" rel="stylesheet" type="text/css" media="screen">
+<script type="text/javascript" src="../javascripts/jquery.js"></script>
+<script type="text/javascript" src="../javascripts/jquery_002.js"></script>
+
+<script type="text/javascript">
+	
+	jQuery(function($) {
+		
+		$('.gallery_demo_unstyled').addClass('gallery_demo'); // adds new class name to maintain degradability
+		
+		$('ul.gallery_demo').galleria({
+			history   : true, // activates the history object for bookmarking, back-button etc.
+			clickNext : true, // helper for making the image clickable
+			insert    : '#main_image', // the containing selector for our main image
+			onImage   : function(image,caption,thumb) { // let's add some image effects for demonstration purposes
+				
+				// fade in the image & caption
+				if(! ($.browser.mozilla && navigator.appVersion.indexOf("Win")!=-1) ) { // FF/Win fades large images terribly slow
+					image.css('display','none').fadeIn(1000);
+				}
+				caption.css('display','none').fadeIn(1000);
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// fade out inactive thumbnail
+				_li.siblings().children('img.selected').fadeTo(500,0.3);
+				
+				// fade in active thumbnail
+				thumb.fadeTo('fast',1).addClass('selected');
+
+				
+				// add a title for the clickable image
+				image.attr('title','Next image >>');
+			},
+			onThumb : function(thumb) { // thumbnail effects goes here
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// if thumbnail is active, fade all the way.
+				var _fadeTo = _li.is('.active') ? '1' : '0.3';
+				
+				// fade in the thumbnail when finnished loading
+				thumb.css({display:'none',opacity:_fadeTo}).fadeIn(1500);
+				
+				// hover effects
+				thumb.hover(
+					function() { thumb.fadeTo('fast',1); },
+					function() { _li.not('.active').children('img').fadeTo('fast',0.3); } // don't fade out if the parent is active
+				)
+			}
+		});
+	});
+	
+	</script>
+
+</script>
+</head>
+<body>
+<!-- INICIO FONDO -->
+<div id="fondo">
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** INICIO CABECERA                      ****** -->
+<!-- ************************************************** -->
+
+<div id="cabecera">
+  <a class="escudo" href="/inicio.html"></a>
+  <div class="maderuelocom"></div>
+  <!-- MENU GRAFICO: DEFINIR BOTONES EN ORDEN DRCHA a IZDA -->
+  <ul id="menu_btn_grafico">
+    <li><a href="http://www.aemet.es/es/eltiempo/prediccion/localidades?l=40408"       class="icono_clima"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://webmail.maderuelo.com/"                                        class="icono_arroba" 
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://madeforum.maderuelo.com/"                                      class="icono_foro"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/naturaleza/parque_natural/presen_ficha.html" class="icono_parque"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/principal/360/entrada.html"            class="icono_360"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="siglo12.html"                        class="icono_siglo12"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+  </ul>
+<!-- MENU TEXTUAL DE CABECERA: DEFINIR BOTONES EN ORDEN IZDA A DRCHA -->
+  <ul id="menu_btn_horiz">
+    <li><a href="/turismo/turismo_visitando.html"  class="btn_turismo"     >Turismo<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_historia"    >Historia<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_arte"        >Arte<span></span></a></li>
+    <li><a href="/naturaleza/ind_natural.html"     class="btn_naturaleza"  >Naturaleza<span></span></a></li>
+    <li><a href="/festejos/ind_fiesta.html" class="btn_festejos"    >Festejos<span></span></a></li>
+    <li><a href="/ayuntamiento/ayto.html" class="btn_ayuntamiento">Ayuntamiento<span></span></a></li>
+    <li><a href=" " class="btn_anuncios"    >Anuncios<span></span></a></li>
+    <li><a href=" " class="btn_web"         >Web<span></span></a></li>
+  </ul>
+<!-- SUBMENU DE BOTONES TEXTO     -->
+<!-- ************************* -->
+<div id="submenu_texto" ></div>
+</div><!-- FIN CABECERA  -->
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA MAPA CENTRAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areamapa">
+
+<!-- ***** FONDO MAPA *****-->
+<div class="fondomapa">
+
+<h3 class="tit_galeria">Campamentos de Maderuelo Siglo XII</h3>
+<div class="demo">
+<div id="main_image"></div>
+<ul class="gallery_demo_unstyled">
+    <li class="active"><img src="/images/siglo12/galeria/campamento_0.jpg" alt="msxii" title="Todas aquellas personas interesados en plantar su tienda formando parte de alguno de los campamentos de esta edición, pueden solicitarlo mediante correo electrónico a la siguiente dirección: msxii@maderuelo.com.  El listado provisional de admitidos se actualiza en el foro de Maderuelo: http://madeforum.maderuelo.com/viewtopic.php?t=660"></li>   
+    <li class="active"><img src="/images/siglo12/galeria/campamento_1.jpg"    alt="msxii" title="Se busca recrear el ambiente de un campo de tiendas"></li>
+    <li class="active"><img src="/images/siglo12/galeria/campamento_2.jpg" alt="msxii" title="Para cuidar la ambientación, dentro del campamento debe procurarse ocultar los utensilios modernos"></li>
+    <li class="active"><img src="/images/siglo12/galeria/campamento_3.jpg" alt="msxii" title="No se está obligado a mostrar el campamento a los visitantes."></li>
+    <li class="active"><img src="/images/siglo12/galeria/campamento_4.jpg" alt="msxii" title="Maderuelo es una zona bastante expuesta a la climatología"></li>
+    <li class="active"><img src="/images/siglo12/galeria/campamento_5.jpg" alt="msxii" title="Cada grupo decide cómo plantar las tiendas dentro del área concedida y el acceso a su espacio"></li>
+    <li class="active"><img src="/images/siglo12/galeria/campamento_6.jpg" alt="msxii" title="Por limitaciones de espacio en la zona amurallada, nos vemos obligados a ubicar tiendas separadamente"></li>
+    <li class="active"><img src="/images/siglo12/galeria/campamento_7.jpg" alt="msxii" title="Se recomienda que cada grupo cuide su entorno y sus enseres"></li>
+    <li class="active"><img src="/images/siglo12/galeria/campamento_8.jpg" alt="msxii" title="Se recomienda que cada grupo cuide su entorno y sus enseres"></li>
+    <li class="active"><img src="/images/siglo12/galeria/campamento_9.jpg" alt="msxii" title="Cierto orden y limpieza siempre son deseables, en todo ejército"></li>
+    <li class="active"><img src="/images/siglo12/galeria/campamento_10.jpg" alt="msxii" title="Especialmente si se recrea una hermandad religiosa"></li>
+    <li class="active"><img src="/images/siglo12/galeria/campamento_11.jpg" alt="msxii" title="Es una experiencia que os recomendamos"></li>
+    <li class="active"><img src="/images/siglo12/galeria/campamento_12.jpg" alt="msxii" title="Y especialmente en el incomparable marco de Maderuelo"></li>
+    <li class="active"><img src="/images/siglo12/galeria/campamento_13.jpg" alt="msxii" title="año 2009; extramuros"></li>
+    <li class="active"><img src="/images/siglo12/galeria/campamento_14.jpg" alt="msxii" title="año 2009"></li>
+    <li class="active"><img src="/images/siglo12/galeria/campamento_15.jpg" alt="msxii" title="año 2009"></li>
+    <li class="active"><img src="/images/siglo12/galeria/campamento_16.jpg" alt="msxii" title="año 2009; intramuros"></li>
+
+</ul>
+<p class="nav_galeria"><a href=" " onclick="$.galleria.prev(); return false;">&laquo; Anterior</a> | <a href="#texto"> Más INFO</a> | <a href=" " onclick="$.galleria.next(); return false;">Siguiente &raquo;</a></p>
+</div> <!--demo -->
+
+
+
+</div> <!-- FIN FONDOMAPA  -->
+
+</div> <!-- FIN AREAMAPA -->
+
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA TEXTO FINAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areatexto"><a NAME = "texto"></a>
+
+<p class="big">
+  <span class="letracapital"><h7>A</h7></span>
+<h3>viso para el Campamento del 2010</h3>
+<br><br>
+<p>
+Todas aquellas personas interesados en plantar su tienda formando parte de alguno de los campamentos de esta edición, pueden solicitarlo mediante correo electrónico a la siguiente dirección: <span><a href="mailto:msxii@maderuelo.com">msxii@maderuelo.com</a></span>
+<br><br>
+El listado provisional de admitidos se actualiza en el foro de Maderuelo: <span><a href="http://madeforum.maderuelo.com/viewtopic.php?t=793">Campamentos Maderuelo SXII 2010 (lista provisional)</a></span>
+<br><br>
+Como en pasadas ediciones, se hace distinción entre campamentos historicistas y campamentos modernos, entenciendo a los primeros aquellos que cuentan con tiendas y complementos de aspecto histórico acorde con el Siglo XII.  En esta página incluimos algunos ejemplos.
+</p>
+<h3>Reglas para Tiendas y Tendejones históricos</h3>
+<p>
+Se entiende por Tiendas históricas, aquellas confeccionadas con materiales y técnicas acordes con la época medieval.  Deben ser de telas no plásticas, bien con tendal o poste central o a dos aguas, similares al estilo normando. Contarán con vientos exteriores y los álabes de la entrada no cerrados con cremalleras.<br>
+<br> 
+Aquel grupo interesado en plantar tiendas en un campamento de estilo histórico, deberá solicitarlo a la organización vía email y deberá aportar los siguientes datos: 
+</p>
+<ul class="l_rombo">
+      <li>Nombre de la mesnada, hueste o compañía</li>
+      <li>Alférez, alcaide o quien esté al frente del grupo</li>
+      <li>Total de ocupantes</li>
+      <li>Número de tiendas y su tamaño aproximado</li>
+</ul>
+<br>
+<h3> Reglas para Tiendas modernas</h3>
+<p>
+Aquel grupo interesado en plantar tiendas en un campamento de estilo histórico, deberá solicitarlo a la organización vía email y deberá aportar los siguientes datos: 
+</p>
+<ul class="l_rombo">
+      <li>Nombre de la mesnada, hueste o compañía</li>
+      <li>quien esté al frente del grupo</li>
+      <li>Total de ocupantes</li>
+      <li>Número de tiendas y su tamaño aproximado</li>
+</ul>
+
+<br><br>
+
+<h3>Otras consideraciones</h3>
+<p>
+Considerando el espacio disponible y el número de tiendas, la organización repartirá los grupos por distintos campamentos repartidos en los alrededores de la Iglesia y de la Entrada a la Villa. La organización no puede ofrecer compensación económica a los participantes.  Por contra, tampoco se exige ni la participación en los actos ni que halla que mostrar el campamento a los visitantes. Durante el evento, cada grupo es dueño de su espacio y del acceso al mismo.
+<br><br>
+Como siempre, la organización se reserva el derecho de introducir cambios en el despliegue de los distintos campamentos así como también se reserva el ejercicio del derecho de admisión en aras de la seguridad general. 
+<br><br>
+También se recuerda a todos que está terminantemente prohibido encender fuego y que cada grupo es responsable de su propia intendencia y manutención.  Dicho esto, lamentamos informar que Maderuelo carece de tiendas y supermercados, salvo panadería, que reparte a las 10:00 a.m. Durante el Sábado y el Domingo se instalará una taberna con barbaco en la plaza.
+<br>
+
+<br><br>
+ 
+Vaya por delante nuestras disculpas si alguién se considera aludido ya que no se pretende hacer una crítica personal si no aprovechar una imagen en la que aparezcan detalles dignos de ser resaltados.
+</p>
+<h3>Muchas gracias por vuestra participacion</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="pie_galeria">
+<a href="/inicio.html">Maderuelo Home Page</a> | <a href="/inicio.html">Made by nosotros, de Maderuelo</a>
+</p>
+
+</div> <!-- FIN AREA TEXTO FINAL PAGINA -->
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA LOGOS VALIDACION                ****** -->
+<!-- ************************************************** -->
+<!-- FIN AREALOGOS -->
+
+</div><!-- FIN FONDO -->
+</body>
+
+
+</html>
+

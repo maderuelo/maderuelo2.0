@@ -1,0 +1,76 @@
+/* ************************************************** */
+/* ************************************************** */
+/* FONDO DEL MAPA PARA SIGLO12 PORTADA */
+/* ************************************************** */
+/* ************************************************** */
+#areamapa .fondomapa {
+width: 692px;
+height: 530px;
+background:  url(../images/siglo12/fondo_siglo12.jpg) no-repeat ; 
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* IDENTIFICADORES DE LOS SIMBOLOS DEL MAPA           */
+/* ************************************************** */
+
+/* ************************************************** */
+/* ************************************************** */
+/* ************************************************** */
+/* CAMBIA LA ANCHURA DE LUGARES MARCADOS EN EL MAPA   */
+/* ************************************************** */
+/* ************************************************** */
+dl.mapa.on a{
+width: 185px;
+}
+
+a.a2000    {background: transparent url(../images/siglo12/annus_mm.png)     no-repeat scroll 0px 0px;}
+a.a2001    {background: transparent url(../images/siglo12/annus_mmi.png)    no-repeat scroll 0px 0px;}
+a.a2002    {background: transparent url(../images/siglo12/annus_mmii.png)   no-repeat scroll 0px 0px;}
+a.a2003    {background: transparent url(../images/siglo12/annus_mmiii.png)  no-repeat scroll 0px 0px;}
+a.a2004    {background: transparent url(../images/siglo12/annus_mmiv.png)   no-repeat scroll 0px 0px;}
+a.a2005    {background: transparent url(../images/siglo12/annus_mmv.png)    no-repeat scroll 0px 0px;}
+a.a2006    {background: transparent url(../images/siglo12/annus_mmvi.png)   no-repeat scroll 0px 0px;}
+a.a2007    {background: transparent url(../images/siglo12/annus_mmvii.png)  no-repeat scroll 0px 0px;}
+a.a2008    {background: transparent url(../images/siglo12/annus_mmviii.png) no-repeat scroll 0px 0px;}
+a.a2009    {background: transparent url(../images/siglo12/annus_mmix.png)   no-repeat scroll 0px 0px;}
+a.a2010    {background: transparent url(../images/siglo12/annus_mmx.png)   no-repeat scroll 0px 0px;}
+a.a2011    {background: transparent url(../images/siglo12/annus_mmxi.png)   no-repeat scroll 0px 0px;}
+a.a2012    {background: transparent url(../images/siglo12/annus_mmxii.png)   no-repeat scroll 0px 0px;}
+a.a2013    {background: transparent url(../images/siglo12/annus_mmxiii.png)   no-repeat scroll 0px 0px;}
+a.a2014    {background: transparent url(../images/siglo12/annus_mmxiv.png)   no-repeat scroll 0px 0px;}
+a.a2015    {background: transparent url(../images/siglo12/annus_mmxv.png)   no-repeat scroll 0px 0px;}
+
+a.informacion   {background: transparent url(/images/b_info.png) no-repeat scroll 0px 0px;}
+
+/* *************************************************** */
+/* IDENTIFICADORES DE COORDENADAS DE AÑOS	       */
+/* *************************************************** */
+#coord_2000            {top: 520px;left: 120px;}
+#coord_2001            {top: 485px;left: 100px;}
+#coord_2002            {top: 450px;left: 80px;}
+#coord_2003            {top: 415px;left: 55px;}
+#coord_2004            {top: 380px;left: 30px;}
+#coord_2005            {top: 345px;left: 10px;}
+#coord_2006            {top: 310px;left: 5px;}
+#coord_2007            {top: 275px;left: 1px;}
+#coord_2008            {top: 240px;left: 1px;}
+#coord_2009            {top: 205px;left: 1px;}
+#coord_2010            {top: 170px; left: 5px;}
+#coord_2011            {top: 135px; left: 25px;}
+#coord_2012            {top: 100px; left: 50px;}
+#coord_2013            {top: 100px; left: 240px;}
+#coord_2014            {top: 135px; left: 320px;}
+#coord_2015            {top: 170px; left: 360px;}
+
+/*#coord_informacion     {top: 90px; left: 207px;}*/
+
+/* *************************************************** */
+/* IDENTIFICADORES DE BOTONES DEL MENU INFERIOR*/
+/* *************************************************** */
+#menu_inferior .uno   {width:180px;left:0px;top:10px;}
+#menu_inferior .dos   {width:160px;left:150px;top:10px;}
+#menu_inferior .tres  {width:180px;left:340px;top:10px;}
+#menu_inferior .cuatro {width:160px;left:480px;top:10px;}
+#menu_inferior .cinco {width:180px;left:640px;top:10px;}
+#menu_inferior .seis  {width:140px;left:800px;top:10px;}

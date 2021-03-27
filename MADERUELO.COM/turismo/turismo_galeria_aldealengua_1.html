@@ -1,0 +1,191 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Maderuelo: Galería de Aldealengua</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_comun.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_cabecera.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_secciones.css">
+<link href="../stylesheet/estilo_galleria.css" rel="stylesheet" type="text/css" media="screen">
+<script type="text/javascript" src="../javascripts/jquery.js"></script>
+<script type="text/javascript" src="../javascripts/jquery_002.js"></script>
+
+<script type="text/javascript">
+	
+	jQuery(function($) {
+		
+		$('.gallery_demo_unstyled').addClass('gallery_demo'); // adds new class name to maintain degradability
+		
+		$('ul.gallery_demo').galleria({
+			history   : true, // activates the history object for bookmarking, back-button etc.
+			clickNext : true, // helper for making the image clickable
+			insert    : '#main_image', // the containing selector for our main image
+			onImage   : function(image,caption,thumb) { // let's add some image effects for demonstration purposes
+				
+				// fade in the image & caption
+				if(! ($.browser.mozilla && navigator.appVersion.indexOf("Win")!=-1) ) { // FF/Win fades large images terribly slow
+					image.css('display','none').fadeIn(1000);
+				}
+				caption.css('display','none').fadeIn(1000);
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// fade out inactive thumbnail
+				_li.siblings().children('img.selected').fadeTo(500,0.3);
+				
+				// fade in active thumbnail
+				thumb.fadeTo('fast',1).addClass('selected');
+
+				
+				// add a title for the clickable image
+				image.attr('title','Next image >>');
+			},
+			onThumb : function(thumb) { // thumbnail effects goes here
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// if thumbnail is active, fade all the way.
+				var _fadeTo = _li.is('.active') ? '1' : '0.3';
+				
+				// fade in the thumbnail when finnished loading
+				thumb.css({display:'none',opacity:_fadeTo}).fadeIn(1500);
+				
+				// hover effects
+				thumb.hover(
+					function() { thumb.fadeTo('fast',1); },
+					function() { _li.not('.active').children('img').fadeTo('fast',0.3); } // don't fade out if the parent is active
+				)
+			}
+		});
+	});
+	
+	</script>
+
+</script>
+</head>
+<body>
+<!-- INICIO FONDO -->
+<div id="fondo">
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** INICIO CABECERA                      ****** -->
+<!-- ************************************************** -->
+
+<div id="cabecera">
+  <a class="escudo" href="/inicio.html"></a>
+  <div class="maderuelocom"></div>
+  <!-- MENU GRAFICO: DEFINIR BOTONES EN ORDEN DRCHA a IZDA -->
+  <ul id="menu_btn_grafico">
+    <li><a href="http://www.aemet.es/es/eltiempo/prediccion/localidades?l=40408"       class="icono_clima"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://webmail.maderuelo.com/"                                        class="icono_arroba" 
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://madeforum.maderuelo.com/"                                      class="icono_foro"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/naturaleza/parque_natural/presen_ficha.html" class="icono_parque"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/principal/360/entrada.html"            class="icono_360"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="/siglo12/siglo12.html"                        class="icono_siglo12"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+  </ul>
+<!-- MENU TEXTUAL DE CABECERA: DEFINIR BOTONES EN ORDEN IZDA A DRCHA -->
+  <ul id="menu_btn_horiz">
+    <li><a href="/turismo/turismo_visitando.html"  class="btn_turismo"     >Turismo<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_historia"    >Historia<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_arte"        >Arte<span></span></a></li>
+    <li><a href="/naturaleza/ind_natural.html"     class="btn_naturaleza"  >Naturaleza<span></span></a></li>
+    <li><a href="/festejos/ind_fiesta.html" class="btn_festejos"    >Festejos<span></span></a></li>
+    <li><a href="/ayuntamiento/ayto.html" class="btn_ayuntamiento">Ayuntamiento<span></span></a></li>
+    <li><a href=" " class="btn_anuncios"    >Anuncios<span></span></a></li>
+    <li><a href=" " class="btn_web"         >Web<span></span></a></li>
+  </ul>
+<!-- SUBMENU DE BOTONES TEXTO     -->
+<!-- ************************* -->
+<div id="submenu_texto" ></div>
+</div><!-- FIN CABECERA  -->
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA MAPA CENTRAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areamapa">
+
+<!-- ***** FONDO MAPA *****-->
+<div class="fondomapa">
+
+<h3 class="tit_galeria">Aldealengua de Santa María</h3>
+<div class="demo">
+<div id="main_image"></div>
+<ul class="gallery_demo_unstyled">
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_1.jpg" alt="Aldealengua" title="Subida a la entrada de la iglesia"></li>
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_2.jpg" alt="Aldealengua" title="Alero de canecillos románicos"></li>
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_3.jpg" alt="Aldealengua" title="Calle de aldealengua"></li>
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_4.jpg" alt="Aldealengua" title="Canecillo con centauro arquero"></li>
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_5.jpg" alt="Aldealengua" title="Canecillo con cierva"></li>
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_6.jpg" alt="Aldealengua" title="Canecillo con liebre"></li>
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_7.jpg" alt="Aldealengua" title="Canecillo con rana"></li>
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_8.jpg" alt="Aldealengua" title="Capilla de San Roque"></li>
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_9.jpg" alt="Aldealengua" title="Casa de Aldealengua"></li>
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_10.jpg" alt="Aldealengua" title="Cerca que rodea la iglesia de Aldealengua"></li>
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_11.jpg" alt="Aldealengua" title="Cerca que rodea la iglesia de Aldealengua por el norte"></li>
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_12.jpg" alt="Aldealengua" title="Cerca que rodea la iglesia de Aldealengua, por el oeste"></li>
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_13.jpg" alt="Aldealengua" title="Conjunto de iglesia y casa episcopal hoy convertida en hotel rural"></li>
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_14.jpg" alt="Aldealengua" title="Entrada al recinto de la iglesia"></li>
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_15.jpg" alt="Aldealengua" title="Entrada desde la carretera de Alconada"></li>
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_16.jpg" alt="Aldealengua" title="Fachada norte de la iglesia de Aldealengua"></li>
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_17.jpg" alt="Aldealengua" title="Panorámica de Aldealengua"></li>
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_18.jpg" alt="Aldealengua" title="Piedras labradas incluidas en el muro"></li>
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_19.jpg" alt="Aldealengua" title="Portada románica"></li>
+    <li class="active"><img src="/images/turismo/galeria/aldealengua_20.jpg" alt="Aldealengua" title="Pórtico de entrada"></li>
+</ul>
+
+<p class="nav_galeria"><a href=" " onclick="$.galleria.prev(); return false;">&laquo; Anterior</a> | <a href="#texto"> Más INFO</a> | <a href=" " onclick="$.galleria.next(); return false;">Siguiente &raquo;</a></p>
+</div>
+
+
+
+</div> <!-- FIN FONDOMAPA  -->
+
+</div> <!-- FIN AREAMAPA -->
+
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA TEXTO FINAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areatexto"><a NAME = "texto"></a>
+
+<p class="big">
+  <h3><span class="letracapital">A</span>ldealengua de Santamaría</h3>
+</p>
+<br><br><br><br>
+<p>
+En la margen derecha del río Riaza, asentada sobre una suave ladera solana que asciende al páramo, a 5 km de Maderuelo y a 2 km de Alconada de Maderuelo. En el siglo XIII se la denomina "Aldea Luenga", es decir, "Aldea Larga, Aldea Grande" indicando que poseía un gran número de casas; posteriormente se la conoció con el nombre de "Aldealengua de Maderuelo" por pertenecer a su comunidad de Villa y Tierra, hasta que en siglo XX tomó su nombre actual.
+<br><br>
+La iglesia parroquial de Aldealengua está dedicada a la advocación de Nuestra Señora de la Asunción y es de origen románico como lo atestigua la puerta de ingreso, adornada con tres arquivoltas sustentadas por capiteles donde se representa una lucha entre leones y unas sirenas-pájaro. El pórtico que la protege es plateresco y en el interior predomina el barroco, destacando su retablo mayor obra de Antonio Martín. Curiosamente está totalmente cercada y tiene una magnífica torre a sus pies.
+<br><br>Fiestas patronales: 15, 16 y 17 de agosto en honor de Nuestra Señora de La Asunción, San Roque y San Roquillo (recientemente añadieron un cuarto día de fiesta, el perrillo). 
+<br>Otras fiestas: Corazón de Jesús (último fin de semana de Junio).
+</p>
+
+<p class="pie_galeria">
+<a href="/inicio.html">Maderuelo Home Page</a> | <a href="/inicio.html">Made by nosotros, de Maderuelo</a>
+</p>
+
+</div> <!-- FIN AREA TEXTO FINAL PAGINA -->
+
+
+</div><!-- FIN FONDO -->
+</body>
+
+
+</html>
+

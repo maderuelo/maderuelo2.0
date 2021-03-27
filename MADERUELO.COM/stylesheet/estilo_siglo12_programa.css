@@ -1,0 +1,112 @@
+/* ************************************************** */
+/* ************************************************** */
+/* FONDO DEL MAPA PARA SIGLO12 */
+/* ************************************************** */
+/* ************************************************** */
+#areamapa .fondomapa {
+width: 692px;
+height: 530px;
+background:  url(../images/siglo12/fondo_programa.jpg) no-repeat ; 
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* DEFINICION DE PROGRAMA                             */
+/******************************************************/
+/* ************************************************** */
+#programa_sabado {
+  width: 380px;
+  height: 226px;
+  list-style: none;
+  left:400px;   top:40px; 
+  position: absolute;
+   font-size: .8em;line-height:.7em;color: #470000;text-align: left;font-weight: bold;
+}
+#programa_domingo {
+  width: 380px;
+  height: 226px;
+  list-style: none;
+  left:400px;   top:300px; 
+  position: absolute;
+  font-size: .8em;line-height:.7em;color: #470000;text-align: left;font-weight: bold;
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* DEFINICION DE TITULO y CARTEL (275 x 390px)        */
+/******************************************************/
+/* ************************************************** */
+img.titulo {
+  list-style: none;
+  left:93px;   top:13px; 
+  position: absolute;
+}
+img.cartel {
+  list-style: none;
+  left:48px;   top:74px; 
+  position: absolute;
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* IDENTIFICADORES DE LOS SIMBOLOS DEL MAPA           */
+/* ************************************************** */
+/* ************************************************** */
+/* ************************************************** */
+/* ************************************************** */
+/* CAMBIA EL ANCHO DE LUGARES MARCADOS EN EL MAPA     */
+/* ************************************************** */
+/* ************************************************** */
+dl.mapa.on a	{width: 200px;height: 1.2em;}
+
+a.item    {background: transparent no-repeat scroll 0px 0px;}
+
+/* *************************************************** */
+/* IDENTIFICADORES DE COORDENADAS DE LUGARES  cada 19px*/
+/* *************************************************** */
+/* manana sabado */
+#coord_acto_1            {top: 60px; left: 390px;}
+#coord_acto_2            {top: 79px;left: 390px;}
+#coord_acto_3            {top: 98px;left: 390px;}
+#coord_acto_4            {top: 116px;left: 390px;}
+#coord_acto_5            {top: 134px;left: 390px;}
+
+/*tarde sabado*/
+#coord_acto_6            {top: 164px;left: 390px;}
+#coord_acto_7            {top: 183px;left: 390px;}
+#coord_acto_8            {top: 202px;left: 390px;}
+#coord_acto_9            {top: 221px;left: 390px;}
+#coord_acto_10           {top: 240px;left: 390px;}
+#coord_acto_11           {top: 259px;left: 390px;}
+
+/* manana domingo */
+#coord_acto_12           {top: 308px;left: 390px;}
+#coord_acto_13           {top: 327px;left: 390px;}
+#coord_acto_14           {top: 346px;left: 390px;}
+#coord_acto_15           {top: 365px;left: 390px;}
+
+
+/*tarde domingo*/
+#coord_acto_16           {top: 400px;left: 390px;}
+#coord_acto_17           {top: 426px;left: 390px;}
+#coord_acto_18           {top: 441px;left: 390px;}
+#coord_acto_19           {top: 456px;left: 390px;}
+#coord_acto_20           {top: 484px;left: 390px;}
+#coord_acto_21           {top: 498px;left: 390px;}
+#coord_acto_22           {top: 517px;left: 390px;}
+
+/* *************************************************** */
+/* IDENTIFICADORES DE BOTONES DEL MENU INFERIOR*/
+/* *************************************************** */
+#menu_inferior .uno   {width:180px;left:0px;top:10px;}
+#menu_inferior .dos   {width:180px;left:150px;top:10px;}
+#menu_inferior .tres  {width:180px;left:350px;top:10px;}
+#menu_inferior .cuatro {width:180px;left:490px;top:10px;}
+#menu_inferior .cinco {width:200px;left:690px;top:10px;}
+
+/* *************************************************** */
+/* IDENTIFICADORES DE SIMBOLOS DE LA LEYENDA           */
+/* *************************************************** */
+#leyenda .informacion { width: 45px; height: 46px;   left:606px;top:0px; background: url(../images/informacion.png) no-repeat;}
+#leyenda .informacion   span { width: 109px; height: 27px;   background: url('/images/txt_mas_info.png') no-repeat;}
+

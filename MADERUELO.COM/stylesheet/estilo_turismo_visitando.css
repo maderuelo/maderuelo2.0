@@ -1,0 +1,73 @@
+/* ************************************************** */
+/* ************************************************** */
+/* FONDO DEL MAPA PARA VISITANDO_MADERUELO*/
+/* ************************************************** */
+/* ************************************************** */
+#areamapa .fondomapa {
+width: 640px;
+height: 460px;
+background:  url(../images/turismo/visitando.jpg) no-repeat ; 
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* IDENTIFICADORES DE LOS SIMBOLOS DEL MAPA           */
+/* ************************************************** */
+/* ************************************************** */
+a.lugar_iglesia        {background: transparent url(../images/b_morado.png) no-repeat }
+a.lugar_civil          {background: transparent url(../images/b_rojo.png) no-repeat scroll 0px 0px;}
+a.lugar_museo          {background: transparent url(../images/b_beige.png) no-repeat scroll 0px 0px;}
+a.lugar_paseo          {background: transparent url(../images/b_azul.png) no-repeat scroll 0px 0px;}
+a.lugar_oficinaturismo {background: transparent url(../images/b_info.png) no-repeat scroll 0px 0px;}
+
+/* *************************************************** */
+/* IDENTIFICADORES DE COORDENADAS DE LUGARES           */
+/* *************************************************** */
+#coord_castroboda          {top: 420px; left: 220px;}
+#coord_puertavilla         {top: 215px;left: 125px;}
+#coord_plazasanmiguel      {top: 190px;left: 140px;}
+#coord_torreonoeste        {top: 215px;left: 70px;}
+#coord_sanmiguel           {top: 140px;left: 150px;}
+#coord_santamaria          {top: 20px;left: 365px;}
+#coord_plazabaile          {top: 130px;left: 245px;}
+#coord_puertabarrio        {top: 30px;left: 300px;}
+#coord_castillo            {top: 36px;left: 482px;}
+#coord_torreoncastillo     {top: 10px;left: 470px;}
+#coord_plazacastillo       {top: 20px;left: 450px;}
+#coord_solana              {top: 260px;left: 265px;}
+#coord_puenteviejo         {top: 255px;left: 450px;}
+#coord_veracruz            {top: 273px;left:567px;}
+#coord_puentenuevo         {top: 206px;left:510px;}
+#coord_arcarcel            {top: 75px;left:387px;}
+#coord_carcel              {top: 116px;left:320px;}
+#coord_oficinaturismo      {top: 90px;left:310px;}
+#coord_sanandres           {top: 10px;left:610px;}
+
+/* *************************************************** */
+/* IDENTIFICADORES DE SIMBOLOS DE LA LEYENDA           */
+/* *************************************************** */
+#leyenda .bandera_iglesia   {width: 54px;height: 55px; left:0px;top:0px; background: url(../images/turismo/bandera_iglesia.png) no-repeat;}
+#leyenda .bandera_iglesia span { width: 64px;height: 29px;   background: url('../images/turismo/txt_iglesia.png') no-repeat;}
+
+#leyenda .bandera_civil { width: 54px; height: 55px; left:138px;top:0px;  background: url(../images/turismo/bandera_civil.png) no-repeat;}
+#leyenda .bandera_civil span { width: 94px; height: 30px;   background: url('../images/turismo/txt_civil.png') no-repeat;}
+
+#leyenda .bandera_museo { width: 54px; height: 55px; left:306px;top:0px; background: url(../images/turismo/bandera_museo.png) no-repeat;}
+#leyenda .bandera_museo   span { width: 79px; height: 29px;   background: url('../images/turismo/txt_museo.png') no-repeat;}
+
+#leyenda .bandera_paseo { width: 54px; height: 55px; left:459px;top:0px;  background: url(../images/turismo/bandera_paseo.png) no-repeat;}
+#leyenda .bandera_paseo   span { width: 73px; height: 27px;   background: url('../images/turismo/txt_paseo.png') no-repeat;}
+
+#leyenda .informacion { width: 45px; height: 46px;   left:606px;top:0px; background: url(../images/informacion.png) no-repeat;}
+#leyenda .informacion   span { width: 109px; height: 27px;   background: url('/images/txt_mas_info.png') no-repeat;}
+
+
+/* *************************************************** */
+/* IDENTIFICADORES DE BOTONES DEL MENU INFERIOR*/
+/* *************************************************** */
+#menu_inferior .uno   {width:180px;left:0px;top:10px;}
+#menu_inferior .dos   {width:180px;left:180px;top:10px;}
+#menu_inferior .tres  {width:180px;left:360px;top:10px;}
+#menu_inferior .cuatro {width:180px;left:540px;top:10px;}
+#menu_inferior .cinco {width:200px;left:720px;top:10px;}
+

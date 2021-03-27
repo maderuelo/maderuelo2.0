@@ -1,0 +1,71 @@
+/* DEFINICION DE ELEMENTOS COMUNES DE PAGINA */
+/* ***************************************** */
+
+/* ***************************************** */
+/* TODA LA PAGINA*/
+/* ***************************************** */
+#fondo { 
+width: 1517px;
+background: black;
+padding:10px 10px 10px 10px;
+}
+
+
+
+/* ***************************************** */
+/*  DEFINICION CABECERA DE LA PAGINA     */     
+/* ***************************************** */
+#cabecera { 
+width: 1007px;
+display: block;
+height: 165px;
+background: black; 
+position:relative;
+padding:0px 0px 0px 0px;
+margin:0;
+}
+
+/* ***************************************** */
+/*  DEFINICION AREA PORTADA.  FONDO NEGRO    */     
+/* ***************************************** */
+#areaportada { /* posicion relativa */
+  position: relative;
+  width: 1007px;
+  height: 580px;
+  background: transparent url(../images/portada.jpg) no-repeat scroll; 
+  padding:0px 0px 0px 0px;}
+
+/* ***************************************** */
+/*  DEFINICION AREA MAPA DE LA PAGINA     */     
+/* ***************************************** */
+#areamapa { /* posicion relativa */
+  position: relative;
+  width: 1007px;
+  height: 592px;
+  background: transparent url(../images/lienzo.jpg) no-repeat scroll;
+  padding:0px 0px 0px 0px;
+}
+
+/* ***************************************** */
+/*  DEFINICION AREA TEXTO DE LA PAGINA.  BAJO MAPA     */     
+/* ***************************************** */
+#areatexto { 
+  position: relative;
+  width: 1007px;
+  background: transparent url(../images/lienzo.jpg) repeat scroll; 
+  margin-top:60px;
+  padding:5px 0px 5px 0px;
+}
+
+/* ***************************************** */
+/*  DEFINICION VALIDACION                    */     
+/* ***************************************** */
+#arealogos { 
+  position: relative;
+  width: 983px;
+  background: transparent url(../images/lienzo.jpg) no-repeat scroll; 
+  margin-left:7px;  padding:5px 0px 0px 5px;
+}
+
+
+

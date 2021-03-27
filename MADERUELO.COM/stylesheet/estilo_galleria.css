@@ -1,0 +1,90 @@
+.galleria{
+     list-style:none;width:200px}
+.galleria li{
+     display:block;
+     width:80px;
+     height:80px;overflow:hidden;
+     float:left;
+     margin:0 10px 10px 0}
+.galleria li a{
+    display:none}
+.galleria li div{
+    position:absolute;
+    display:none;
+    top:0;
+    left:180px}
+.galleria li div img{
+    cursor:pointer; }
+
+.galleria li.active div img,.galleria li.active div{display:block}
+
+.galleria li img.thumb{
+    cursor:pointer;top:auto;
+    left:auto;
+    display:block;
+    width:auto;
+    height:auto}
+.galleria li .caption{
+    display:block;
+    padding-top:.5em}
+
+* html .galleria li div span{width:400px} /* MSIE bug */
+
+	/* BEGIN DEMO STYLE */
+	*{margin:0;padding:0}
+
+
+
+	a{
+          color:#348;
+            text-decoration:none;
+            outline:none;}
+	a:hover{
+            color:#67a;}
+	.caption{
+            font-style:italic;font-size: 80%; 
+            color:#887;}
+	.demo{
+            position:relative;
+            margin-top:2px;}
+	.gallery_demo{       /* ancho del espacio para thumnails  */
+            width:780px;
+            margin:0 auto;}
+	.gallery_demo li{
+            width:68px;height:40px;
+            border:3px double #111;
+            margin: 0 2px;
+            background:#000;}
+	.gallery_demo li div{left:240px}
+	.gallery_demo li div .caption{font:italic 0.7em/1.4 georgia,serif;text-align:justify }
+	
+	#main_image{
+            margin:0 auto 10px auto;  /*separacion entre el visor y thumbnails*/
+            height:450px;
+            width:780px;
+            background:black;
+            text-align:center;}
+	#main_image img{margin-bottom:10px;margin-top:10px;font-size: 80%;}
+	
+	.nav_galeria{padding-top:15px;clear:both;
+             font:80% bold ;
+             letter-spacing:3px;
+             text-transform:uppercase;
+             text-align:center;
+             color:#bba;}
+        .tit_galeria{
+             text-align:center; 
+             }
+	
+/*	.info{
+             text-align:left;
+             width:700px;
+             margin:30px auto;
+             border-top:1px dotted #221;
+             padding-top:30px;}
+	.info p{margin-top:1.6em;}  */
+	
+        .pie_galeria{
+             text-align:center; 
+             }
+

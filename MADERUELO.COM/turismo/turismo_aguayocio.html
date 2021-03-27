@@ -1,0 +1,530 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<title>AGUA Y OCIO en Maderuelo</title>
+
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_comun.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_cabecera.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_secciones.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_mapa.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_turismo_aguayocio.css">
+
+<script type="text/javascript" src="../javascripts/eventos_mapa.js"> </script>
+</head>
+<body>
+<!-- INICIO FONDO -->
+<div id="fondo">
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** INICIO CABECERA                      ****** -->
+<!-- ************************************************** -->
+
+<div id="cabecera">
+  <a class="escudo" href="/inicio.html"></a>
+  <div class="maderuelocom"></div>
+  <!-- MENU GRAFICO: DEFINIR BOTONES EN ORDEN DRCHA a IZDA -->  <ul id="menu_btn_grafico">
+    <li><a href="http://www.aemet.es/es/eltiempo/prediccion/localidades?l=40408"       class="icono_clima"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://webmail.maderuelo.com/"                                        class="icono_arroba" 
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://madeforum.maderuelo.com/"                                      class="icono_foro"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/naturaleza/parque_natural/presen_ficha.html" class="icono_parque"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/principal/360/entrada.html"            class="icono_360"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="/siglo12/siglo12.html"                        class="icono_siglo12"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+  </ul>
+<!-- MENU TEXTUAL DE CABECERA: DEFINIR BOTONES EN ORDEN IZDA A DRCHA -->
+  <ul id="menu_btn_horiz">
+    <li><a href="/turismo/turismo_visitando.html"  class="btn_turismo"     >Turismo<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_historia"    >Historia<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_arte"        >Arte<span></span></a></li>
+    <li><a href="/naturaleza/ind_natural.html"     class="btn_naturaleza"  >Naturaleza<span></span></a></li>
+    <li><a href="/festejos/ind_fiesta.html" class="btn_festejos"    >Festejos<span></span></a></li>
+    <li><a href="/ayuntamiento/ayto.html" class="btn_ayuntamiento">Ayuntamiento<span></span></a></li>
+    <li><a href=" " class="btn_anuncios"    >Anuncios<span></span></a></li>
+    <li><a href=" " class="btn_web"         >Web<span></span></a></li>
+  </ul>
+<!-- SUBMENU DE BOTONES TEXTO     -->
+<!-- ************************* -->
+<div id="submenu_texto" ></div>
+</div><!-- FIN CABECERA  -->
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA MAPA CENTRAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areamapa">
+
+<!-- ***** FONDO MAPA *****-->
+<div class="fondomapa">
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** LEYENDA                              ****** -->
+<!-- ************************************************** -->
+<ul id="leyenda">
+<li><a class="leyenda_natacion" href=" " title="Lugares donde está permitido el baño" ><span></span></a></li>
+<li><a class="leyenda_vela"   href=" " title="Deportes de vela, sujeto a permiso de JCYL" ><span></span></a></li>
+<li><a class="leyenda_pesca"   href=" " title="Pesca de barbo, carpa y blackbass con licencia de JCYL"><span></span></a></li>
+<li><a class="leyenda_remo"   href=" " title="Deportes de remo, bajo licencia de JCYL"><span></span></a></li>
+<li><a class="leyenda_futbol"   href=" " title="Campo de fútbol reglamentario de tierra"><span></span></a></li>
+<li><a class="leyenda_fronton"   href=" " title="Maderuelo dispone de un moderno frontón polideportivo"><span></span></a></li>
+<li><a class="informacion"     href="#texto" ><span></span></a></li>
+</ul> <!-- FIN LEYENDA -->
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** MENU INFERIOR                        ****** -->
+<!-- ************************************************** -->
+<ul id="menu_inferior">
+<li><a class="uno" href="/turismo/turismo_comollegar.html"><span>¿Cómo llegar?      </span></a></li>
+<li><a class="dos"    href="/turismo/turismo_visitando.html"><span>Callejeando        </span></a></li>
+<li><a class="tres" href="/turismo/turismo_hosteleria.html"><span>Hostelería         </span></a></li>
+<li><a class="cuatro"    href="/turismo/turismo_senderismo.html"><span>Senderismo    </span></a></li>
+<li><a class="cinco"   href="/turismo/turismo_tierramaderuelo.html"><span>Tierra de Maderuelo</span></a></li>
+
+</ul> <!-- FIN MENU INFERIOR -->
+
+
+
+<!-- ***** MAPA *****-->
+<dl class="mapa">
+<!-- ***************************************************************************** -->
+<!--  OFICINA DE TURISMO -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria.html" class="lugar_oficinaturismo" id="coord_oficinaturismo" 
+       onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/oficinaturismo.gif" id="img_oficinaturismo" >
+   <h7>Oficina de Turismo</h7>
+<br><br><br>
+Maderuelo dispone de Oficina de Turismo donde podrá ser informado de qué visitar en esta Villa y sus alrededores.
+Los horarios de apertura son de Miércoles a Sábado,de 10h a 17h<br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Visitas concertadas</li>
+      <li>Tfn: 921 55 60 89</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria.html" class="enlaceweb" 
+           onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+   </ul>
+</dd>
+
+
+
+<!-- ***************************************************************************** -->
+<!--  LAS HAZAS NATACION + REMO + VELA -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_hazas.html" class="agua" id="coord_hazas" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/hazas.jpg"  >
+   <h7>Las Hazas</h7>
+<br><br><br>
+A lo largo del embalse encontramos varias playas aptas para el baño.  Destaca las Hazas por su cercanía a Maderuelo y su orientación a Poniente, su fácil acceso desde la carretera. Aguas poco profundas y talud poco pronunciado.
+<br><br>
+Dista unos 3Km de Maderuelo, siguiendo la carretera de Ayllón a Aranda, por la margen derecha del embalse.
+<br><br>
+Se recuerda a todos, nuestro deber de preservar <b>limpio el entorno</b>. Estás en el Parque Natural Hoces del Riaza.
+<br>
+<ul class="l_sinvineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_ocio_vela_1.html" class="enlaceweb">Sobre ocio</a></li>
+      <li><a href="turismo_galeria_hazas.html" class="enlaceweb">Sobre este paraje</a></li>
+</ul>
+<ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Orientado a Poniente</li>
+      <li>Fácil Acceso</li>
+      <li>Brisa predominante del Oeste</li>
+</ul>
+<img class="item" src="/images/turismo/icono_vela.png">
+<img class="item" src="/images/turismo/icono_remo.png">
+<img class="item" src="/images/turismo/icono_natacion.png">
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  LA CERCONA NATACION + REMO + VELA -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_cercona.html" class="agua" id="coord_cercona" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/cercona.jpg"  >
+   <h7>La Cercona</h7>
+<br><br><br>
+A lo largo del embalse encontramos varias playas aptas para el baño.  La Cercona también está orientada a Poniente y su talud poco pronunciado facilita el baño.<br>
+Dista unos 6Km de Maderuelo, siguiendo la carretera de Ayllón a Aranda. Tras pasar las Hazas, tomar el primer camino a la izquierda, que bordea la margen derecha del embalse, y seguirlo durante unos 2Km.
+<br><br>
+Se recuerda a todos, nuestro deber de preservar <b>limpio el entorno</b>. Estás en el Parque Natural Hoces del Riaza.
+<br>
+<ul class="l_sinvineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_ocio_vela_1.html" class="enlaceweb">Sobre ocio</a></li>
+      <li><a href="turismo_galeria_cercona.html" class="enlaceweb">Sobre este paraje</a></li>
+</ul>
+<ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Orientado a Poniente</li>
+      <li>2km por camino</li>
+      <li>Brisa predominante del Oeste</li>
+</ul>
+<img class="item" src="/images/turismo/icono_vela.png">
+<img class="item" src="/images/turismo/icono_remo.png">
+<img class="item" src="/images/turismo/icono_natacion.png">
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  LA ALDEHUELA NATACION + REMO + VELA -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_aldehuela_1.html" class="agua" id="coord_aldehuela" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/aldehuela.jpg"  >
+   <h7>La Aldehuela</h7>
+<br><br><br>
+Desde la carretera de Aranda a Ayllón, a unos 9Km de Maderuelo, un camino desciende desde el monte de sabinas hacia esta playa.  Precaución en el baño por que el talud es pronunciado.
+<br><br>
+Se recuerda a todos, nuestro deber de preservar <b>limpio el entorno</b>. Estás en el Parque Natural Hoces del Riaza.
+<br>
+<ul class="l_sinvineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_ocio_vela_1.html" class="enlaceweb">Sobre ocio</a></li>
+      <li><a href="turismo_galeria_aldehuela_1.html" class="enlaceweb">Sobre este paraje</a></li>
+</ul>
+<ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Orientado a Poniente</li>
+      <li>2km por camino</li>
+      <li>Brisa predominante del Oeste</li>
+</ul>
+<img class="item" src="/images/turismo/icono_vela.png">
+<img class="item" src="/images/turismo/icono_remo.png">
+<img class="item" src="/images/turismo/icono_natacion.png">
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  LAS CAÑADAS NATACION + REMO + VELA -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_canadas_1.html" class="agua" id="coord_canadas" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/canadas.jpg"  >
+   <h7>La Cañadas</h7>
+<br><br><br>
+En la margen izquierda del embalse, apto para el baño, piragua y, especialmente, para vela y windsurf, por el viento favorable de poniente.  Lo accidentado del relieve aconseja ser cauto a la hora del baño.
+<br><br>
+Dista unos 5Km de Maderuelo, 1Km por la carretera a Campo de San Pedro, desvío a la izquierda, por la carretera de la Estación.  Una vez llegados a la Estacion, tomar el camino a la izquierda, que conduce al aparcamiento, junto al embalse.
+<br><br>
+Se recuerda a todos, nuestro deber de preservar <b>limpio el entorno</b>. Estás en el Parque Natural Hoces del Riaza.
+<br>
+<ul class="l_sinvineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_ocio_vela_1.html" class="enlaceweb">Sobre ocio</a></li>
+      <li><a href="turismo_galeria_canadas_1.html" class="enlaceweb">Sobre este paraje</a></li>
+</ul>
+<ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Orientado a Poniente</li>
+      <li>viento y brisa aguas adentro</li>
+      <li>2km por camino</li>
+</ul>
+<img class="item" src="/images/turismo/icono_vela.png">
+<img class="item" src="/images/turismo/icono_remo.png">
+<img class="item" src="/images/turismo/icono_natacion.png">
+</dd>
+
+
+
+
+
+<!-- ***************************************************************************** -->
+<!--  LA VERACRUZ NATACION + REMO + VELA + PESCA -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_veracruz_1.html" class="agua" id="coord_veracruz" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/veracruz.jpg"  >
+   <h7>La Veracruz</h7>
+<br><br><br>
+Junto a la Veracruz, el Riaza describe un gran meandro y podemos practicar la pesca, natación y piraguismo, si bien debemos extremar las precauciones por lo accidentado del relive cuando las aguas están altas. 
+<br><br>
+Dista 1Km de Maderuelo, cruzando el puente Nuevo.
+<br><br>
+Se recuerda a todos, nuestro deber de preservar <b>limpio el entorno</b>.
+<br>
+<ul class="l_sinvineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_ocio_pesca_1.html" class="enlaceweb">Sobre ocio</a></li>
+      <li><a href="turismo_galeria_veracruz_1.html" class="enlaceweb">Sobre este paraje</a></li>
+</ul>
+<ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Aparcamiento</li>
+      <li>Fácil Acceso</li>
+      <li>Relieve sumergido accidentado</li>
+</ul>
+<img class="item" src="/images/turismo/icono_pesca.png">
+<img class="item" src="/images/turismo/icono_remo.png">
+<img class="item" src="/images/turismo/icono_natacion.png">
+</dd>
+
+
+<!-- ***************************************************************************** -->
+<!--  SAN ANDRES PESCA -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_sanandres.html" class="pesca" id="coord_sanandres" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/sanandres.jpg"  >
+   <h7>San Andrés</h7>
+<br><br><br>
+Numerosos puntos de las márgenes del embalse permite la pesca de Blackbass, Carpa y Barbo.
+San Andres y la Rivilla están en la falda de Maderuelo y el acceso desde la carretera o desde la Senda Larga del Parque es bastante fácil. <br><br>
+Situado en la margen izquierda del embalse, Entre el puente nuevo, la confluencia con el Arroyo Moralejos y la curva de la Rivilla.
+<br><br>
+Se recuerda a todos, su deber de preservar <b>limpio el entorno</b> y no dejar cebos, anzuelos ni latas en las márgenes.
+<br>
+<ul class="l_sinvineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_ocio_pesca_1.html" class="enlaceweb">Pesca</a></li>
+      <li><a href="turismo_galeria_sanandres_1.html" class="enlaceweb">Sobre este paraje</a></li>
+</ul>
+<ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>barbo, Blackbass y Carpa</li>
+      <li>Fácil Acceso</li>
+</ul>
+<img class="item" src="/images/turismo/icono_pesca.png">
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  MILAGROSA PESCA -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_milagrosa.html" class="pesca" id="coord_milagrosa" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/milagrosa.jpg"  >
+   <h7>La Milagrosa</h7>
+<br><br><br>
+Numerosos puntos de las márgenes del embalse permite la pesca de Blackbass, Carpa y Barbo.
+La Milagrosa está en la margen derecha de la cola del embalse y el acceso desde la carretera de Aranda a Ayllón es bastante fácil. Dista unos 2Km de Maderuelo,
+<br><br>Se recuerda a todos, su deber de preservar <b>limpio el entorno</b> y no dejar cebos, anzuelos ni latas en las márgenes.
+<br>
+<ul class="l_sinvineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_ocio_pesca_1.html" class="enlaceweb">Pesca</a></li>
+      <li><a href="turismo_galeria_milagrosa.html" class="enlaceweb">Sobre este paraje</a></li>
+</ul>
+<ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>barbo, Blackbass y Carpa</li>
+      <li>Fácil Acceso</li>
+      <li>No estacionar en el arcén</li>
+</ul>
+<img class="item" src="/images/turismo/icono_pesca.png">
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  PEÑALBA PESCA -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_penalba.html" class="pesca" id="coord_penalba" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/penalba.jpg"  >
+   <h7>Los Chorrillos y Villarre</h7>
+<br><br><br>
+Numerosos puntos de las márgenes del embalse permite la pesca de Blackbass, Carpa y Barbo.
+Siguiendo 1Km el camino de los Chorrillos, se alcanza la cola del embalse por la margen izquierda. El tráfico está prohibido.
+<br><br>Se recuerda a todos, su deber de preservar <b>limpio el entorno</b> y no dejar cebos, anzuelos ni latas en las márgenes.
+<br>
+<ul class="l_sinvineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_ocio_pesca_1.html" class="enlaceweb">Pesca</a></li>
+      <li><a href="turismo_galeria_penalba.html" class="enlaceweb">Sobre este paraje</a></li>
+</ul>
+<ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>barbo, Blackbass y Carpa</li>
+      <li>Fácil Acceso</li>
+      <li>Estacionar en el camino y seguir a pie</li>
+</ul>
+<img class="item" src="/images/turismo/icono_pesca.png">
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  EL FRONTON -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_fronton_1.html" class="deporte" id="coord_fronton" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/fronton.jpg"  >
+   <h7>Frontón y Polideportivo</h7>
+<br><br><br>
+Cerca de la Ermita de Castroboda, junto al campo de fútbol, se encuentra el frontón, de grandes dimensiones y apto para la práctica de otro tipo de deportes (skate, rolling, baloncesto, futbito, etc...).<br>
+Este moderno frontón está dotado de iluminación y graderío.  Sus grandes dimensiones permiten disputar partidos de pelota-mano, frontenis e incluso cesta-punta. La pelota-mano ha sido el deporte más prestigioso entre nuestros mayores.  Por ello, durante las fiestas patronales se celebran encuentros de manomanistas importantes del circuito nacional.<br> 
+<br><br>
+Dista 1Km de Maderuelo, cruzando las eras. EL buen firme lo hace idóneo para la iniciación de los peques al patinaje, skate o bici.
+<br><br>
+Se recuerda a todos, su deber de preservar <b>limpio el entorno</b>
+<br>
+<ul class="l_sinvineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_fronton_1.html" class="enlaceweb">Sobre ocio</a></li>
+</ul>
+<ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Aparcamiento</li>
+      <li>Graderío</li>
+      <li>Iluminación Nocturna</li>
+      <li>Fácil Acceso</li>
+</ul>
+<img class="item" src="/images/turismo/icono_fronton.png">
+<img class="item" src="/images/turismo/icono_balon.png">
+<img class="item" src="/images/turismo/icono_bici.png">
+</dd>
+
+
+<!-- ***************************************************************************** -->
+<!--  VEGAPALACIO BICICLETA-->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_vegapalacio_1.html" class="bici" id="coord_vegapalacio" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/vegapalacio.jpg"  >
+   <h7>Rutas en Bicicleta (I)</h7>
+<br><br><br>
+Son numerosos los caminos que nos ofrecen divertidas rutas en bici.  El límite, como siempre lo pone uno mismo y sus ganas de recorrer baldíos, encinares y parameras. Rutas más detalladas en la sección de "Senderismo"
+<br><br>
+El trazado es poco accidentado y los paisajes muy vistosos, salpicados de bosques de sabinas y encinas poco espesos.
+<br><br>
+Se recuerda a todos, su deber de <b>respetar el entorno</b>
+<br>
+<ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_ocio_bici_1.html" class="enlaceweb">Sobre ocio</a></li>
+      <li><a href="turismo_galeria_vegapalacio_1.html" class="enlaceweb">Sobre este paraje</a></li>
+</ul>
+<ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Bosques de ribera poco espesos</li>
+      <li>Fauna interesante</li>
+</ul>
+<img class="item" src="/images/turismo/icono_bici.png">
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  ESTACIÓN BICICLETA-->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_estacion_1.html" class="bici" id="coord_estacion" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/estacion.jpg"  >
+   <h7>Rutas en Bicicleta (II)</h7>
+<br><br><br>
+Son numerosos los caminos que nos ofrecen divertidas rutas en bici.  El límite, como siempre lo pone uno mismo y sus ganas de recorrer baldíos, encinares y parameras.  Siempre respetando las limitaciones impuestas por el Parque Natural Hoces del Riaza si se quiere acceder más al norte de la Estación. Rutas más detalladas en la sección de "Senderismo"
+<br><br>
+El trazado es poco accidentado y los paisajes muy vistosos, salpicados de bosques de sabinas y encinas poco espesos.
+<br><br>
+Se recuerda a todos, su deber de <b>respetar el entorno</b>
+<br>
+<ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_ocio_bici_1.html" class="enlaceweb">Sobre ocio</a></li>
+      <li><a href="turismo_galeria_estacion_1.html" class="enlaceweb">Sobre este paraje</a></li>
+</ul>
+<ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Bosques poco espesos</li>
+      <li>Fauna interesante</li>
+</ul>
+<img class="item" src="/images/turismo/icono_bici.png">
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  VAYUNQUERA BICICLETA-->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_vayunquera_1.html" class="bici" id="coord_paramo" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/pantamino.jpg"  >
+   <h7>Rutas en Bicicleta (III)</h7>
+<br><br><br>
+Son numerosos los caminos que nos ofrecen divertidas rutas en bici.  El límite, como siempre lo pone uno mismo y sus ganas de recorrer baldíos, encinares y parameras.  Rutas más detalladas en la sección de "Senderismo"
+<br><br>
+El trazado, una vez alcanzado el Páramo, es poco accidentado y los paisajes muy vistosos, salpicados de bosques de sabinas y encinas poco espesos.
+<br><br>
+Se recuerda a todos, su deber de <b>respetar el entorno</b>
+<br>
+<ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_ocio_bici_1.html" class="enlaceweb">Sobre ocio</a></li>
+      <li><a href="turismo_galeria_vayunquera_1.html" class="enlaceweb">Sobre este paraje</a></li>
+</ul>
+<ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Bosques poco espesos</li>
+      <li>Fauna interesante</li>
+</ul>
+<img class="item" src="/images/turismo/icono_bici.png">
+</dd>
+
+
+</dl><!-- FIN MAPA  -->
+</div> <!-- FIN FONDO MAPA  -->
+
+
+
+
+</div> <!-- FIN AREACENTRAL -->
+
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA TEXTO FINAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areatexto"><a NAME="texto"></a>
+<p class="big">
+  <h3><span class="letracapital">A</span>gua en Maderuelo es sinónimo de ocio...</h3>
+</p>
+<p>
+<br><br><br><br>Desde comienzos de Primavera acuden al pantano practicantes de piragüismo, vela o windsurf y durante las tardes de verano, numerosas personas acuden a las playas más soleadas.<br>
+Salvo para el baño, permitido en las playas aquí mencionadas, se requiere solicitar licencia en la Casa del Parque o en la Oficina de Turismo de Maderuelo.
+<br><br>
+En otros momentos, podemos practicar diversos deportes de pelota o incluso patinaje en el amplio frontón de Los Cotos.
+<br>Si, por el contrario, le interesan las marchas a pie o en bicicleta, consulte nuestras sugerencias en la página de "Senderismo".
+<br><br>
+<br>Además, en las cercanías de Maderuelo, puede encontrar otras actividades relacionadas con el ocio.  Por ejemplo:<br>
+   <ul class="l_rombo">
+      <lh>Monta a Caballo:</lh> 
+      <li>En Grajera, en el Centro de Actividades "LA HÍPICA" (tfno. 921 557 861).</li>
+      <li>En Riaza, en la Hípica "LA VEREDA" (tfno. 921 125 114).</li>
+   </ul> 
+   <ul class="l_rombo">
+      <lh>Karting y Quads:</lh> 
+      <li>En Fresno de la Fuente, en el Centro de Ocio "LUIS MIGUEL" (tfno. 921 063 030).</li>
+   </ul> 
+   <ul class="l_rombo">
+      <lh>Paintball:</lh> 
+      <li>En Fresno de la Fuente, en el Centro de Ocio "LUIS MIGUEL" (tfno. 921 063 030).</li>
+      <li>En Grajera, en el Centro de Actividades "LA HÍPICA" (tfno. 921 557 861).</li>
+   </ul> 
+</p>
+</div> <!-- FIN AREA TEXTO FINAL PAGINA -->
+
+
+
+</div><!-- FIN FONDO -->
+</body>
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Senderismo en Maderuelo</title>
+
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_comun.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_cabecera.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_secciones.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_mapa.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_turismo_senderismo.css">
+<script type="text/javascript" src="../javascripts/eventos_mapa.js"> </script>
+</head>
+<body>
+<!-- INICIO FONDO -->
+<div id="fondo">
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** INICIO CABECERA                      ****** -->
+<!-- ************************************************** -->
+
+<div id="cabecera">
+  <a class="escudo" href="/inicio.html"></a>
+  <div class="maderuelocom"></div>
+  <!-- MENU GRAFICO: DEFINIR BOTONES EN ORDEN DRCHA a IZDA -->
+  <ul id="menu_btn_grafico">
+    <li><a href="http://www.aemet.es/es/eltiempo/prediccion/municipios/maderuelo-id40115"       class="icono_clima"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com"                                        class="icono_arroba" 
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com"                                      class="icono_foro"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/naturaleza/parque_natural/presen_ficha.html" class="icono_parque"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/principal/360/entrada.html"            class="icono_360"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="/siglo12/siglo12.html"                        class="icono_siglo12"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+  </ul>
+<!-- MENU TEXTUAL DE CABECERA: DEFINIR BOTONES EN ORDEN IZDA A DRCHA -->
+  <ul id="menu_btn_horiz">
+    <li><a href="/turismo/turismo_visitando.html"  class="btn_turismo"     >Turismo<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_historia"    >Historia<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_arte"        >Arte<span></span></a></li>
+    <li><a href="/naturaleza/ind_natural.html"     class="btn_naturaleza"  >Naturaleza<span></span></a></li>
+    <li><a href="/festejos/ind_fiesta.html" class="btn_festejos"    >Festejos<span></span></a></li>
+    <li><a href="/ayuntamiento/ayto.html" class="btn_ayuntamiento">Ayuntamiento<span></span></a></li>
+    <li><a href=" " class="btn_anuncios"    >Anuncios<span></span></a></li>
+    <li><a href=" " class="btn_web"         >Web<span></span></a></li>
+  </ul>
+<!-- SUBMENU DE BOTONES TEXTO     -->
+<!-- ************************* -->
+<div id="submenu_texto" ></div>
+</div><!-- FIN CABECERA  -->
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA MAPA CENTRAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areamapa">
+
+<!-- ***** FONDO MAPA *****-->
+<div class="fondomapa">
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** LEYENDA                              ****** -->
+<!-- ************************************************** -->
+<ul id="leyenda">
+<li><a class="bandera_verde"    href=" " ><span></span></a></li>
+<li><a class="bandera_amarilla" href=" " ><span></span></a></li>
+<li><a class="bandera_roja"     href=" " ><span></span></a></li>
+<li><a class="informacion"      href="#texto" ><span></span></a></li>
+</ul> <!-- FIN LEYENDA -->
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** MENU INFERIOR                        ****** -->
+<!-- ************************************************** -->
+<ul id="menu_inferior">
+<li><a class="uno"    href="/turismo/turismo_comollegar.html"><span>¿Cómo llegar?      </span></a></li>
+<li><a class="dos"    href="/turismo/turismo_visitando.html"><span>Callejeando    </span></a></li>
+<li><a class="tres"   href="/turismo/turismo_hosteleria.html"><span>Hostelería         </span></a></li>
+<li><a class="cuatro" href="/turismo/turismo_aguayocio.html"><span>Agua y Ocio        </span></a></li>
+<li><a class="cinco"  href="/turismo/turismo_tierramaderuelo.html"><span>Tierra de Maderuelo</span></a></li>
+
+</ul> <!-- FIN MENU INFERIOR -->
+
+
+
+<!-- ***** MAPA *****-->
+<dl class="mapa">
+<!-- ***************************************************************************** -->
+<!--  OFICINA DE TURISMO -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria.html" class="lugar_oficinaturismo" id="coord_oficinaturismo" 
+       onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/oficinaturismo.gif" id="img_oficinaturismo" >
+   <h7>Oficina de Turismo</h7><br>
+Maderuelo dispone de Oficina de Turismo donde podrá ser informado de qué visitar en esta Villa y sus alrededores.
+Los horarios de apertura son de Miércoles a Sábado,d e 10h a 17h<br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Visitas concertadas</li>
+      <li>Tfn: 921 55 60 89</li>
+   </ul>
+</dd>
+
+
+
+<!-- ***************************************************************************** -->
+<!--  SENDA DEL PARAMO Y VAYUNQUERA 1-->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_vayunquera_1.html" class="senda_dificil" id="coord_paramo" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/pantamino.jpg"  >
+   <h7>Senda del Páramo y Vayunquera</h7><br>
+Desde Maderuelo, descendemos hacia el Puente Nuevo para pasar al otro lado del embalse.<br> 
+Tras cruzar la carretera de Ayllón-Aranda, ascendemos por el camino de enfrente, el de Pantamino, dejando el cerro de la Horca Vieja a la izquierda y Peñalba a la diestra.<br>
+Tras 2Km, tomaremos la bifurcación a la izquierda que desciende hasta entrar en la parte alta de Vayunquera, junto a la Fuente Cimera.<br>
+Junto a frondosas choperas, un camino de 4km nos acerca de nuevo hasta la carretera de Aranda, que flanquea la margen izquierda del pantano y 
+nos lleva de vuelta al Puente Nuevo y Maderuelo.
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Distancia total: 12Km</li>
+      <li>Recorrido a pie o bicicleta</li>
+      <li>Relieve poco accidentado</li>
+   </ul>
+   <ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a  href="turismo_galeria_vayunquera_1.html"  class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Fotos</a></li>
+      <li><a  href="turismo_galeria_vayunquera_2.html"  class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Fotos (II)</a></li>
+   </ul>
+</dd>
+<!-- ***************************************************************************** -->
+<!--  SENDA DEL PARAMO Y VAYUNQUERA 2-->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_vayunquera_1.html" class="senda_dificil" id="coord_vayunquera" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/vayunquera.jpg"  >
+   <h7>Senda del Páramo y Vayunquera</h7>
+<br>
+Desde Maderuelo, descendemos hacia el Puente Nuevo para pasar al otro lado del embalse.<br> 
+Tras cruzar la carretera de Ayllón-Aranda, ascendemos por el camino de enfrente, el de Pantamino, dejando el cerro de la Horca Vieja a la izquierda y Peñalba a la diestra.<br>
+Tras 2Km, tomaremos la bifurcación a la izquierda que desciende hasta entrar en la parte alta de Vayunquera, junto a la Fuente Cimera.<br>
+Junto a frondosas choperas, un camino de 4km nos acerca de nuevo hasta la carretera de Aranda, que flanquea la margen izquierda del pantano y 
+nos lleva de vuelta al Puente Nuevo y Maderuelo.
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Distancia total: 12Km</li>
+      <li>Recorrido a pie o bicicleta</li>
+      <li>Relieve poco accidentado</li>
+   </ul>
+   <ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a  href="turismo_galeria_vayunquera_1.html"  class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Fotos</a></li>
+      <li><a  href="turismo_galeria_vayunquera_2.html"  class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Fotos (II)</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  SENDA DEl ARROYO y MARIPARDA  -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_arroyo_1.html" class="senda_facil" id="coord_mariparda" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/arroyo.jpg"  >
+   <h7>Senda del Arroyo y Mariparda</h7>
+<br><br>
+Partiendo de la Puerta del Barrio, descendemos junto a las viejas bodegas por el camino de la Umbría hacia el Arroyo y atravesamos la carretera que desciende hacia el pantano.
+<br><br>
+Llegados a los huertos del Arroyo, si vamos a poniente, camino de la Vega, toparemos con la carretera de la Estación al cabo de 1 km y al cabo de 3 km, la carretera muere en la vieja estación, pudiendo seguir y descender hacia el Pantano, hacia las Cañadas.<br>
+El retorno se hará desandando el camino o bordeando el embalse, dejando el agua a nuestra izquierda,
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Distancia total: 1Km</li>
+      <li>Recorrido a pie o bicicleta</li>
+      <li>Relieve poco accidentado</li>
+   </ul>
+   <ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_arroyo_1.html"  class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Fotos</a></li>
+      <li><a href="turismo_galeria_arroyo_2.html"  class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Fotos (II)</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  SENDA DEl ARROYO y VEGAPALACIO  -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_vegapalacio_1.html" class="senda_facil" id="coord_vegapalacio" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/vegapalacio.jpg"  >
+   <h7>Paseo por Vegapalacio</h7>
+<br><br><br><br>
+Partiendo de la Puerta del Barrio, descendemos junto a las viejas bodegas por el camino de la Umbría hacia el Arroyo y atravesamos la carretera que desciende hacia el pantano.
+<br><br>
+Llegados a los huertos del Arroyo, giramos a la derecha, a poniente, por el camino de la Vega.  El valle se abre aguas arriba.  Podemos transitar dos caminos distintos, uno en cada ribera del caz del arroyo Moralejos.<br><br>
+Por Vegapalacio se conoce la hondonada entre el hoyo del Mercado, la carretera de la Estación y los huertos de Mariparda. <br>
+Si el paseo nos parece suficiente, el retorno a Maderuelo se hará desandando el camino o tomando la citada carretera, hacia la izquierda para subir al depósito viejo, las eras y la puerta de la Villa.
+<br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Distancia total: 3Km</li>
+      <li>Recorrido a pie o bicicleta</li>
+      <li>Relieve poco accidentado</li>
+   </ul>
+   <ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_vegapalacio_1.html"  class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Fotos</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  SENDA DEl ARROYO y la VEGA  -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_vega_1.html" class="senda_facil" id="coord_vega" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/vega.jpg"  >
+   <h7>Paseo por la Vega</h7>
+<br><br><br><br>
+Partiendo de la Puerta del Barrio, descendemos junto a las viejas bodegas por el camino de la Umbría hacia el Arroyo y atravesamos la carretera que desciende hacia el pantano.
+<br><br>
+Llegados a los huertos del Arroyo, giramos a la derecha, a poniente, por el camino de la Vega.  El valle se abre aguas arriba.  Podemos transitar dos caminos distintos, uno en cada ribera del caz del arroyo Moralejos.<br><br>
+Dejamos atrás Mariparda, Vegapalacio y el hoyo del Mercado, llegando a la carretera de la Estación, qeu cruza la Vega junto a una chopera, frecuentemente encharcada<br>
+Si el paseo nos parece suficiente, el retorno a Maderuelo se hará desandando el camino o tomando la citada carretera, hacia la izquierda para subir al depósito viejo, las eras y la puerta de la Villa.
+<br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Distancia total: 4Km</li>
+      <li>Recorrido a pie o bicicleta</li>
+      <li>Relieve poco accidentado</li>
+   </ul>
+   <ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_vega_1.html"  class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Fotos</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  SENDA DE LAS CAÑADAS  -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_canadas_1.html" class="senda_media" id="coord_canadas" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/canadas.jpg"  >
+   <h7>Senda de las Cañadas</h7><br>
+Partiendo de la Puerta del Barrio, descendemos junto a las viejas bodegas por el camino de la Umbría hacia el Arroyo y atravesamos la carretera que desciende hacia el pantano.<br>
+Llegados a los huertos del Arroyo, tomaremos el camino hacia el oeste, hacia la Vega.<br>  
+Toparemos con la carretera de la Estación al cabo de 1 km y la seguiremos con dirección a las vías del ferrocarril.<br>
+Al cabo de 3 km, la carretera muere en la vieja estación y tomaremos el camino de la derecha, que desciende hacia el Pantano, hacia las Cañadas.<br>
+El retorno se hará desandando el camino o bordeando el embalse, dejando el agua a nuestra izquierda.
+<br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Distancia total: 12Km</li>
+      <li>Recorrido a pie o bicicleta</li>
+      <li>Relieve poco accidentado</li>
+   </ul>
+   <ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_canadas_1.html"  class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Fotos</a></li>
+      <li><a href="turismo_galeria_canadas_2.html"  class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Fotos (II)</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  SENDA DE LA ESTACIÓN -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_estacion_1.html" class="senda_media" id="coord_estacion" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/estacion.jpg" >
+   <h7>Senda de la Estación</h7>
+<br><br><br><br>
+Partiendo de la Puerta del Barrio, descendemos junto a las viejas bodegas por el camino de la Umbría hacia el Arroyo y atravesamos la carretera que desciende hacia el pantano.<br>
+Llegados a los huertos del Arroyo, tomaremos el camino hacia el oeste, hacia la Vega.<br>  
+Toparemos con la carretera de la Estación al cabo de 1 km y, girando a la derecha, la seguiremos con dirección a las vías del ferrocarril.<br>
+Al cabo de unos 3 km, la carretera muere en la vieja estación.  Si el paseo nos parece suficiente, el retorno a Maderuelo se hará desandando el camino. Si no, podemos tomar el camino de la derecha, que desciende hacia el Pantano, hacia las Cañadas.
+<br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Distancia total: 8Km</li>
+      <li>Recorrido a pie o bicicleta</li>
+      <li>Relieve poco accidentado</li>
+   </ul>
+   <ul class="l_vineta">
+      <lh>Para saber más...</lh>
+      <li><a href="turismo_galeria_estacion_1.html"  class="enlaceweb" onclick="window.open(this.href,'_blank'); return false;">Fotos</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  SENDA DE LAS HAZAS, CERCONA Y ALDEHUELA 1 -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_hazas.html" class="senda_media" id="coord_hazas" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/hazas.jpg" id="img_hazas" >
+   <h7>Senda de las Hazas, Cercona y Aldehuela</h7><br>
+Desde Maderuelo, descendemos hacia el Puente Nuevo para pasar al otro lado del embalse. 
+Girando a la izquierda, tomaremos la carretera de Ayllón-Aranda. <br>
+Tras 2Km, con el embalse a nuestra izquierda, llegamos a una playa, las Hazas, 
+apta para el baño.  Siguiendo la carretera, ésta se aleja del embalse, pero tomaremos el primer camino de la izquierda, que continúa por la margen 
+del pantano.<br>
+Tras 2km llega a otra playa, sembrada de chopos, La Cercona.  Siguiendo el mismo camino, dos km más lejos, tras un recodo, nos muestra 
+la última playa de esta margen, la Aldihuela.<br>
+Recomendamos ascender a las lomas cercanas y divisaremos un bonito paisaje, todo el cauce del pantano, la sierra al fondo y muchos pueblos en lontananza.<br>
+El retorno se hará desandando el camino, dejando el agua a nuestra derecha.
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Distancia total: 16Km</li>
+      <li>Recorrido a pie o bicicleta</li>
+      <li>Relieve poco accidentado</li>
+      <li>Vistas panorámicas</li>
+      <li><a href="turismo_galeria_hazas.html" class="enlaceweb" 
+           onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+   </ul>
+</dd>
+<!-- ***************************************************************************** -->
+<!--  SENDA DE LAS HAZAS, CERCONA Y ALDEHUELA 2 -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_cercona.html" class="senda_dificil" id="coord_cercona" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/cercona.jpg" id="img_cercona" >
+   <h7>Senda de las Hazas, Cercona y Aldehuela</h7><br>
+Desde Maderuelo, descendemos hacia el Puente Nuevo para pasar al otro lado del embalse. 
+Girando a la izquierda, tomaremos la carretera de Ayllón-Aranda. <br>
+Tras 2Km, con el embalse a nuestra izquierda, llegamos a una playa, las Hazas, 
+apta para el baño.  Siguiendo la carretera, ésta se aleja del embalse, pero tomaremos el primer camino de la izquierda, que continúa por la margen 
+del pantano.<br>
+Tras 2km llega a otra playa, sembrada de chopos, La Cercona.  Siguiendo el mismo camino, dos km más lejos, tras un recodo, nos muestra 
+la última playa de esta margen, la Aldihuela.<br>
+Recomendamos ascender a las lomas cercanas y divisaremos un bonito paisaje, todo el cauce del pantano, la sierra al fondo y muchos pueblos en lontananza.<br>
+El retorno se hará desandando el camino, dejando el agua a nuestra derecha.
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Distancia total: 16Km</li>
+      <li>Recorrido a pie o bicicleta</li>
+      <li>Relieve poco accidentado</li>
+      <li>Vistas panorámicas</li>
+      <li><a href="turismo_galeria_cercona.html" class="enlaceweb" 
+           onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  SENDA DE LAS HAZAS, CERCONA Y ALDEHUELA 3 -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_aldehuela.html" class="senda_dificil" id="coord_aldehuela" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/aldehuela.jpg" id="img_aldehuela" >
+   <h7>Senda de las Hazas, Cercona y Aldehuela</h7><br>
+Desde Maderuelo, descendemos hacia el Puente Nuevo para pasar al otro lado del embalse. 
+Girando a la izquierda, tomaremos la carretera de Ayllón-Aranda. <br>
+Tras 2Km, con el embalse a nuestra izquierda, llegamos a una playa, las Hazas, 
+apta para el baño.  Siguiendo la carretera, ésta se aleja del embalse, pero tomaremos el primer camino de la izquierda, que continúa por la margen 
+del pantano.<br>
+Tras 2km llega a otra playa, sembrada de chopos, La Cercona.  Siguiendo el mismo camino, dos km más lejos, tras un recodo, nos muestra 
+la última playa de esta margen, la Aldihuela.<br>
+Recomendamos ascender a las lomas cercanas y divisaremos un bonito paisaje, todo el cauce del pantano, la sierra al fondo y muchos pueblos en lontananza.<br>
+El retorno se hará desandando el camino, dejando el agua a nuestra derecha.
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Distancia total: 16Km</li>
+      <li>Recorrido a pie o bicicleta</li>
+      <li>Relieve poco accidentado</li>
+      <li>Vistas panorámicas</li>
+      <li><a href="turismo_galeria_aldehuela.html" class="enlaceweb" 
+           onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  SENDA DE LA FUENTE MILAGROSA -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_milagrosa.html" class="senda_facil" id="coord_milagrosa" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/milagrosa.jpg" id="img_milagrosa" >
+   <h7>Senda de la Fuente Milagrosa</h7><br>
+Desde Maderuelo, descendemos hacia el Puente Nuevo para pasar al otro lado del embalse.<br> 
+Girando a la derecha, tomaremos la carretera con dirección a Ayllón. Tras 1Km, con el embalse a nuestra derecha, pasaremos bajo los Peñascos de Peñalba.<br>  
+La carretera describe una curva cerrada y un centenar de metros más adelante, hallamos la fuente, bajo la cuneta derecha.<br>
+El retorno se hará desandando el camino, dejando el agua a nuestra izquierda.
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Distancia total: 4Km</li>
+      <li>Precaución en la Carretera</li>
+      <li>Dificultad baja</li>
+      <li>Vistas panorámicas</li>
+      <li><a href="turismo_galeria_milagrosa.html" class="enlaceweb" 
+           onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!--  SENDA DEL MIRADOR DE PEÑALBA -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_penalba.html" class="senda_facil" id="coord_penalba" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/penalba.jpg" id="img_penalba" >
+   <h7>Mirador de Peñalba</h7><br>
+Partimos del Arco de entrada, giramos a la izquierda por la carretera de la solana.  En la primara curva seguimos de frente por el camino que faldea bajo las eras y conduce a la fuente de los Chorrillos.<br>
+Desde los huertos, el camino desciende suavemente, entre de guindales asilvestrados hasta la orilla del pantano y nos lleva frente a los buitres que sobrevuelan los Peñascos de Peñalba.
+Se puede seguir aguas arriba, bordeando los meandros del río ha erosionado hasta llegar a, según la época y el nivel del embalse, unas verdes praderas donde abunda el poleo.<br>
+LLegados al puente de Alconadillas podemos retornar por el mismo camino o siguiendo la margen opuesta o  la carretera. <br>
+También podemos entrar en Alconadilla, refrescarnos en su caudalosa fuente y volver a Maderuelo por el camino de la Guadaña. 
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Distancia total: 4Km</li>
+      <li>Dificultad baja</li>
+      <li>Avistamiento de rapaces</li>
+      <li>Vistas panorámicas</li>
+      <li><a href="turismo_galeria_penalba.html" class="enlaceweb" 
+           onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+   </ul>
+</dd>
+
+
+<!-- ***************************************************************************** -->
+<!--  SENDA DE LA RIVILLA Y SAN ANDRES-->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria_sanandres.html" class="senda_facil" id="coord_sanandres" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/sanandres.jpg" id="img_sanadres" >
+   <h7>La Rivilla y Senda Larga</h7><br>
+Desde Maderuelo bajamos hasta el arroyo Moralejos.  Esta senda pasa junto a las ruinas de la   ermita mozárabe de Sta.Coloma hasta una zona de descanso con mesas que ofrece una perspectiva menos usual de Maderuelo, las Hazas, el cerro de la Horca Vieja, Torre del Rey y otras lomas de la orilla opuesta, salpicadas de sabinas, quejigos y encinas, especies autóctonas en dura pugna por crecer en estas tierras, tras el fracaso de la repoblación de pinos.<br>
+Según lo cansados que estemos, podemos continuar bordeando por la Rivilla o ascender por cualquiera de los valles que desembocan en el Riaza.  Ellos nos llevarán de vuelta al arroyo del que partimos o a la carretera de la antigua estación de  Maderuelo, que se encuentra a unos 3 km al norte del pueblo. 
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Distancia total: 8Km</li>
+      <li>Dificultad media</li>
+      <li>Avistamiento de aves acuáticas</li>
+      <li>Vistas panorámicas</li>
+      <li><a href="turismo_galeria_sanandres.html" class="enlaceweb" 
+           onclick="window.open(this.href,'_blank'); return false;">Galería de Imágenes</a></li>
+   </ul>
+</dd>
+
+
+
+</dl><!-- FIN MAPA  -->
+</div> <!-- FIN FONDO MAPA  -->
+
+
+
+
+</div> <!-- FIN AREACENTRAL -->
+
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA TEXTO FINAL DE LA PAGINA        ****** -->
+<!-- ************************************************** -->
+<div id="areatexto"><a NAME = "texto"></a>
+
+<p class="big">
+  <h3><span class="letracapital">D</span>esde Maderuelo...</h3>
+</p>
+<p>
+<br><br><br><br>
+partiendo desde alguna de sus puertas amuralladas, podemos emprender varios y agradables paseos. <br>
+Unos caminos recorren cualquiera de las márgenes del pantano, aguas arriba o abajo. Otros nos adentran en el páramo calizo salpicado de sabinas o recorren vallejos rodeados de Chaparras. <br> 
+En estas páginas damos unas sencillas indicaciones para seleccionar cuál es el paseo que más nos apetezca.  El límite lo pondremos nosotros mismos.<br>
+<br>
+Pero si buscamos excursiones por la comarca y mayores distancias, les recomendamos las siguientes rutas:<br>
+</p>
+<h4>Parque Natural Hoces del Riaza</h4>
+<p>
+<h7>Interés:</h7> Paisaje y fauna<br>
+<h7>Distancia:</h7> 13km carretera + 8km camino.  Retorno excluido<br>
+<h7>Modo:</h7>  En bici, a pie y parcialmente en coche.<br>
+<br>
+Saliendo de Maderuelo, seguimos la carretera C-114 con sentido a Aranda, durante unos 12 Km, que serpentea a través del monte de sabinas y encinas chaparras.  Desde estas lomas se divisa la cuenca del Riaza hasta la sierra.
+<br>
+Atentos al anuncio del desvío al pie de presa, antes de llegar al despoblado de Maluque.  Si hemos ido en coche, lo debemos aparcar en una explanada habilitada junto a la barrera de entrada. No se puede seguir en coche ya que las rapaces son muy recelosas de la presencia humana y, si se asustan, pueden huir y abandonar a sus crías.
+<br>
+En todo momento, debemos evitar gritos y alborotos innecesarios, por la misma razón.
+<br>
+Desde el aparcamiento, la carretera desciende durante más de un kilómetro.  Es un cómodo recorrido durante el que podemos divisar las primeras buitreras , en las oquedades de las pareces del cañón.
+<br>
+Una vez llegados al pie de la presa, cruzaremos el puente para entrar en el Parque Natural y seguir el curso del Riaza.
+<br>
+Sobre nuestras cabezas, decenas de buitres leonados y alimoches (si es verano), sobrevuelan los riscos de estas primeras hoces.  Por doquier vemos grandes peñascos, que se desprendieron y rodaron desde los cerros.  No podemos evitar sentir un escalofrío.
+<br>
+Un  kilómetro más adelante, cruzamos bajo un alto y espectacular puente del ferrocarril.  Uno de los escasos ejemplos de ingeniería que realza la belleza del paisaje.
+<br>
+El camino sigue, paralelo al río, cuyas márgenes contrastan el frondosidad con la dureza de las colinas y riscos, apenas unas decenas de metros más arriba. 
+<br>
+Seguimos otro par de kilómetros.  En algunos puntos las zarzas y arbustos de las lindes del camino, pretenden cerrarse y formar un dosel sobre nuestras cabezas.  Si tenemos suerte, podremos ver algún escarbadero de jabalí o algún corzo que bajo a abrevar.
+<br>
+Llegados al punto en el que un pequeño arroyo cruza el sendero, entonces estaremos a los pies del cerro de Castroboda, donde apareció la imagen de nuestra patrona.   Más o menos hemos recorrido la mitad del cañón, la parte que pertenece a Maderuelo.  el resto trascurre por tierras de Valdevacas, Santa Cruz de la Salceda y Montejo de la Vega.
+<br>
+Vemos que el paisaje se ha suavizado un poco, quizás para que centremos nuestra atención el la flora y fauna.  Seguimos un kilómetro más y el valle se amplia, rodeando las ruinas románicas del convento benedictino del Casuar, que ya existía antes de la repoblación definitiva de estas tierras, pero esa es otra historia...<br>
+   <ul class="l_rombo">
+      <lh>Aquí tenemos que tomar una decisión:</lh> 
+      <li>volver sobre nuestros pasos y ahora  es cuesta arriba.</li>
+      <li>o ascender por la pista hasta Valdevacas, unos 4 km más arriba.</li>
+      <li>o seguir el Riaza hasta Montejo, unos 4 km más abajo.</li>
+   </ul>
+<br>
+</p>
+<h4>Arroyo Moralejos hasta el Enebral de Hornuez</h4>
+<p>
+<h7>Interés:</h7> Paisaje<br>
+<h7>Distancia:</h7> 13km por caminos. Retorno excluido<br>
+<h7>Modo:</h7>  En bici, a pie y parcialmente en coche.<br>
+<br>
+Este itinerario de ser dividido en varias etapas. Es posible hacerlo íntegramente a pie o bici, aunque se puede usar el coche para desplazamientos intermedios.
+</p>
+<h6>1ª Etapa: Remontar el arroyo Moralejos hasta Valdevarnés</h6>
+<p>
+Partimos, a pie o en bici,  de la Puerta del Barrio, en la umbría de Maderuelo, siguiendo el camino que desciende hasta la vega del arroyo Moralejos o de San Andrés.  Aguas arriba, el camino es totalmente llano y recto, atravesando algunas choperas flanqueadas por las típicas colinas romas de calizas terciarias.<br>
+<br>
+Hemos dejado atrás la silueta protectora de la alta espadaña de Santa María y atravesamos el terraplén de la vía por un paso subterráneo, entrando en la dehesa de Valdevarnés, que nos recibe apoyado en la solana de una suave loma en cuya cima se alza una iglesia románica, posible antigua atalaya del conjunto defensivo de la Comunidad de Maderuelo.<br>
+<br>
+Esta etapa puede substituirse si se toma la carretera desde Maderuelo a Valdevarnés.
+</p>
+<h6>2ª Etapa: Remontar el barranco de la Hoz</h6>
+<p>
+En la etapa previa hemos llegado al vecino Valdevarnés.  Salimos de este pueblo atravesando las eras hacia el norte y nos desviamos por el camino que asciende hacia la izquierda, siguiendo el contorno de la colina, durante unos centenares de metros.  El camino comienza a descender y conduce a un cañon que se abre a nuestra izquierda.<br>
+<br>
+Este cañón, de unos 25 metros de profundidad y menos de 75 metros de ancho en muchas zonas, zigzaguea hacia poniente durante unos 2 ó 3 km, encerrando un incipiente bosque de sabinas y enebros en su interior.<br>  
+   <ul class="l_rombo">
+      <lh>Antes de remontarlo, debemos decidir:</lh> 
+      <li>avanzar por el exterior del cañón, sobre las paredes rocosas.  Conlleva mucho más riesgo y el esfuerzo es grande.</li>
+      <li>o ascender por el interior. El paisaje es muy distinto si lo vemos desde abajo</li>
+   </ul>
+</p>
+<p>
+Quizás merezca la pena, volver  otro día y probar ambas alternativas.  Al final del recorrido, el cañón pierde profundidad y podemos divisar el santuario de Hornuez, pero esa es otra etapa.
+</p>
+<h6>3ª Etapa:  Enebral del Hornuez</h6>
+<p>
+Una vez alcanzado la cabecera de la Hoz de Valdevarnés, solamente nos resta   proseguir hacia el noroeste, unos 3 km de suave ascensión. Ahora es fácil ya que  la alta ermita nos sirve de guía.  Atravesamos algunas manchas de sabinas, carrascas y almendros.<br>
+<br>  
+Así alcanzaremos una de las últimas dehesas de sabinas de la península, que cuenta con los ejemplares de sabinas más grandes y viejos que se conservan.  Quizás debamos explicar que en la comarca llamamos enebros a las sabinas, para evitar confusión a algunos lectores.  Rodeando esta dehesa, miles de pinos hacen que el aire sea un tonificante para nuestros fatigados pulmones y nos proporcionan un reparador frescor.<br>
+<br> 
+Dada la altura de este enebral, se puede contemplar todos los pueblos del nordeste segoviano; lo que históricamente fue  la Tierra de Ayllón, la de Fresno y Riaza en lontananza y la de Maderuelo a nuestros pies.<br>
+<br>   
+Este paraje es idóneo para comer o merendar, pues existen varios asadores y mesas preparados para ello.  Finalmente podemos completar la excursión  visitando el Santuario de Nuestra Señora de Hornuez, que conserva el tronco de la sabina en la que se apareció y muchos de los exvotos, prueba de la profunda devoción que la comarca le profesa.<br>
+</p>
+</div> <!-- FIN AREA TEXTO FINAL PAGINA -->
+
+
+
+</div><!-- FIN FONDO -->
+</body>
+</html>

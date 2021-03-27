@@ -1,0 +1,2009 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>Historia de Maderuelo y su Entorno. Indice</TITLE>
+	<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 5.0">
+	<META NAME="CREATED" CONTENT="20041229;9373000">
+	<META NAME="CHANGED" CONTENT="20041229;9375000">
+	<META NAME="ProgId" CONTENT="FrontPage.Editor.Document">
+
+<SCRIPT LANGUAGE="JavaScript1.2" type="text/javascript">
+
+//VENTANA SIMPLE
+//Autor: Alberto Carnicero
+<!--
+
+var _EPOCA = null;
+
+nereidFadeObjects = new Object();
+nereidFadeTimers = new Object();
+
+/* object - image to be faded (actual object, not name);
+ * destop - destination transparency level (ie 80, for mostly solid)
+ * rate   - time in milliseconds between trasparency changes (best under 100)
+ * delta  - amount of change each time (ie 5, for 5% change in transparency)
+ */
+
+function nereidFade(object, destOp, rate, delta){
+if (!document.all)
+return
+    if (object != "[object]"){  //do this so I can take a string too
+        setTimeout("nereidFade("+object+","+destOp+","+rate+","+delta+")",0);
+        return;
+    }
+        
+    clearTimeout(nereidFadeTimers[object.sourceIndex]);
+    
+    diff = destOp-object.filters.alpha.opacity;
+    direction = 1;
+    if (object.filters.alpha.opacity > destOp){
+        direction = -1;
+    }
+    delta=Math.min(direction*diff,delta);
+    object.filters.alpha.opacity+=direction*delta;
+
+    if (object.filters.alpha.opacity != destOp){
+        nereidFadeObjects[object.sourceIndex]=object;
+        nereidFadeTimers[object.sourceIndex]=setTimeout("nereidFade(nereidFadeObjects["+object.sourceIndex+"],"+destOp+","+rate+","+delta+")",rate);
+    }
+}
+
+
+
+//IMAGEN QUE CAMBIA AL APUNTARLA
+function CompruebaVersion() {
+	if (navigator.appVersion.charAt(0) >= 3 && document.images) return true
+	else return false
+}
+
+function CreaArray(n) {
+	this.length = n
+	for (var i = 1; i<=n; i++) {
+		this[i] = new Image()
+	}
+	return this
+}
+
+
+function ocultar() {
+		hechos_paleolitico.style.visibility="hidden";
+		hechos_neolitico.style.visibility="hidden";
+		hechos_calcolitico.style.visibility="hidden";
+		hechos_bronce.style.visibility="hidden";
+		hechos_celta.style.visibility="hidden";
+		hechos_romanizacion.style.visibility="hidden";
+		hechos_pax.style.visibility="hidden";
+		hechos_goda.style.visibility="hidden";
+		hechos_arabe.style.visibility="hidden";
+		hechos_viii_x.style.visibility="hidden";
+		hechos_xi_xii.style.visibility="hidden";
+		hechos_xiii.style.visibility="hidden";
+		
+		armas_celta.style.visibility="hidden";
+		armas_romanizacion.style.visibility="hidden";
+		armas_pax.style.visibility="hidden";
+		armas_goda.style.visibility="hidden";
+		armas_viii_x.style.visibility="hidden";
+		armas_xi_xii.style.visibility="hidden";
+		armas_xiii.style.visibility="hidden";
+		armas_xiv.style.visibility="hidden";
+		armas_xv.style.visibility="hidden";
+
+		
+		gentes_celta.style.visibility="hidden";
+		gentes_romanizacion.style.visibility="hidden";
+		gentes_pax.style.visibility="hidden";
+		gentes_goda.style.visibility="hidden";
+		gentes_viii_x.style.visibility="hidden";
+		gentes_xi_xii.style.visibility="hidden";
+		gentes_xiii.style.visibility="hidden";
+		
+		maderuelo_celta.style.visibility="hidden";
+		maderuelo_romanizacion.style.visibility="hidden";
+		maderuelo_pax.style.visibility="hidden";
+		maderuelo_goda.style.visibility="hidden";
+		maderuelo_viii_x.style.visibility="hidden";
+		maderuelo_xi_xii.style.visibility="hidden";
+		maderuelo_xiii.style.visibility="hidden";
+		maderuelo_xiv.style.visibility="hidden";
+		maderuelo_xv.style.visibility="hidden";
+		maderuelo_xvi.style.visibility="hidden";
+		maderuelo_xvii.style.visibility="hidden";
+		maderuelo_xviii.style.visibility="hidden";
+		maderuelo_xix.style.visibility="hidden";
+		
+		vocablos.style.visibility="hidden";
+		cuentos.style.visibility="hidden";
+		
+}
+
+function hechos() {
+		ocultar();
+		if (_EPOCA== "paleolitico") {
+			hechos_paleolitico.style.visibility="visible";
+		}
+		if (_EPOCA== "neolitico") {
+			hechos_neolitico.style.visibility="visible";
+		}	
+		if (_EPOCA== "calcolitico") {
+			hechos_calcolitico.style.visibility="visible";
+		}			
+		if (_EPOCA== "bronce") {
+			hechos_bronce.style.visibility="visible";
+		}					
+		if (_EPOCA== "celta") {
+			hechos_celta.style.visibility="visible";
+		}
+		if (_EPOCA== "romanizacion") {
+			hechos_romanizacion.style.visibility="visible";
+		}
+		if (_EPOCA== "pax") {
+			hechos_pax.style.visibility="visible";
+		}
+		if (_EPOCA== "goda") {
+			hechos_goda.style.visibility="visible";
+		}
+		if (_EPOCA== "arabe") {
+			hechos_arabe.style.visibility="visible";
+		}		
+		if (_EPOCA== "viii_x") {
+			hechos_viii_x.style.visibility="visible";
+		}
+		if (_EPOCA== "xi_xii") {
+			hechos_xi_xii.style.visibility="visible";
+		}
+		if (_EPOCA== "xiii") {
+			hechos_xiii.style.visibility="visible";
+		}		
+		nereidFade(document.images["obj_hechos"], 100, 30, 5)
+		nereidFade(document.images["obj_armas"], 30, 30, 5)
+		nereidFade(document.images["obj_gentes"], 30, 30, 5)
+		nereidFade(document.images["obj_maderuelo"], 30, 30, 5)
+		nereidFade(document.images["obj_vocablos"], 30, 30, 5)
+		nereidFade(document.images["obj_cuentos"], 30, 30, 5)
+		nereidFade(document.images["obj_llavehechos"], 100, 30, 5)
+		nereidFade(document.images["obj_llavearmas"], 0, 30, 5)
+		nereidFade(document.images["obj_llavegentes"], 0, 30, 5)
+		nereidFade(document.images["obj_llavemaderuelo"], 0, 30, 5)
+		nereidFade(document.images["obj_llavevocablos"], 0, 30, 5)
+		nereidFade(document.images["obj_llavecuentos"], 0, 30, 5)
+}
+
+function armas() {
+		ocultar();
+		
+		if (_EPOCA== "celta") {
+			armas_celta.style.visibility="visible";
+		}
+		if (_EPOCA== "romanizacion") {
+			armas_romanizacion.style.visibility="visible";
+		}
+		if (_EPOCA== "pax") {
+			armas_pax.style.visibility="visible";
+		}
+		if (_EPOCA== "goda") {
+			armas_goda.style.visibility="visible";
+		}
+		if (_EPOCA== "viii_x") {
+			armas_viii_x.style.visibility="visible";
+		}
+		if (_EPOCA== "xi_xii") {
+			armas_xi_xii.style.visibility="visible";
+		}		
+		if (_EPOCA== "xiii") {
+			armas_xiii.style.visibility="visible";
+		}		
+	    if (_EPOCA== "xiv") {
+			armas_xiv.style.visibility="visible";
+		}		
+	    if (_EPOCA== "xv") {
+			armas_xv.style.visibility="visible";
+		}		
+
+		nereidFade(document.images["obj_hechos"], 30, 30, 5)
+		nereidFade(document.images["obj_armas"], 100, 30, 5)
+		nereidFade(document.images["obj_gentes"], 30, 30, 5)
+		nereidFade(document.images["obj_maderuelo"], 30, 30, 5)
+		nereidFade(document.images["obj_vocablos"], 30, 30, 5)
+		nereidFade(document.images["obj_cuentos"], 30, 30, 5)
+		nereidFade(document.images["obj_llavehechos"], 0, 30, 5)
+		nereidFade(document.images["obj_llavearmas"], 100, 30, 5)
+		nereidFade(document.images["obj_llavegentes"], 0, 30, 5)
+		nereidFade(document.images["obj_llavemaderuelo"], 0, 30, 5)
+		nereidFade(document.images["obj_llavevocablos"], 0, 30, 5)
+		nereidFade(document.images["obj_llavecuentos"], 0, 30, 5)
+}
+
+function gentes() {
+		ocultar();
+		
+		if (_EPOCA== "celta") {
+			gentes_celta.style.visibility="visible";
+		}
+		if (_EPOCA== "romanizacion") {
+			gentes_pax.style.visibility="visible";
+		}		
+		if (_EPOCA== "pax") {
+			gentes_pax.style.visibility="visible";
+		}
+		if (_EPOCA== "goda") {
+			gentes_goda.style.visibility="visible";
+		}
+		if (_EPOCA== "viii_x") {
+			gentes_viii_x.style.visibility="visible";
+		}
+		if (_EPOCA== "xi_xii") {
+			gentes_xi_xii.style.visibility="visible";
+		}		
+		if (_EPOCA== "xiii") {
+			gentes_xiii.style.visibility="visible";
+		}		
+		
+		nereidFade(document.images["obj_hechos"], 30, 30, 5)
+		nereidFade(document.images["obj_armas"], 30, 30, 5)
+		nereidFade(document.images["obj_gentes"], 100, 30, 5)
+		nereidFade(document.images["obj_maderuelo"], 30, 30, 5)
+		nereidFade(document.images["obj_vocablos"], 30, 30, 5)
+		nereidFade(document.images["obj_cuentos"], 30, 30, 5)
+		nereidFade(document.images["obj_llavehechos"], 0, 30, 5)
+		nereidFade(document.images["obj_llavearmas"], 0, 30, 5)
+		nereidFade(document.images["obj_llavegentes"], 100, 30, 5)
+		nereidFade(document.images["obj_llavemaderuelo"], 0, 30, 5)
+		nereidFade(document.images["obj_llavevocablos"], 0, 30, 5)
+		nereidFade(document.images["obj_llavecuentos"], 0, 30, 5)
+}
+
+function maderuelo() {
+		ocultar();
+		
+		if (_EPOCA== "celta") {
+			maderuelo_celta.style.visibility="visible";
+		}
+		if (_EPOCA== "romanizacion") {
+			maderuelo_romanizacion.style.visibility="visible";
+		}
+		if (_EPOCA== "pax") {
+			maderuelo_pax.style.visibility="visible";
+		}
+		if (_EPOCA== "goda") {
+			maderuelo_goda.style.visibility="visible";
+		}
+		if (_EPOCA== "viii_x") {
+			maderuelo_viii_x.style.visibility="visible";
+		}
+		if (_EPOCA== "xi_xii") {
+			maderuelo_xi_xii.style.visibility="visible";
+		}		
+		if (_EPOCA== "xiii") {
+			maderuelo_xiii.style.visibility="visible";
+		}		
+		if (_EPOCA== "xiv") {
+			maderuelo_xiv.style.visibility="visible";
+		}	
+		if (_EPOCA== "xv") {
+			maderuelo_xv.style.visibility="visible";
+		}			
+		if (_EPOCA== "xvi") {
+			maderuelo_xvi.style.visibility="visible";
+		}
+		if (_EPOCA== "xvii") {
+			maderuelo_xvii.style.visibility="visible";
+		}	
+		if (_EPOCA== "xviii") {
+			maderuelo_xviii.style.visibility="visible";
+		}	
+		if (_EPOCA== "xix") {
+			maderuelo_xix.style.visibility="visible";
+		}	
+		nereidFade(document.images["obj_hechos"], 30, 30, 5)
+		nereidFade(document.images["obj_armas"], 30, 30, 5)
+		nereidFade(document.images["obj_gentes"], 30, 30, 5)
+		nereidFade(document.images["obj_maderuelo"], 100, 30, 5)
+		nereidFade(document.images["obj_vocablos"], 30, 30, 5)
+		nereidFade(document.images["obj_cuentos"], 30, 30, 5)
+		nereidFade(document.images["obj_llavehechos"], 0, 30, 5)
+		nereidFade(document.images["obj_llavearmas"], 0, 30, 5)
+		nereidFade(document.images["obj_llavegentes"], 0, 30, 5)
+		nereidFade(document.images["obj_llavemaderuelo"], 100, 30, 5)
+		nereidFade(document.images["obj_llavevocablos"], 0, 30, 5)
+		nereidFade(document.images["obj_llavecuentos"], 0, 30, 5)
+}
+
+function fnvocablos() {
+		ocultar();
+	
+		vocablos.style.visibility="visible";
+		nereidFade(document.images["obj_hechos"], 30, 30, 5)
+		nereidFade(document.images["obj_armas"], 30, 30, 5)
+		nereidFade(document.images["obj_gentes"], 30, 30, 5)
+		nereidFade(document.images["obj_maderuelo"], 30, 30, 5)
+		nereidFade(document.images["obj_cuentos"], 30, 30, 5)
+		nereidFade(document.images["obj_vocablos"], 100, 30, 5)
+		nereidFade(document.images["obj_llavehechos"], 0, 30, 5)
+		nereidFade(document.images["obj_llavearmas"], 0, 30, 5)
+		nereidFade(document.images["obj_llavegentes"], 0, 30, 5)
+		nereidFade(document.images["obj_llavemaderuelo"], 0, 30, 5)
+		nereidFade(document.images["obj_llavecuentos"], 0, 30, 5)
+		nereidFade(document.images["obj_llavevocablos"], 100, 30, 5)
+}
+
+function fncuentos() {
+		ocultar();
+	
+		cuentos.style.visibility="visible";
+		nereidFade(document.images["obj_hechos"], 30, 30, 5)
+		nereidFade(document.images["obj_armas"], 30, 30, 5)
+		nereidFade(document.images["obj_gentes"], 30, 30, 5)
+		nereidFade(document.images["obj_maderuelo"], 30, 30, 5)
+		nereidFade(document.images["obj_cuentos"], 100, 30, 5)
+		nereidFade(document.images["obj_vocablos"], 30, 30, 5)
+		nereidFade(document.images["obj_llavehechos"], 0, 30, 5)
+		nereidFade(document.images["obj_llavearmas"], 0, 30, 5)
+		nereidFade(document.images["obj_llavegentes"], 0, 30, 5)
+		nereidFade(document.images["obj_llavemaderuelo"], 0, 30, 5)
+		nereidFade(document.images["obj_llavecuentos"], 100, 30, 5)
+		nereidFade(document.images["obj_llavevocablos"], 0, 30, 5)
+}
+
+
+function datos ()  {
+		if (_MODO == "armas") {
+			armas()
+		}
+		if (_MODO == "gentes") {
+			gentes()
+		}
+		if (_MODO == "maderuelo") {
+			maderuelo()
+		}
+		if (_MODO == "hechos") {
+			hechos()
+		}
+}
+
+function cargaobj_imagenes() {
+      _EPOCA='calcolitico';soldado(_EPOCA);hechos()
+      _EPOCA='paleolitico';soldado(_EPOCA);hechos()
+      _EPOCA='neolitico';soldado(_EPOCA);hechos()
+      _EPOCA='bronce';soldado(_EPOCA);hechos() 
+      _EPOCA='celta';soldado(_EPOCA);hechos()
+      _EPOCA='romanizacion';soldado(_EPOCA);hechos()
+      _EPOCA='pax';soldado(_EPOCA);hechos()
+      _EPOCA='goda';soldado(_EPOCA);hechos()
+      _EPOCA='arabe';soldado(_EPOCA);hechos()
+      _EPOCA='viii_x';soldado(_EPOCA);hechos()
+      _EPOCA='xi_xii';soldado(_EPOCA);hechos()
+      _EPOCA='xiii';soldado(_EPOCA);hechos()
+      _EPOCA='xiv';soldado(_EPOCA);hechos()
+      _EPOCA='xv';soldado(_EPOCA);hechos()
+      _EPOCA='xvi';soldado(_EPOCA);hechos()
+      _EPOCA='xvii';soldado(_EPOCA);hechos()
+      _EPOCA='xviii';soldado(_EPOCA);hechos()
+      _MODO='hechos'
+ }
+
+
+function soldado(epoca) {
+		if (epoca == "paleolitico" ) {
+			obj_imagen.src="../../../images/historia_y_arte/historia/s_paleolitico.jpg";
+			nereidFade(document.images["obj_imagen"], 100, 40, 5)	
+		}
+		if (epoca == "neolitico" ) {
+			obj_imagen.src="../../../images/historia_y_arte/historia/s_neolitico.jpg";
+			nereidFade(document.images["obj_imagen"], 100, 40, 5)
+		}
+		if (epoca == "calcolitico" ) {
+			obj_imagen.src="../../../images/historia_y_arte/historia/s_neolitico.jpg";
+			nereidFade(document.images["obj_imagen"], 100, 40, 5)
+		}
+		if (epoca == "bronce" ) {
+			obj_imagen.src="../../../images/historia_y_arte/historia/s_bronce.jpg";
+			nereidFade(document.images["obj_imagen"], 100, 40, 5)
+		}                  
+		if (epoca == "celta" ) {
+			obj_imagen.src="../../../images/historia_y_arte/historia/s_arevaco.jpg";
+			nereidFade(document.images["obj_imagen"], 100, 40, 5)
+		}                  
+		if (epoca == "romanizacion" ) {
+			obj_imagen.src="../../../images/historia_y_arte/historia/s_siglo0.jpg";
+		}                  
+		if (epoca == "pax" ) {
+			obj_imagen.src="../../../images/historia_y_arte/historia/s_siglo2.jpg";
+		}                  
+		if (epoca == "goda" ) {
+			obj_imagen.src="../../../images/historia_y_arte/historia/s_siglo6.jpg";
+		}                  
+		if (epoca == "arabe" ) {
+			obj_imagen.src="../../../images/historia_y_arte/historia/s_siglo8.jpg";
+		}                  
+		if (epoca == "viii_x" ) {
+			obj_imagen.src="../../../images/historia_y_arte/historia/s_siglo10.jpg";
+		}                  
+		if (epoca == "xi_xii" ) {
+			obj_imagen.src="../../../images/historia_y_arte/historia/s_siglo11.jpg";
+		}
+		if (epoca == "xiii" ) {
+			obj_imagen.src="../../../images/historia_y_arte/historia/s_siglo13_1.jpg";
+		}
+		if (epoca == "xiv" ) {
+			obj_imagen.src="../../../images/historia_y_arte/historia/s_siglo14.jpg";
+		}
+		obj_imagen.style.visibility="visible";                                    
+}
+
+
+    </script>
+
+</head>
+
+
+
+<body bgcolor="#FFFFCC" background="../../../images/historia_y_arte/historia/fondo_fibulas.gif" onload="cargaobj_imagenes();">
+
+<div align="left">
+    <table border="0" width="1024" cellspacing="0" cellpadding="0" style="border-collapse: collapse">
+      <tr>
+        <td width="800px">
+          <p align="center">
+          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="700" height="50" align="right">
+            <param name="movie" value="../../cabecera.swf">
+            <param name="quality" value="High">
+            <param name="_cx" value="18521">
+            <param name="_cy" value="1323">
+            <param name="FlashVars" value="0">
+            <param name="Src" value="../../cabecera.swf">
+            <param name="WMode" value="Window">
+            <param name="Play" value="0">
+            <param name="Loop" value="-1">
+            <param name="SAlign" value>
+            <param name="Menu" value="-1">
+            <param name="Base" value>
+            <param name="AllowScriptAccess" value="always">
+            <param name="Scale" value="ShowAll">
+            <param name="DeviceFont" value="0">
+            <param name="EmbedMovie" value="0">
+            <param name="BGColor" value>
+            <param name="SWRemote" value>
+            <embed src="../../../cabecera.swf" quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="700" height="50"></object>
+        </td>
+      </tr>
+    </table>
+</div>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"  width="1024" >
+<tr>
+<td height="700px">
+    <div id="capa_menu" style="visibility:visible;position:absolute;top=80;z-index:2; left:10"> 
+         <map name="FPMap0">         
+         <area onMouseover="_EPOCA='calcolitico';soldado('calcolitico');datos()" shape="rect" coords="2, 63, 122, 85" alt="mueve el ratón a la derecha del guerrero">
+         <area onMouseover="_EPOCA='paleolitico';soldado('paleolitico');datos()" shape="rect" coords="2, 0, 113, 26" alt="mueve el ratón a la derecha del guerrero">
+         <area onMouseover="_EPOCA='neolitico';soldado('neolitico');datos()" shape="rect" coords="142, 32, 238, 54" alt="mueve el ratón a la derecha del guerrero">
+         <area onMouseover="_EPOCA='bronce';soldado('bronce');datos()" shape="rect" coords="0, 99, 110, 135" alt="mueve el ratón a la derecha del guerrero">
+         <area onMouseover="_EPOCA='celta';soldado('celta');datos()" shape="rect" coords="0, 168, 130, 190" alt="mueve el ratón a la derecha del guerrero">
+         <area onMouseover="_EPOCA='romanizacion';soldado('romanizacion');datos()" shape="rect" coords="0, 200, 136, 236" alt="mueve el ratón a la derecha del guerrero">
+         <area onMouseover="_EPOCA='pax';soldado('pax');datos()" shape="rect" coords="4, 246, 138, 272" alt="mueve el ratón a la derecha del guerrero">
+         <area onMouseover="_EPOCA='goda';soldado('goda');datos()" shape="rect" coords="9, 302, 162, 326" alt="mueve el ratón a la derecha del guerrero">
+         <area onMouseover="_EPOCA='arabe';soldado('arabe');datos()" shape="rect" coords="2, 342, 163, 365" alt="mueve el ratón a la derecha del guerrero">
+         <area onMouseover="_EPOCA='viii_x';soldado('viii_x');datos()" shape="rect" coords="5, 379, 196, 401" alt="mueve el ratón a la derecha del guerrero">
+         <area onMouseover="_EPOCA='xi_xii';soldado('xi_xii');datos()" shape="rect" coords="47, 414, 223, 438" alt="mueve el ratón a la derecha del guerrero">
+         <area onMouseover="_EPOCA='xiii';soldado('xiii');datos()" shape="rect" coords="102, 449, 266, 469" alt="mueve el ratón a la derecha del guerrero">
+         <area onMouseover="_EPOCA='xiv';soldado('xiv');datos()" shape="rect" coords="164, 485, 324, 504" alt="mueve el ratón a la derecha del guerrero">
+         <area onMouseover="_EPOCA='xv';soldado('xv');datos()" shape="poly" coords="204, 532, 215, 559, 299, 548, 368, 534, 363, 519" alt="mueve el ratón a la derecha del guerrero">
+         <area onMouseover="_EPOCA='xvi';soldado('xvi');datos()" shape="poly" coords="360, 568, 366, 586, 428, 569, 500, 556, 489, 537" alt="mueve el ratón a la derecha del guerrero">
+         <area onMouseover="_EPOCA='xvii';soldado('xvii');datos()" shape="poly" coords="473, 578, 566, 543, 570, 565, 489, 601, 473, 582, 474, 581" alt="mueve el ratón a la derecha del guerrero">
+         <area onMouseover="_EPOCA='xviii';soldado('xviii');datos()" shape="poly" coords="590, 583, 599, 601, 661, 584, 702, 556, 694, 542" alt="mueve el ratón a la derecha del guerrero">
+         <area onMouseover="_EPOCA='xix';soldado('xix');datos()" shape="poly" coords="694, 582, 796, 547, 804, 566, 710, 601" alt="mueve el ratón a la derecha del guerrero">         
+         </map>
+         <img  id="menu" border="0" src="../../../images/historia_y_arte/historia/fondo_menu_0.gif"  usemap="#FPMap0" alt="selecciona una época y luego unos hechos" width="1024" height="602">                      
+    
+       <img border="0" id="obj_imagen" src="../../../images/historia_y_arte/historia/s_siglo11.jpg" style="visibility:visible;position:absolute;top=150px;left=300px;z-index:2;filter:alpha(opacity=100);-moz-opacity:1.0" width="150" alt="selecciona una época y luego unos hechos">
+       <img border="0" id="obj_hechos" src="../../../images/historia_y_arte/historia/hechos.gif" style="visibility:visible;position:absolute;top=145px;left=490px;z-index:2;filter:alpha(opacity=30);-moz-opacity:0.3"  onMouseover="_MODO='hechos';hechos()" width="179" height="26" alt="Hitos relevantes para Maderuelo y la meseta central en esta época">
+       <img border="0" id="obj_armas" src="../../../images/historia_y_arte/historia/armas.gif"  style="visibility:visible;position:absolute;top=190px;left=490px;z-index:3;filter:alpha(opacity=30);-moz-opacity:0.3" onMouseover="_MODO='armas';armas()" width="198" height="22" alt="armamento que caracteriza la época seleccionada">
+       <img border="0" id="obj_gentes" src="../../../images/historia_y_arte/historia/gentes.gif" style="visibility:visible;position:absolute;top=240px;left=490px;z-index:3;filter:alpha(opacity=30);-moz-opacity:0.3" onMouseover="_MODO='gentes';gentes()" width="192" height="25" alt="cómo vivían las gentes en la época seleccionada">
+       <img border="0" id="obj_maderuelo" src="../../../images/historia_y_arte/historia/maderuelo.gif" style="visibility:visible;position:absolute;top=285px;left=490px;z-index:3;filter:alpha(opacity=30);-moz-opacity:0.3" onMouseover="_MODO='maderuelo';maderuelo()" width="215" height="23" alt="conoce qué ocurrió en Maderuelo en la época seleccionada" >
+       <img border="0" id="obj_vocablos" src="../../../images/historia_y_arte/historia/vocablos.gif" style="visibility:visible;position:absolute;top=325px;left=490px;z-index:3;filter:alpha(opacity=30);-moz-opacity:0.3" onMouseover="this.style.cursor='hand';fnvocablos(this)" width="105" height="23" alt="para saber más acerca de vocablos relacionados con Maderuelo" >
+       <img border="0" id="obj_cuentos" src="../../../images/historia_y_arte/historia/cuentos.gif" style="visibility:visible;position:absolute;top=365px;left=490px;z-index:3;filter:alpha(opacity=30);-moz-opacity:0.3" onMouseover="this.style.cursor='hand';fncuentos(this)" width="210" height="23" alt="elige una leyenda de la época seleccionada">
+       <img border="0" id="obj_llavehechos" src="../../../images/historia_y_arte/historia/llave0.gif" style="visibility:visible;position:absolute;top=120px;left=700px;z-index:1;filter:alpha(opacity=0);-moz-opacity:0.0"  width="14" height="340" alt="Hitos relevantes para Maderuelo y la meseta central en esta época">
+       <img border="0" id="obj_llavearmas" src="../../../images/historia_y_arte/historia/llave1.gif" style="visibility:visible;position:absolute;top=120px;left=700px;z-index:1;filter:alpha(opacity=0);-moz-opacity:0.0"  width="17" height="346" alt="armamento que caracteriza la época seleccionada">
+       <img border="0" id="obj_llavegentes" src="../../../images/historia_y_arte/historia/llave2.gif" style="visibility:visible;position:absolute;top=120px;left=700px;z-index:1;filter:alpha(opacity=0);-moz-opacity:0.0" width="14" height="340" alt="cómo vivían las gentes en la época seleccionada">
+       <img border="0" id="obj_llavemaderuelo" src="../../../images/historia_y_arte/historia/llave3.gif" style="visibility:visible;position:absolute;top=120px;left=700px;z-index:1;filter:alpha(opacity=0);-moz-opacity:0.0"  width="15" height="341" alt="conoce qué ocurrió en Maderuelo en la época seleccionada">
+       <img border="0" id="obj_llavevocablos" src="../../../images/historia_y_arte/historia/llave5.gif" style="visibility:visible;position:absolute;top=120px;left=700px;z-index:1;filter:alpha(opacity=0);-moz-opacity:0.0"  width="15" height="341" alt="para saber más acerca de vocablos relacionados con Maderuelo">
+       <img border="0" id="obj_llavecuentos" src="../../../images/historia_y_arte/historia/llave6.gif" style="visibility:visible;position:absolute;top=120px;left=700px;z-index:1;filter:alpha(opacity=0);-moz-opacity:0.0"  width="15" height="341"  alt="elige una leyenda de la época seleccionada">
+    </div>
+    
+    
+    
+    
+    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;visibility:visible;position:absolute;top=100px;left=480px;z-index:3" width="100%" id="AutoNumber3">
+        <tr>
+        <td width="100%">
+            <div id="hechos_paleolitico" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    &nbsp;<p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="273" id="menu_h_paleolitico">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >La Prehistoria durante el <a target="_blank" href="histo_paleolitico.html#">Paleolítico</a></font></i></b></p>
+                                        </td>
+                                    </tr>
+                                    </table>
+            </div>
+        </td>
+        </tr>
+        <tr>
+        <td width="100%">
+            <div id="hechos_neolitico" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    &nbsp;<p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"  width="273" id="menu_h_neolitico">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >La Prehistoria durante el <a target="_blank" href="histo_neolitico.html#">Neolítico</a></font></i></b></p>
+                                        </td>
+                                    </tr>
+                                    </table>
+            </div>
+        </td>
+        </tr>
+        <tr>
+        <td width="100%">
+            <div id="hechos_calcolitico" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    &nbsp;<p>&nbsp;</p>
+                                    <p>&nbsp;</p>                                    
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="273" id="menu_h_calcolitico">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >Fin de la Prehistoria: el <a target="_blank" href="histo_calcolitico.html#">Calcolítico</a></font></i></b></p>
+                                        </td>
+                                    </tr>
+                                    </table>
+            </div>
+        </td>
+        </tr>
+        <tr>
+        <td width="100%">
+            <div id="hechos_bronce" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    &nbsp;<p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"  width="273" id="menu_h_bronce">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >La Protohistoria: La Edad del <a target="_blank" href="histo_bronce.html#">Bronce</a></font></i></b></p>
+                                        </td>
+                                    </tr>
+                                    </table>
+            </div>
+        </td>
+        </tr>
+        <tr>
+        <td width="100%">
+            <div id="hechos_celta" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="273" id="menu_h_celta">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >La Edad de Hierro</font></i></b></p>
+                                          &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left" style="line-height: 150%">
+                                          <i><b> <font face="Times New Roman" size="3" ><a target="_blank" href="histo_hierro.html#fases">Fases</a> de la Edad de Hierro</font></b></i></p>
+                                        </td>
+                                    </tr>
+                                                     
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >Las <a target="_blank" href="histo_hierro.html#invasion">Invasiones</a> Celtas</font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >La <a target="_blank" href="histo_hierro.html#celtiberia">Celtiberia</a></font></b></i></td>
+                                    </tr>
+                                    </table>
+            </div>
+        </td>
+        </tr>
+        <tr>
+        <td width="100%">
+            <div id="hechos_romanizacion" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"  width="272" id="menu_h_romanizacion">
+                                    <tr>
+                                        <td width="272">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >La Romanización del Duero</font></i></b></p>
+                                          &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <p align="left" style="line-height: 150%">
+                                          <i><b> <font face="Times New Roman" size="3" >Las <a target="_blank" href="histo_roma_celtib1.html">guerras</a> celtibéricas</font></b></i></p>
+                                        </td>
+                                    </tr>
+                                                     
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >Guerras <a target="_blank" href="histo_roma_sertorio.html">Sertorianas</a></font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >Aculturización y <a target="_blank" href="histo_romanizacion.html">Romanización</a></font></b></i></td>
+                                    </tr>
+                                </table>
+            </div>
+         </td>
+         </tr>
+         <tr>
+         <td width="100%">
+             <div id="hechos_pax" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3">
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="273" id="menu_h_pax">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >Bajo el Imperio Romano</font></i></b></p>
+                                          &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >En el <a target="_blank" href="histo_roma_siglo1.html">siglo I d.C.</a></font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >En el <a target="_blank" href="histo_roma_siglo2.html">siglo II d.C.</a></font></b></i></td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >El <a target="_blank" href="histo_roma_siglo3.html">siglo III d.C.</a> y los <a target="_blank" href="histo_roma_francos.html#inicio">Alemani</a></font></b></i></td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >El <a target="_blank" href="histo_roma_siglo4.html">siglo IV d.C.</a> y los <a target="_blank" href="histo_roma_francos.html#francas">Francos</a></font></b></i></td>
+                                    </tr>                                    
+                                </table>
+             </div>
+          </td>
+          </tr>
+          <tr>
+          <td width="100%">
+              <div id="hechos_goda" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="272" id="menu_h_goda">
+                                    <tr>
+                                        <td width="272">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000">Época Visigoda</font></i></b></p>
+                                          &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <p align="left">
+                                          <i><b> <font face="Times New Roman" size="3" ><a target="_blank" href="histo_goda_origen.html">Origen</a> de los Pueblos Godos</font></b></i></p>
+                                        </td>
+                                    </tr>
+                                                     
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="histo_goda_siglo5.html">Caída</a> del Imperio </font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >Godos contra <a target="_blank" href="histo_goda_vs_germano.html">Germanos</a> </font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >Fundación del Reino en <a target="_blank" href="histo_goda_toledo.html">Toledo</a> </font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="histo_goda_siglo7.html">Revueltas</a> en el s.VII </font></b></i></td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="histo_goda_decadencia.html">Decadencia</a> y Caída </font></b></i></td>
+                                    </tr>                                    
+                                    </table>
+              </div>
+        </td>
+        </tr>                          
+        <tr>
+        <td width="100%">
+            <div id="hechos_arabe" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    &nbsp;<p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"  width="273" id="menu_h_arabe">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >La Conquista del <a target="_blank" href="histo_arabe_1.html#">Islam</a></font></i></b></p>
+                                        </td>
+                                    </tr>
+                                    </table>
+            </div>
+        </td>
+        </tr>
+        <tr>
+        <td width="100%">
+            <div id="hechos_viii_x" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"  width="274" id="menu_h_viii">
+                                    <tr>
+                                        <td width="274">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000">Condado de Castilla </font></i></b></p>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="274">
+                                          <p align="right">
+                                          <i><b> <font face="Times New Roman" size="2" color="#800000">
+                                          Siglo VIII </font></b></i></p>
+                                        </td>
+                                    </tr>                                                     
+                                    <tr>
+                                        <td width="274">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="h_media_siglo8_1.html">Origen</a> de Asturias </font></b></i></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="274">
+                                          <i><b><font face="Times New Roman" size="3" >El reino <a target="_blank" href="h_media_siglo8_1.html">Astur </a></font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="274">
+                                          <p align="right">
+                                          <i><b> <font face="Times New Roman" size="2" color="#800000">
+                                          Siglo IX </font></b></i></p>
+                                        </td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td width="274">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="h_media_siglo9_2_alfonso2.html">Alfonso II</a> y la consolidación astur</font></b></i></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="274">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="h_media_siglo9_3_ramiro1.html">Ramiro I</a> y descenso de las montañas</font></b></i></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="274">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="h_media_siglo9_4_ordono1.html">Ordoño I</a>, dueño de la Cantábrica</font></b></i></p></td>
+                                    </tr>                                                                                                            
+                                    <tr>
+                                        <td width="274">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="h_media_siglo9_alfonso3.html">Alfonso III</a> y el nacimiento de Castilla</font></b></i></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="274">
+                                          <p align="right">
+                                          <i><b> <font face="Times New Roman" size="2" color="#800000">
+                                          Siglo X </font></b></i></p>
+                                        </td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td width="274">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="h_media_siglo10_2_fernanglez.html">Fernán González</a>, Conde de Castilla y magnate de León </font></b></i></p></td>
+                                    </tr>                                   
+                                    <tr>
+                                        <td width="274">
+                                          <i><b><font face="Times New Roman" size="3" >García Fernández contra <a target="_blank" href="h_media_siglo10_3_garciafdez.html">Almanzor</a> </font></b></i></td>
+                                    </tr>                                    
+                                </table>
+            </div>
+       </td>
+       </tr>                          
+       <tr>
+       <td width="100%">
+           <div id="hechos_xi_xii" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="273" id="menu_h_xi">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >Reino de Castilla</font></i></b></p>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="right">
+                                          <i><b> <font face="Times New Roman" size="2" color="#800000">
+                                          Siglo XI </font></b></i></p>
+                                        </td>
+                                    </tr>                                                     
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="h_media_siglo11_1_sanchogarcia.html">Sancho García</a>,el de los buenos fueros</font></b></i></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >Castilla bajo <a target="_blank" href="h_media_siglo11_2_garciasanchez.html">Navarra y Sancho el Mayor</a> </font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" >Fernando I; Castilla, de condado a <a target="_blank" href="h_media_siglo11_3_fernando_1.html">reino</a> </font></b></i></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="h_media_siglo11_4_sancho2.html">Sancho II</a> y el Cid Campeador </font></b></i></td>
+                                    </tr>                                  
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="h_media_siglo11_5_alfonso6.html">Alfonso VI</a>, Rex et Imperator </font></b></i></p></td>
+                                    </tr>         
+                                    <tr>
+                                        <td width="273">
+                                          <p align="right">
+                                          <i><b> <font face="Times New Roman" size="2" color="#800000">
+                                          Siglo XII </font></b></i></p>
+                                        </td>
+                                    </tr>                            
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="h_media_siglo12_urraca.html">Urraca</a> de Castilla y Alfonso de Aragón </font></b></i></td>
+                                    </tr>      
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="h_media_siglo12_alfonso7.html">Alfonso VII</a>, Hispaniae Imperator</font></b></i></td>
+                                    </tr>     
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="h_media_siglo12_sancho3.html">Sancho III</a>, León desligada de Castilla</font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="h_media_siglo12_alfonso8.html">Alfonso VIII</a>, el de las Navas</font></b></i></td>
+                                    </tr>                                                                       
+                                </table>
+           </div>
+        </td>
+        </tr>                                                    
+       <tr>
+       <td width="100%">
+           <div id="hechos_xiii" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"  width="273" id="menu_h_xiii">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >Reino de Castilla </font></i></b></p>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="right">
+                                          <i><b> <font face="Times New Roman" size="2" color="#800000">
+                                          Siglo XIII </font></b></i></p>
+                                        </td>
+                                    </tr>                            
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="h_media_siglo13_enrique1.html">Enrique I</a>, </font></b></i></td>
+                                    </tr>      
+                                   
+                                </table>
+           </div>
+        </td>
+        </tr>                                                    
+
+
+
+        <tr>
+        <td width="100%">
+            <div id="armas_celta" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="273" id="menu_a_celta">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >La Edad de Hierro</font></i></b></p>
+                                          &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left" style="line-height: 150%">
+                                          <i><b> <font face="Times New Roman" size="3" >Los Guerreros <a target="_blank" href="histo_hierro_guerrero.html">Arevacos</a></font></b></i></p>
+                                        </td>
+                                    </tr>                                                    
+                                    </table>
+            </div>
+        </td>
+        </tr>
+        <tr>
+        <td width="100%">
+            <div id="armas_romanizacion" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"  width="272" id="menu_a_romanizacion">
+                                    <tr>
+                                        <td width="272">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >La Romanización del Duero</font></i></b></p>
+                                          &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <p align="left" style="line-height: 150%">
+                                          <i><b> <font face="Times New Roman" size="3" >El <a target="_blank" href="guerra_roma_repub.html#práctico">Pragmatismo</a> de Roma</font></b></i></p>
+                                        </td>
+                                    </tr>                                                     
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >Soldados de la <a target="_blank" href="guerra_roma_repub.html#República">República</a></font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >La <a target="_blank" href="guerra_roma_auxi.html#caballería auxiliar">Caballería</a> Auxiliar </font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >Las Tropas <a target="_blank" href="guerra_roma_auxi.html#auxiliares">Auxiliares</a> </font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="guerra_roma_cascos.html">Cascos</a> y <a target="_blank" href="guerra_roma_escudos.html">Escudos</a></font></b></i></td>
+                                    </tr>
+                                </table>
+            </div>
+         </td>
+         </tr>
+         <tr>
+         <td width="100%">
+             <div id="armas_pax" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3">
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"  width="273" id="menu_a_pax">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >Bajo el Imperio Romano</font></i></b></p>
+                                          &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >Legionarios del <a target="_blank" href="guerra_roma_ano0.html#Augusto">cambio de era</a></font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >Legionarios del <a target="_blank" href="guerra_roma_siglo1.html">siglo I</a> d.C.</font></b></i></td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >Ejército de Roma en el <a target="_blank" href="guerra_roma_siglo3.html">siglo III</a> d.C.</font></b></i></td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >Ejército de Roma en el <a target="_blank" href="guerra_roma_siglo4.html">siglo IV</a> d.C.</font></b></i></td>
+                                    </tr>   
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >Ejército de Roma en el <a target="_blank" href="guerra_roma_siglo5.html">siglo V</a> d.C.</font></b></i></td>
+                                    </tr>                                    
+                                </table>
+             </div>
+         </td>
+         </tr>
+         <tr>
+         <td width="100%">
+             <div id="armas_goda" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="272" id="menu_a_goda">
+                                    <tr>
+                                        <td width="272">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000">Época Visigoda</font></i></b></p>
+                                          &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <p align="left">
+                                          <i><b> <font face="Times New Roman" size="3" >...estamos recopilando datos</font></b></i></p>
+                                        </td>
+                                    </tr>                                                    
+                                    </table>
+             </div>
+           </td>
+           </tr>                          
+           <tr>
+           <td width="100%">
+               <div id="armas_viii_x" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="274" id="menu_a_viii">
+                                    <tr>
+                                        <td width="274">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000">Condado de Castilla </font></i></b></p>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="274">
+                                          <p align="right">
+                                          <i><b> <font face="Times New Roman" size="2" color="#800000">
+                                          Siglo VIII </font></b></i></p>
+                                        </td>
+                                    </tr>                                                     
+                                    <tr>
+                                        <td width="274">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" >Ejércitos Medievales <a target="_blank" href="guerra_media_siglo8.html">Hispanos</a> </font></b></i></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="274">
+                                          <p align="right">
+                                          <i><b> <font face="Times New Roman" size="2" color="#800000">
+                                          Siglo IX </font></b></i></p>
+                                        </td>
+                                    </tr>     
+                                    <tr>
+                                        <td width="274">
+                                          <i><b><font face="Times New Roman" size="3" >Organización <a target="_blank" href="g_media_siglo9_ejercitohispano.html">militar</a> castellana</font></b></i></td>
+                                    </tr>                                                                                 
+                                    <tr>
+                                        <td width="274">
+                                          <p align="right">
+                                          <i><b> <font face="Times New Roman" size="2" color="#800000">
+                                          Siglo X </font></b></i></p>
+                                        </td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td width="274">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="g_media_10_ejercitohispano.html">Ejércitos</a> Castellanos y Andalusíes </font></b></i></p></td>
+                                    </tr>                                   
+                                    <tr>
+                                        <td width="274">
+                                          <i><b><font face="Times New Roman" size="3" >Evolución del <a target="_blank" href="g_media_siglo10_evolucionarmas.html">Armamento</a></font></b></i></td>
+                                    </tr>                                       
+                                </table>
+               </div>
+           </td>
+           </tr>                          
+           <tr>
+           <td width="100%">
+               <div id="armas_xi_xii" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="273" id="menu_a_xi">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >Reino de Castilla </font></i></b></p>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="right">
+                                          <i><b> <font face="Times New Roman" size="2" color="#800000">
+                                          Siglo XI </font></b></i></p>
+                                        </td>
+                                    </tr> 
+                                    <tr>
+                                        <td width="274">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="g_media_siglo11_ejercitohispano.html">Ejércitos</a> Hispanos </font></b></i></p></td>
+                                    </tr>                                                                    
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="g_media_siglo11_evolucionarmas.html">Evolución</a> del Armamento </font></b></i></td>
+                                    </tr>    
+                                    <tr>
+                                        <td width="273">
+                                          <p align="right">
+                                          <i><b> <font face="Times New Roman" size="2" color="#800000">
+                                          Siglo XII </font></b></i></p>
+                                        </td>
+                                    </tr>                            
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >Las <a target="_blank" href="g_media_siglo12_miliciaconcejil.html">Milicias</a> de los Concejos </font></b></i></td>
+                                    </tr>       
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="g_media_12_13_ejercitohispano.html">Ejércitos Hispanos</a> </font></b></i></td>
+                                    </tr>      
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >Evolución del <a target="_blank" href="g_media_siglo12_13_evolucionarmas.html">Armamento</a> </font></b></i></td>
+                                    </tr>   
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >Órdenes <a target="_blank" href="g_media_siglo12_ordenes.html">Militares</a> en Castilla y León</font></b></i></td>
+                                    </tr>   
+                                    </table>
+               </div>
+           </td>
+           </tr> 
+           <tr>
+           <td width="100%">
+               <div id="armas_xiii" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="273" id="menu_a_xiii">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >Reino de Castilla </font></i></b></p>
+                                          </td>
+                                    </tr>
+                                    <tr>                                    
+                                        <td width="273">
+                                          <p align="right">
+                                          <i><b> <font face="Times New Roman" size="2" color="#800000">
+                                          Siglo XIII </font></b></i></p>
+                                        </td>
+                                    </tr>                                
+                                    <tr>
+                                        <td width="273">
+										<p align="left" style="line-height: 150%">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="g_media_12_13_ejercitohispano.html">Ejércitos</a> Hispanos </font></b></i></p></td>
+                                    </tr>      
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >Evolución del <a target="_blank" href="g_media_siglo12_13_evolucionarmas.html">Armamento</a> </font></b></i></td>
+                                    </tr>            
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >La Campaña de las <a target="_blank" href="g_media_siglo13_navas.html">Navas</a></font></b></i></td>
+                                    </tr>                             
+                                    </table>
+               </div>
+           </td>
+           </tr>                                                                                                      
+           <tr>
+           <td width="100%">
+               <div id="armas_xiv" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="273" id="menu_a_xiv">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >Baja Edad Media </font></i></b></p>
+                                          &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="right">
+                                          <i><b> <font face="Times New Roman" size="2" color="#800000">
+                                          Siglo XIV </font></b></i></p>
+                                        </td>
+                                    </tr>                                                     
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left" style="line-height: 150%">
+                                          <i><b><font face="Times New Roman" size="3" >Evolución del <a target="_blank" href="g_media_siglo14_evolucionarmas.html">Armamento</a> </font></b></i></p></td>
+                                    </tr>    
+                                    </table>
+               </div>
+            </td>
+            </tr>  
+            <tr>
+           <td width="100%">
+               <div id="armas_xv" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="273" id="menu_a_xiv">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >Baja Edad Media </font></i></b></p>
+                                          &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="right">
+                                          <i><b> <font face="Times New Roman" size="2" color="#800000">
+                                          Siglo XV </font></b></i></p>
+                                        </td>
+                                    </tr>                                                     
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left" style="line-height: 150%">
+                                          <i><b><font face="Times New Roman" size="3" >Evolución del Armamento (en construcción) </font></b></i></p></td>
+                                    </tr>    
+                                    </table>
+               </div>
+            </td>
+            </tr>    
+  
+            <tr>
+            <td width="100%">
+                <div id="gentes_celta" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="273" id="menu_g_celta">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >La sociedad en la Edad del Hierro</font></i></b></p>
+                                          &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left" style="line-height: 150%">
+                                          <i><b> <font face="Times New Roman" size="3" >Nuestros Antepasados <a target="_blank" href="histo_arevacos.html#Los Arevacos">Arevacos</a></font></b></i></p>
+                                        </td>
+                                    </tr>                                                 
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="histo_arevacos.html#Culto">Cultos de los Arevacos</a></font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="histo_arevaco_sociedad.html#Vestimenta">Vestimenta</a>, <a target="_blank" href="histo_arevaco_sociedad.html#Adornos">Adornos</a> y Peinados </font></b></i>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >La <a target="_blank" href="histo_arevaco_sociedad.html#Cerveza">Cerveza</a> de los Celtas</font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="histo_hierro_castro.html">Castros</a> y Cabañas Celtas</font></b></i></td>
+                                    </tr>
+                                    </table>
+                </div>
+            </td>
+            </tr>
+            <tr>
+            <td width="100%">
+                <div id="gentes_romanizacion" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="272" id="menu_g_romanizacion">
+                                    <tr>
+                                        <td width="272">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >Romanización del Valle del Duero</font></i></b></p>
+                                          &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <p align="left" style="line-height: 150%">
+                                          <i><b> <font face="Times New Roman" size="3" >Las <a target="_blank" href="histo_roma_casas.html">Casas</a> Romanas</font></b></i></p>
+                                        </td>
+                                    </tr>
+                                                     
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >Escenas <a target="_blank" href="histo_roma_gentes.html">Cotidianas</a> </font></b></i></td>
+                                    </tr>
+                                </table>
+                </div>
+            </td>
+            </tr>                           
+            <tr>
+            <td width="100%">
+                <div id="gentes_pax" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="272" id="menu_g_pax">
+                                    <tr>
+                                        <td width="272">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >Bajo el Imperio Romano</font></i></b></p>
+                                          &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <p align="left" style="line-height: 150%">
+                                          <i><b> <font face="Times New Roman" size="3" >Las <a target="_blank" href="histo_roma_casas.html">Casas</a> Romanas</font></b></i></p>
+                                        </td>
+                                    </tr>
+                                                     
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >Escenas <a target="_blank" href="histo_roma_gentes.html">Cotidianas</a> </font></b></i></td>
+                                    </tr>
+                                </table>
+                </div>
+            </td>
+            </tr>                          
+            <tr>
+            <td width="100%">
+                <div id="gentes_goda" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="272" id="menu_g_goda">
+                                    <tr>
+                                        <td width="272">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000">La Sociedad Visigoda</font></i></b></p>
+                                          &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >Arte <a target="_blank" href="histo_goda_ornamentos.html">Visigodo</a> y ornamentos </font></b></i></td>
+                                    </tr>                                                                        
+                                    <tr>
+                                        <td width="272">
+                                          <p align="left">
+                                          <i><b> <font face="Times New Roman" size="3" >En torno a la <a target="_blank" href="histo_goda_rural.html#torno">Aldea</a>...</font></b></i></p>
+                                        </td>
+                                    </tr>                                                     
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >Agricultura de <a target="_blank" href="histo_goda_rural.html#agricultura">Subsistencia</a> </font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >Campesinos frente a <a target="_blank" href="histo_goda_rural.html#frente">pastores</a></font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >Propiedad de la <a target="_blank" href="histo_goda_rural.html#P">Tierra</a></font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >Reparto de <a target="_blank" href="histo_goda_rural.html#suertes">Suertes</a> y Tenancias </font></b></i></td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >La <a target="_blank" href="histo_goda_rural.html#esclavitud">Esclavitud</a> </font></b></i></td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="histo_goda_rural.html#señores">Señores</a> y Privilegios</font></b></i></td>
+                                    </tr>                                    
+                                    </table>
+                </div>
+            </td>
+            </tr>                          
+            <tr>
+            <td width="100%">
+                <div id="gentes_viii_x" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="274" id="menu_g_viii">
+                                    <tr>
+                                        <td width="274">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000">La sociedad altomedieval castellana </font></i></b></p>
+                                          &nbsp;
+                                          </td>
+                                    </tr>                                              
+                                    <tr>
+                                        <td width="274">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="h_media_siglo8_1.html#Maderuelo">Despoblación</a> del Riaza </font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="274">
+                                          <i><b><font face="Times New Roman" size="3" >Emigraciones <a target="_blank" href="h_media_mozarabes.html">Mozárabes</a> </font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="274">                                     
+                                          <i><b><font face="Times New Roman" size="3" >Organización en <a target="_blank" href="histo_media_merindad.html">Merindades</a> </font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="274">
+                                          <i><b><font face="Times New Roman" size="3" >La <a target="_blank" href="histo_media_extremo.html">Extremadura</a> Castellana </font></b></i></td>
+                                    </tr>                   
+                                </table>
+                </div>
+            </td>
+            </tr>                          
+            <tr>
+            <td width="100%">
+                <div id="gentes_xi_xii" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="273" id="menu_g_xi">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >Nacimiento del Reino de Castilla </font></i></b></p>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="right">
+                                          <i><b> <font face="Times New Roman" size="2" color="#800000">
+                                          Siglo XI </font></b></i></p>
+                                        </td>
+                                    </tr>                                                     
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" >El <a target="_blank" href="h_media_fuero.html">Fuero</a> de Sepúlveda</font></b></i></p></td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" >La <a target="_blank" href="h_media_siglo11_curia_alfonso6.html">Curia</a> de Alfonso VI </font></b></i></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="right">
+                                          <i><b> <font face="Times New Roman" size="2" color="#800000">
+                                          Siglo XII </font></b></i></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" >El paisaje <a target="_blank" href="h_media_siglo12_agrario.html">agrario</a></font></b></i></p></td>
+                                    </tr>                                                                
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" >La <a target="_blank" href="h_media_siglo12_curiaalfonso7.html">Curia</a> de Alfonso VII </font></b></i></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" >La <a target="_blank" href="../../../htdocs/siglo12/vestimenta/vestido_civiles.html">Indumentaria</a> masculina</font></b></i></p></td>
+                                    </tr> 
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" >La <a target="_blank" href="../../../htdocs/siglo12/vestimenta/vestido_dama.html">Indumentaria</a> femenina</font></b></i></p></td>
+                                    </tr>                                                                   
+                                </table>
+                </div>
+            </td>
+            </tr>                                      
+            <tr>
+            <td width="100%">
+                <div id="gentes_xiii" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="273" id="menu_g_xiii">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >Reino de Castilla </font></i></b></p>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="right">
+                                          <i><b> <font face="Times New Roman" size="2" color="#800000">
+                                          Siglo XIII </font></b></i></p>
+                                        </td>
+                                    </tr>                                                     
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" >Estamos recopilando datos...</font></b></i></p></td>
+                                    </tr>                                    
+                                </table>
+                </div>
+            </td>
+            </tr>                                      
+
+            <tr>
+            <td width="100%">
+                <div id="maderuelo_celta" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="273" id="menu_m_celta">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >La Edad de Hierro</font></i></b></p>
+                                          &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left" style="line-height: 150%">
+                                          <i><b> <font face="Times New Roman" size="3" >Castro <a target="_blank" href="histo_hierro.html#El Castro Maderolum">Maderolum</a></font></b></i></p>
+                                        </td>
+                                    </tr>                                                 
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="histo_hierro.html#Las Estelas Discoideas">Estelas</a> Discoideas</font></b></i>
+                                        </td>
+                                    </tr>
+                                    </table>
+                </div>
+            </td>
+            </tr>
+			<tr>
+            <td width="100%">
+                <div id="maderuelo_romanizacion" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="272" id="menu_m_romanizacion">
+                                    <tr>
+                                        <td width="272">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >Romanización del valle de Duero</font></i></b></p>
+                                          &nbsp;
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <p align="left" style="line-height: 150%">
+                                          <i><b> <font face="Times New Roman" size="3" >Las <a target="_blank" href="histo_roma_calzada.html">Calzada</a> de Roa a Tiermes</font></b></i></p>
+                                        </td>
+                                    </tr>                                                     
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >El <a target="_blank" href="histo_roma_puente.html">puente viejo</a> de Maderuelo </font></b></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >Maderuelo y <a target="_blank" href="histo_roma_siglo1.html#Maderuelo">Clunia</a></font></b></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >Villas y Latifundios en el <a target="_blank" href="histo_roma_siglo3.html#Maderuelo">Riaza</a> </font></b></i>
+                                        </td>
+                                    </tr>
+                                </table>
+                </div>
+            </td>
+            </tr>                          
+            <tr>
+            <td width="100%">
+                <div id="maderuelo_pax" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="272" id="menu_m_pax">
+                                    <tr>
+                                        <td width="272">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >...Bajo el Imperio</font></i></b></p>
+                                          &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <p align="left" style="line-height: 150%">
+                                          <i><b> <font face="Times New Roman" size="3" >Las <a target="_blank" href="histo_roma_calzada.html">Calzada</a> de Roa a Tiermes</font></b></i></p>
+                                        </td>
+                                    </tr>                                                     
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >El <a target="_blank" href="histo_roma_puente.html">puente viejo</a> de Maderuelo </font></b></i>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >Maderuelo y <a target="_blank" href="histo_roma_siglo1.html#Maderuelo">Clunia</a></font></b></i>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >Villas y Latifundios en el <a target="_blank" href="histo_roma_siglo3.html#Maderuelo">Riaza</a> </font></b></i>
+                                          </td>
+                                    </tr>
+                                </table>
+                </div>
+            </td>
+            </tr>                          
+            <tr>
+            <td width="100%">
+                <div id="maderuelo_goda" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="272" id="menu_m_goda">
+                                    <tr>
+                                        <td width="272">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000">...Durante la época Visigoda</font></i></b></p>
+                                          &nbsp;
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <p align="left">
+                                          <i><b> <font face="Times New Roman" size="3" >Visigodos en el valle del <a target="_blank" href="histo_godaobj_maderuelo.html">Riaza</a></font></b></i></p>
+                                        </td>
+                                    </tr>                                                     
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="histo_goda_vs_germano.html#Maderuelo">Invasiones</a> Bárbaras (s. V) </font></b></i>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="3" >¿<a target="_blank" href="histo_goda_toledo.html">Por qué</a> estudiar los godos?</font></b></i>
+                                          </td>
+                                    </tr>
+                                    </table>
+                </div>
+            </td>
+            </tr>                          
+            <tr>
+            <td width="100%">
+                <div id="maderuelo_viii_x" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="274" id="menu_m_viii">
+                                    <tr>
+                                        <td width="274">
+                                          <p align="right" ><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000">¿que pasó en el valle del Riaza?</font></i></b></p>
+                                          &nbsp;
+                                          </td>
+                                    </tr>                                              
+                                    <tr>
+                                        <td width="274">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="h_media_siglo9_4_ordono1.html#Maderuelo">Incursiones</a> de ambos Bandos</font></b></i>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="274">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="h_media_siglo10_repoblariaza.html">Río Aza</a>, un valle muy disputado</font></b></i>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="274">                                     
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="h_media_siglo10_2_fernanglez.html#comitísima">Donación</a> del Casuar y Valdevacas </font></b></i>
+                                          </td>
+                                    </tr>
+                                </table>
+                </div>
+            </td>
+            </tr>                          
+            <tr>
+            <td width="100%">
+                <div id="maderuelo_xi_xii" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="273" id="menu_m_xi">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >Nacimiento del Reino de Castilla </font></i></b></p>                                       
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="right">
+                                          <i><b> <font face="Times New Roman" size="2" color="#800000">
+                                          Siglo XI </font></b></i></p>
+                                        </td>
+                                    </tr>                                                     
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" >Maderuelo, bastión <a target="_blank" href="h_media_siglo11_1_sanchogarcia.html#Maderuelo">fronterizo</a></font></b></i></p></td>
+                                    </tr>  
+                                    <tr>
+                                        <td width="273">
+                                          <p align="right">
+                                          <i><b> <font face="Times New Roman" size="2" color="#800000">
+                                          Siglo XII </font></b></i></p>
+                                        </td>
+                                    </tr>                            
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >Maderuelo, de bastión a <a target="_blank" href="h_media_siglo12_villamaderuelo.html">Villa</a> </font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >El <a target="_blank" href="h_media_siglo12_villamaderuelo.html#ugares">Alfoz</a> Maderolense </font></b></i></td>
+                                    </tr> 
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >Primeros <a target="_blank" href="h_media_siglo12_vecinos.html">vecinos</a> de Maderuelo</font></b></i></td>
+                                    </tr>  
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >Cuando<a target="_blank" href="h_media_siglo12_alfonso8maderuelo.html">Alfonso VIII</a> estuvo en Maderuelo</font></b></i></td>
+                                    </tr>  
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" ><a target="_blank" href="h_media_siglo12_pleitoosma.html">Pleito</a> por Liceras, Ayllón y otras rentas en Maderuelo</font></b></i></td>
+                                    </tr>                                                                        
+                                </table>
+                </div>
+            </td>
+            </tr> 
+            <tr>
+            <td width="100%">
+                <div id="maderuelo_xiii" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="274" id="menu_m_xiii">
+                                    <tr>
+                                        <td width="274">
+                                          <p align="center" ><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000">Sobre lo acontecido en la Villa</font></i></b></p>
+                                          &nbsp;
+                                          </td>
+                                    </tr>                                              
+                                    <tr>
+                                        <td width="274">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" >Emparedamiento de una <a target="_blank" href="h_media_siglo13obj_maderuelo.html">anciana</a></font></b></i></p></td>
+                                    </tr>
+                                </table>
+                </div>
+            </td>
+            </tr>
+            <tr>                          
+            <td width="100%">
+                <div id="maderuelo_xiv" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="274" id="menu_m_xiv">
+                                    <tr>
+                                        <td width="274">
+                                          <p align="center" ><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000">Sobre lo acontecido en la Villa</font></i></b></p>
+                                          &nbsp;
+                                          </td>
+                                    </tr>                                              
+                                    <tr>
+                                        <td width="274">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" >Estamos recopilando más datos...</font></b></i></p>
+                                        </td>
+                                    </tr>
+                                </table>
+                </div>
+            </td>
+            </tr>                                                                                                                                                                                               
+            <tr>                          
+            <td width="100%">
+                <div id="maderuelo_xv" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="274" id="menu_m_xv">
+                                    <tr>
+                                        <td width="274">
+                                          <p align="center" ><b><i>
+                                          &nbsp;
+                                          <font face="Times New Roman" size="3" color="#800000">Sobre lo acontecido en la Villa</font></i></b></p>
+                                          &nbsp;
+                                          </td>
+                                    </tr>                                              
+                                    <tr>
+                                        <td width="274">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" >Una misteriosa lluvia de <a target="_blank" href="h_media_siglo15obj_maderuelo.html">piedras</a></font></b></i></p>
+                                        </td>
+                                    </tr>
+                                </table>
+                </div>
+            </td>
+            </tr>                                                                                                                                                                                               
+            <tr>                          
+            <td width="100%">
+                <div id="maderuelo_xvi" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="274" id="menu_m_xvi">
+                                    <tr>
+                                        <td width="274">
+                                          <p align="center" ><b><i>
+                                          &nbsp;
+                                          <font face="Times New Roman" size="3" color="#800000">Sobre lo acontecido en la Villa</font></i></b></p>
+                                          &nbsp;
+                                          </td>
+                                    </tr>                                              
+                                    <tr>
+                                        <td width="274">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" >Estamos recopilando datos...</font></b></i></p>
+                                        </td>
+                                    </tr>
+                                </table>
+                </div>
+            </td>
+            </tr>
+            <tr>
+            <td width="100%">
+                <div id="maderuelo_xvii" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="274" id="menu_m_xvii">
+                                    <tr>
+                                        <td width="274">
+                                          <p align="center" ><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000">Sobre lo acontecido en la Villa</font></i></b></p>
+                                          &nbsp;
+                                          </td>
+                                    </tr>                                              
+                                    <tr>
+                                        <td width="274">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" >Pleito contra Santiago de <a target="_blank" href="h_media_siglo17obj_maderuelo.html">Compostela</a></font></b></i></p>
+                                          </td>
+                                    </tr>
+                                </table>
+                </div>
+            </td>
+            </tr> 
+            <tr>
+            <td width="100%">
+                <div id="maderuelo_xviii" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="274" id="menu_m_xviii">
+                                    <tr>
+                                        <td width="274">
+                                          <p align="center" ><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000">Sobre lo acontecido en la Villa</font></i></b></p>
+                                          &nbsp;
+                                          </td>
+                                    </tr>                                              
+                                    <tr>
+                                        <td width="274">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" >La espadaña de Santa María, en <a target="_blank" href="h_media_siglo18obj_maderuelo.html">ruinas</a></font></b></i></p>
+                                          </td>
+                                    </tr>
+                                </table>
+                </div>
+            </td>
+            </tr> 
+            
+            <tr>                          
+            <td width="100%">
+                <div id="maderuelo_xix" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="274" id="menu_m_xix">
+                                    <tr>
+                                        <td width="274">
+                                          <p align="center" ><b><i>
+                                          &nbsp;
+                                          <font face="Times New Roman" size="3" color="#800000">Sobre lo acontecido en la Villa</font></i></b></p>
+                                          &nbsp;
+                                          </td>
+                                    </tr>                                              
+                                    <tr>
+                                        <td width="274">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="3" >Estamos recopilando datos...</font></b></i></p>
+                                        </td>
+                                    </tr>
+                                </table>
+                </div>
+            </td>
+            </tr>
+            <tr>
+            <td width="100%">
+                <div id="vocablos" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3" >
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="273" id="menu_vocablos">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >Nuestros vocablos...</font></i></b></p>
+                                          &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left" style="line-height: 150%">
+                                          <i><b> <font face="Times New Roman" size="3" >Origen del Nombre de <a target="_blank" href="toponimia_maderuelo.html">Maderuelo</a></font></b></i></p>
+                                        </td>
+                                    </tr>  
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left" style="line-height: 150%">
+                                          <i><b> <font face="Times New Roman" size="3" >Topónimos de <a target="_blank" href="toponimia.html">Maderuelo</a></font></b></i></p>
+                                        </td>
+                                    </tr>     
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left" style="line-height: 150%">
+                                          <i><b> <font face="Times New Roman" size="3" > <a target="_blank" href="arabismos.html">Arabismos</a></font></b></i></p>
+                                        </td>
+                                    </tr>                                                 
+                                    </table>
+                </div>
+            </td>
+            </tr>
+            <tr>
+            <td width="100%">
+                <div id="cuentos" style="visibility:hidden;position:absolute;top=95px;left=250px;z-index:3">
+                                    &nbsp;<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="273" id="menu_cuentos">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="center"><b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >La tradición oral...</font></i></b></p>
+                                          &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >La Vera Cruz y el Maestre <a target="_blank" href="leyenda.html#maestre">templario</a></font></b></i>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >La doncella <a target="_blank" href="leyenda.html#doncella">muerta</a></font></b></i>
+                                          </td>
+                                    </tr> 
+                                    <tr>
+                                        <td width="273">
+                                          <i><b><font face="Times New Roman" size="3" >El asalto a <a target="_blank" href="leyenda.html#Maderuelo">Maderuelo</a></font></b></i>
+                                          </td>
+                                    </tr>                                                                      
+                                                                     
+                                </table>
+             </div>
+         </td>
+         </tr>
+
+
+
+       </table>
+       </td>
+                   
+  </tr>
+  <tr>
+  <td>
+  
+
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"   width="100%" id="AutoNumber4">
+    <tr>
+      <td width="4%">
+      <img border="0" src="../../../images/historia_y_arte/historia/letram.gif" width="77" height="52" alt="Maderuelo tiene un sitio en la historia de la Meseta"></td>
+      <td width="96%"><font size="5" color="#800000"><i><b>aderuelo en la 
+      Historia</b></i></font></td>
+    </tr>
+  </table>
+      <font FACE="Times">
+      <p ALIGN="JUSTIFY" style="text-indent: 16; line-height: 150%; margin-left: 4; margin-right: 4"><span style="font-family:Times"><b>Al estar ubicado sobre un
+      <font color="#800000">cerro</font>, a escasa
+      distancia del <font color="#800000"> río</font> y con varias <font color="#800000"> fuentes</font> en las proximidades,
+      <font color="#800000"> Maderuelo</font> disfruta de un emplazamiento que 
+      fue atractivo para todas las sociedades que se asentaron en la zona, como 
+      lo demuestra su antiquísimo nombre, que procede del culto celta de las
+      <font color="#800000">matres.</font></b></span><p ALIGN="JUSTIFY" style="text-indent: 16; line-height: 150%; margin-left: 4; margin-right: 4"><span style="font-family:Times"><b>Si nos remontamos a la
+      <font color="#800000">prehistoria</font>, encontramos
+      vestigios en alguna caverna próxima, cerca de sendas de animales hacia sus abrevaderos en las márgenes del río.
+      
+      Sus importantes recursos de
+      <font color="#800000"> pastos</font> y <font color="#800000"> bosques</font>
+      permitieron que las tribus celtas&nbsp;<font color="#800000">arevacas</font> se establecieran hasta que fueron
+      sometidos por los <font color="#800000">romanos</font>, que forzaron la emigración a las ciudades y
+      llanuras.
+      Con la decadencia romana se volvió a ocupar esta agreste
+      zona, en forma de aldeas autosuficientes o villas de <font color="#800000"> latifundistas</font>
+      hispanorromanos.
+      &nbsp;Después, los <font color="#800000">visigodos</font>, expulsados del 
+  sur de Francia por
+      los francos y merovingios, refundaron su reino en Hispania.&nbsp; En la 
+  comarca del Riaza y Duratón se asentaron gran número de ellos, llegando a 
+  conocerse este área como campi gotorum (los campos de los godos).&nbsp; De ello han quedado numerosos vestigios en
+      las proximidades. </b></span>
+      <p ALIGN="JUSTIFY" style="text-indent: 16; line-height: 150%; margin-left: 4; margin-right: 4"><span style="font-family:Times"><b>
+  
+    
+      <table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="50%" valign="middle">
+          <p ALIGN="justify" style="text-indent: 16; line-height: 150%; margin-left: 8; margin-right: 8"><b>De la época dominada por los
+            <font color="#800000">musulmanes</font>,
+      Maderuelo conserva algunos restos arquitectónicos, únicos en Segovia. Fue una tierra muy disputada y la Edad Media dejó aqui una huella
+      muy profunda.</b>
+      </td>
+          <td width="50%" align="left" valign="top">
+            <table border="1" width="45%">
+              <tr>
+                <td width="100%" valign="top">
+                  <p style="margin-left: 8; margin-right: 8">
+                  <img border="0" src="../../../images/historia_y_arte/historia/arq001009p.jpg" width="300" height="199" align="left"></p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td width="50%">
+            <p style="margin-left: 8; margin-right: 8"></td>
+          <td width="50%" align="center">
+            <p style="margin-left: 8; margin-right: 8" align="left"><i><b><font color="#800000">Arcos de estilo 
+            mudéjar y románico en el atrio de la iglesia</font></b></i>
+          </td>
+        </tr>
+      </table>
+  <p ALIGN="JUSTIFY" style="text-indent: 16; line-height: 150%; margin-left: 4; margin-right: 4">De finales de la Edad Media se conservan <font color="#800000"> puertas</font> y el trazado de <font color="#800000">murallas</font>, restos de más de trece
+      templos y vestigios diseminados por las casas del pueblo.&nbsp;<p ALIGN="JUSTIFY" style="text-indent: 16; line-height: 150%; margin-left: 4; margin-right: 4">Maderuelo
+      es de los pocos municipios que aun conservan su condición de <font color="#800000">
+      Villa y Tierra</font>, como
+      cabeza de una comunidad que se fundó tras afianzar los condes castellanos su
+      dominio sobre la <font color="#800000"> frontera del Duero</font>.
+      
+        
+      
+  <p ALIGN="JUSTIFY" style="text-indent: 16; line-height: 150%; margin-left: 4; margin-right: 4">La <font color="#800000"> Edad Moderna</font> trajo a la zona un cierto
+      aislamiento, al quedar marginada de los nuevos ejes de comunicación. Al
+      igual que Castilla, Maderuelo se empobreció por el imperialismo y
+      guerras, como la de Sucesión.
+      La agricultura nunca pudo igualar el poder económico anterior, basado en la
+      ganadería lanar.
+      &nbsp; Sin embargo, se superaron las penurias, como lo
+      atestigua la imponente ermita que el pueblo levantó a su patrona, la Virgen de <font color="#800000">Castroboda</font>,&nbsp; a finales del siglo
+      XVIII.
+      
+        
+      
+  <p ALIGN="JUSTIFY" style="text-indent: 16; line-height: 150%; margin-left: 4; margin-right: 4">El <font color="#800000"> siglo XIX</font> trajo un nuevo empobrecimiento,
+      por el aumento de la población y el <font color="#800000">XX</font> comenzó con una España
+      tercermundista e ignorante, donde la Guerra Civil y la gripe del 18
+      demuestran las condiciones lamentables del país.
+      Tras la guerra civil, España exigió a Maderuelo una
+      pesada carga, sin compensación alguna.
+      Aunque ya existía una creciente <font color="#800000">emigración</font> a las ciudades industriales, el
+      <font color="#800000"> embalse el Riaza</font>, anegó las mejores tierras y pastos, privando de
+      importantes recursos a muchas familias, que se vieron forzadas a emigrar.
+      De nuevo, el municipio quedó casi despoblado.
+      
+        
+      
+  <p ALIGN="JUSTIFY" style="text-indent: 16; line-height: 150%; margin-left: 4; margin-right: 4">Recién comenzado, el <font color="#800000"> siglo XXI</font> encuentra un
+      Maderuelo vivo, cuya economía está repartida, por primera vez, entre el
+      sector agrícola y ganadero, industrial, construcción y un sector turístico
+      creciente.
+      Sus problemas son comunes a toda Castilla, el acusado envejecimiento de la población y la ausencia de
+      mano de obra cualificada.
+        
+      
+  <p ALIGN="JUSTIFY" style="text-indent: 16; line-height: 150%; margin-left: 4; margin-right: 4">&nbsp;</td>
+</tr>
+
+  </table>
+<div align="center">
+  <table border="0" width="8%" cellspacing="0" cellpadding="0" style="border-collapse: collapse"  >
+    <tr>
+      <td width="100%">
+        <p align="right">
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="700" height="50">
+          <param name="movie" value="../../cabecera.swf">
+          <param name="quality" value="high"><embed src="../../cabecera.swf" quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="700" height="50"></object>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</body>
+
+</html>

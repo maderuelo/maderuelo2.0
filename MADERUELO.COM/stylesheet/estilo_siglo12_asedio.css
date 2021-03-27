@@ -1,0 +1,42 @@
+/* ************************************************** */
+/* ************************************************** */
+/* FONDO DEL MAPA PARA SIGLO12 ASEDIO*/
+/* ************************************************** */
+/* ************************************************** */
+#areamapa .fondomapa {
+width: 618px;
+height: 530px;
+background:  url(../images/siglo12/fondo_asedio.jpg) no-repeat ; 
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* IDENTIFICADORES DE LOS SIMBOLOS DEL MAPA           */
+/* ************************************************** */
+/* ************************************************** */
+a.item          {background: transparent url(../images/vineta.png) no-repeat scroll 0px 0px;}
+
+
+/* *************************************************** */
+/* IDENTIFICADORES DE COORDENADAS DE LUGARES   44px    */
+/* *************************************************** */
+#coord_almajeneque            	{top: 113px;left:310px;}
+#coord_catapulta	        {top: 157px;left:310px;}
+#coord_bastida           	{top: 201px;left:310px;}
+#coord_ariete           	{top: 245px;left:310px;}
+#coord_parapeto         	{top: 289px;left:310px;}#coord_polvora             	{top: 333px;left:310px;}
+
+
+
+
+/* *************************************************** */
+/* IDENTIFICADORES DE BOTONES DEL MENU INFERIOR*/
+/* *************************************************** */
+#menu_inferior .uno   {width:180px;left:0px;top:10px;}
+#menu_inferior .dos   {width:180px;left:150px;top:10px;}
+#menu_inferior .tres  {width:180px;left:360px;top:10px;}
+#menu_inferior .cuatro {width:180px;left:510px;top:10px;}
+#menu_inferior .cinco {width:200px;left:720px;top:10px;}
+
+
+

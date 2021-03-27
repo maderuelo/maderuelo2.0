@@ -1,0 +1,202 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>MSXII: Galería de Yelmo</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_comun.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_cabecera.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_secciones.css">
+<link href="../stylesheet/estilo_galleria.css" rel="stylesheet" type="text/css" media="screen">
+<script type="text/javascript" src="../javascripts/jquery.js"></script>
+<script type="text/javascript" src="../javascripts/jquery_002.js"></script>
+
+<script type="text/javascript">
+	
+	jQuery(function($) {
+		
+		$('.gallery_demo_unstyled').addClass('gallery_demo'); // adds new class name to maintain degradability
+		
+		$('ul.gallery_demo').galleria({
+			history   : true, // activates the history object for bookmarking, back-button etc.
+			clickNext : true, // helper for making the image clickable
+			insert    : '#main_image', // the containing selector for our main image
+			onImage   : function(image,caption,thumb) { // let's add some image effects for demonstration purposes
+				
+				// fade in the image & caption
+				if(! ($.browser.mozilla && navigator.appVersion.indexOf("Win")!=-1) ) { // FF/Win fades large images terribly slow
+					image.css('display','none').fadeIn(1000);
+				}
+				caption.css('display','none').fadeIn(1000);
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// fade out inactive thumbnail
+				_li.siblings().children('img.selected').fadeTo(500,0.3);
+				
+				// fade in active thumbnail
+				thumb.fadeTo('fast',1).addClass('selected');
+
+				
+				// add a title for the clickable image
+				image.attr('title','Next image >>');
+			},
+			onThumb : function(thumb) { // thumbnail effects goes here
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// if thumbnail is active, fade all the way.
+				var _fadeTo = _li.is('.active') ? '1' : '0.3';
+				
+				// fade in the thumbnail when finnished loading
+				thumb.css({display:'none',opacity:_fadeTo}).fadeIn(1500);
+				
+				// hover effects
+				thumb.hover(
+					function() { thumb.fadeTo('fast',1); },
+					function() { _li.not('.active').children('img').fadeTo('fast',0.3); } // don't fade out if the parent is active
+				)
+			}
+		});
+	});
+	
+	</script>
+
+</script>
+</head>
+<body>
+<!-- INICIO FONDO -->
+<div id="fondo">
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** INICIO CABECERA                      ****** -->
+<!-- ************************************************** -->
+
+<div id="cabecera">
+  <a class="escudo" href="/inicio.html"></a>
+  <div class="maderuelocom"></div>
+  <!-- MENU GRAFICO: DEFINIR BOTONES EN ORDEN DRCHA a IZDA -->
+  <ul id="menu_btn_grafico">
+    <li><a href="http://www.aemet.es/es/eltiempo/prediccion/localidades?l=40408"       class="icono_clima"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://webmail.maderuelo.com/"                                        class="icono_arroba" 
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://madeforum.maderuelo.com/"                                      class="icono_foro"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/naturaleza/parque_natural/presen_ficha.html" class="icono_parque"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/principal/360/entrada.html"            class="icono_360"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="siglo12.html"                        class="icono_siglo12"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+  </ul>
+<!-- MENU TEXTUAL DE CABECERA: DEFINIR BOTONES EN ORDEN IZDA A DRCHA -->
+  <ul id="menu_btn_horiz">
+    <li><a href="/turismo/turismo_visitando.html"  class="btn_turismo"     >Turismo<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_historia"    >Historia<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_arte"        >Arte<span></span></a></li>
+    <li><a href="/naturaleza/ind_natural.html"     class="btn_naturaleza"  >Naturaleza<span></span></a></li>
+    <li><a href="/festejos/ind_fiesta.html" class="btn_festejos"    >Festejos<span></span></a></li>
+    <li><a href="/ayuntamiento/ayto.html" class="btn_ayuntamiento">Ayuntamiento<span></span></a></li>
+    <li><a href=" " class="btn_anuncios"    >Anuncios<span></span></a></li>
+    <li><a href=" " class="btn_web"         >Web<span></span></a></li>
+  </ul>
+<!-- SUBMENU DE BOTONES TEXTO     -->
+<!-- ************************* -->
+<div id="submenu_texto" ></div>
+</div><!-- FIN CABECERA  -->
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA MAPA CENTRAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areamapa">
+
+<!-- ***** FONDO MAPA *****-->
+<div class="fondomapa">
+
+<h3 class="tit_galeria">Yelmo, almete, capacete, bacinete y similares</h3>
+<div class="demo">
+<div id="main_image"></div>
+<ul class="gallery_demo_unstyled">
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_1.jpg" alt="milagrosa" title="Yelmo cónico. Muy usado durante siglos, desde su adopción por los pueblos germánicos y góticos, influenciados por los contactos con el Imperio Romano Oriental.
+Los había con o sin refuerzos tanto perimetral como en la cresta central.  Con o sin nasal.  Los más sofisticados se construían de una sola pieza, otros se construían remachando 4 o 6 sectores triangulares sobre el refuerzo central. "></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_2.jpg" alt="milagrosa" title="Yelmo cónico con nasal. Yelmo compuesto de dos mitades remachadas sobre un refuerzo central.  El elaborado nasal aporta amplia protección facial."></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_3.jpg" alt="milagrosa" title="Yelmo cónico con almófar. Este modelo incorpora una protección de sortijas o malla que substituye al almófar independiente o lo dobla, esto es, añade una segunda capa. El nasal es dorado y la ausencia de punta en la cima, indica que se  fabricó en una sola pieza, sin remachar 2, 4 o 6 sectores."></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_4.jpg" alt="milagrosa" title="Yelmo cónico con cresta. Modelo anticuado para el siglo XII, muy influenciado por la moda bizantina, que fué irradiada por todo el Mediterraneo y por el Este de Europa. El uso de la cresta no suele ser ornamental si no que constituye el armazón sobre el que se remachan las dos mitades del yelmo."></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_5.jpg" alt="milagrosa" title="Yelmo cónico con nasal y nuquera. La nuquera implica una mejora al casco cónico que los sitúa en pleno siglo XII.  Sin embargo, exige mayor maestría del herrero pues generalmente se fabrica en una pieza. En la figura se complementa con un amplio nasal"></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_6.jpg" alt="milagrosa" title="Yelmo cónico con arista central. Este elaborado yelmo perteneció a un principal del reino taifa de Zaragoza (Ahmad Sayf al Dawla)."></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_7.jpg" alt="milagrosa" title=" Yelmo de calva plana. Surge en las postrimerías del XII. Algunos añaden nasal o refuerzo perimetral como en la figura. La mayoría iban pintados con decoraciones muy esquemáticas, generalmente  geométricos.  Aun faltan muchos años para las complejas representaciones heráldicas del finales de XIII y XIV"></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_8.jpg" alt="milagrosa" title="Yelmo de calva plana con facial. Es una evolución del yelmo de calva plana, motivada por el incremento del uso de la caballería pesada. El facial aporta más protección a costa de sacrificar visión panorámica, lo que le desaconseja para su uso por la infantería."></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_9.jpg" alt="milagrosa" title=" Yelmo frigio con nasal y nuquera. Se llaman frigios modernamente por su similitud con los cascos frigios de la Grecia Clásica. La nuquera lo enmarca dentro de la progresiva ampliación de las protecciones que se dió en el XII."></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_10.jpg" alt="milagrosa" title="Yelmo con nasal. Este modelo fue usado por soldados comunes ya que su construcción era simple pero efectiva.  El largo nasal aporta gran proteccion al rostro."></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_11.jpg" alt="milagrosa" title="Yelmo frigio con facial. Este yelmo supone una mejora del casco frígio.  Construido en una pieza , añade un refuerzo perimetral y un elaborado facial con plieges radiales.  Amplias ojeras le otorgan buena visión que lo hacen acto para luchar a pie."></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_12.jpg" alt="milagrosa" title="Bacinete. Yelmo semiesférico que fué sin duda el más usado desde finales del XII hasta mediados del XIII, a tenor de las ilustraciones de la época. Válido tanto para caballeros como infantes y arqueros"></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_13.jpg" alt="milagrosa" title="Bacinete con nasal. Casco que se impone en el siglo XII y muy usado en la península durante el XIII.  Generalmente iba decorado con dibujos geométricos simples. Este modelo ha aumentado su altura total pasando de una semiesfera a un tronco cilíndrico rematado por la semiesfera"></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_14.jpg" alt="milagrosa" title=" Yelmo andalusí semiesférico con nasal.  Muy comunes entre las tropas andalusíes y apenas presentaban diferencias a los usados entras partes de Hispania. Los guerreros musulmanes solían rodear el yelmo con un pequeño turbante."></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_15.jpg" alt="milagrosa" title=" Yelmo semiesférico. Muy común en Al-Andalus usado con turbante.  Su ausencia de nasal lo hace apto para su uso entre los arqueros. Presenta refuerzos cruzados sobre la cúpula y otro perimetral, lo que indica que se ha fabricado ensamblando cuatro piezas triangulares"></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_16.jpg" alt="milagrosa" title="Yelmo cónico con gran nasal. Este casco de finales del XII muestra un nasal mejorado que aporta gran protección al rostro.  El yelmo no presenta secciones remachadas ni refuerzos y se hizo en una sola pieza"></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_17.jpg" alt="milagrosa" title="Yelmo semiesférico con facial.  Usado por toda Europa.  Posee amplia protección aunque no limita la visión en exceso. El refuerzo frontal se prolonga reforzando el facial en la zona nasal hasta la barbilla.  La arista bajo las ojeras le confieren mayor resistencia."></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_18.jpg" alt="milagrosa" title=" Yelmo frigio con facial y nuquera. Igual que en yelmos cónicos y de calva plana, se incorporó el facial para proteger la cara.  Se trata de un modelo muy elaborado ya que parece construido en una sola pieza. Muy usado en Hispania y está representado en varios capiteles románicos de iglesias navarras. Los orificios para los ojos son amplios y apena dificultan la visión lo que le hace válido tanto para la caballería como para la infantería."></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_19.jpg" alt="milagrosa" title="Yelmo con facial. Yelmo típicamente navarro-aragonés en el XII. Está representado en un capitel románico en Tiermes (Soria) en manos de un sargento o infante que apoya a un caballero. Parece construido el facial en una pieza independiente y remachada al casco, que presenta una arista central desde la cima hasta la barbilla que lo confiere mayor resistencia. Al ser usado para la lucha a pie, requiere amplios orificios para disponer de visión panorámica. "></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_20.jpg" alt="milagrosa" title="Chapel de fer. Uno de los primeros modelos. Posee un curioso refuerzo frontal que se remata en la cimera con una punta en estilo frigio. Posterioremente se ensanchó el ala, haciéndole más horizontal y dándole una calva plana. "></li>
+    <li class="active"><img src="/images/siglo12/galeria/yelmo_21.jpg" alt="milagrosa" title="El yelmo llamado frigio imita la forma de las gorras de cuero que se popularizaron en el pueblo franco y germano, entre los siglos VIII y XI.  Gorras puntiagudas en las que la punta solia inclinarse hacia adelante.  Esta gorra fue muy usada por los arqueros de estas regiones.  El nombre frigio deriva de los cascos de bronce que usaba los frigios de la Grecia Clásica pero no existe relación entre ellos.
+Este elaborado yelmo demuestra una alta posicion del portador.  Las aristas le confieren gran resistencia."></li>
+</ul>
+<p class="nav_galeria"><a href=" " onclick="$.galleria.prev(); return false;">&laquo; Anterior</a> | <a href="#texto"> Más INFO</a> | <a href=" " onclick="$.galleria.next(); return false;">Siguiente &raquo;</a></p>
+</div>
+
+
+
+</div> <!-- FIN FONDOMAPA  -->
+
+</div> <!-- FIN AREAMAPA -->
+
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA TEXTO FINAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areatexto"><a NAME = "texto"></a>
+
+<p class="big">
+  <span class="letracapital"><h7>H</h7></span>
+asta  el siglo XII los yelmos cubrían solamente la mitad superior de la cabeza aunque, a partir del X, era habitual una prolongación o nasal que protegía la cara.  El yelmo se sujeta mediante correas o  lazos.
+<br><br>
+Usado desde el I d.c. en toda Europa y cuenca mediterránea, el yelmo cónico es común en el siglo XI y se abandona gradualmente durante el siglo XII, en favor del bacinete (cervellière) semiesférico, y acabará desapareciendo en torno a 1250. Paralelamente, se desarrollan nasales más amplios hasta llegar a máscaras faciales.
+<br><br>
+Los yelmos de calva plana surgen a finales de XII y con la adopción de faciales evolucionarán durante el XIII hasta los típicos grandes yelmos.
+<br><br>
+A finales del XII también surge el capel de fer, traducción directa del francés, chapel de fer.  Es como un sombrero metálico de ala ancha y circular. A menudo se porta sobre un bacinete semiesférico que iba sujeto bajo la cofia de malla o almófar.
+<br><br>
+Solía ser frecuente que los yelmos fueran pintados con patrones muy simples.  Entre los jefes y principales también era común dorar algunas partes e incluso añadir incustraciones de piedras semipreciosas (blocados).
+<br><br>
+Las carrilleras aun son usadas en algunas áreas durante el siglo XI pero se consideran anticuados para el siglo XII, perviviendo en zonas remotas como Irlanda hasta el XIII.
+<br><br>
+Es indudable que los yelmos fabricados en materiales como cuero, madera, lino trenzado, etc fueron mucho más frecuentes y podían aportar la misma protección que un yelmo metálico, siendo ligeros y más baratos.  Pero al estar fabricados con materiales no duraderos apenas nos han llegado vestigios. 
+<br><br>
+Entre los francos de los siglos VI-VII se usó la combinación de capacetes de cuero con refuerzos metalicos.  Al refuerzo perimetral se le llamó cerco.
+<br>
+</p>
+
+<p class="pie_galeria">
+<a href="/inicio.html">Maderuelo Home Page</a> | <a href="/inicio.html">Made by nosotros, de Maderuelo</a>
+</p>
+
+</div> <!-- FIN AREA TEXTO FINAL PAGINA -->
+
+
+
+</div><!-- FIN FONDO -->
+</body>
+
+
+</html>
+

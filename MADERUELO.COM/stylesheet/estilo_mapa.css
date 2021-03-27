@@ -1,0 +1,164 @@
+/* ************************************************** */
+/* ************************************************** */
+/* DEFINICION DEL MAPA */
+/* ************************************************** */
+/* ************************************************** */
+dl.mapa.on {
+margin: 0px;
+padding: 0px;
+position: relative;top:0; left:0;
+text-align: left;
+}
+
+dl.mapa.on dt {
+list-style-type: none;
+list-style-image: none;
+list-style-position: outside;
+display: inline;
+}
+/* ************************************************** */
+/* ************************************************** */
+/* DEFINICION DEL RESUMEN A MOSTRAR                   */
+/* ************************************************** */
+/* ************************************************** */
+dl.mapa.on dd {
+border: 2px solid #222222;
+padding: 4px;
+background: transparent url(../images/resumen.jpg) repeat scroll 0% 50%;
+position: absolute;
+left: -9999px;
+width: 300px;
+z-index: 11;
+font-size: 1em;
+font-family: "Times",serif;
+text-align: justify;
+color: black;
+}
+/* DEFINICION DE LA IMAGEN EMBEBIDA EN EL RESUMEN */
+dl.mapa.on dd img {
+border: 1px solid #000000;
+margin-left: 2px;
+position: relative;
+float:right;
+}
+
+/* DEFINICION DE LA IMAGEN EMBEBIDA EN EL RESUMEN COMO ICONOS */
+dl.mapa.on dd img.item {
+border: 1px solid #000000;
+margin-left: 2px;
+position: relative;
+float:center;
+}
+
+/* DEFINICION DEL BOTON TIPO ENLACE A WEB */
+dl.mapa.on dd a.enlaceweb {
+position:relative;
+float:none;
+width:100%;
+font-family: "Times",serif;
+text-indent: 0px;
+font-weight: bold;
+
+}
+
+
+
+/* DEFINICION DEL BOTON TIPO CERRAR VENTANA */
+dl.mapa.on dd a.cerrar {
+position:relative;
+float:left;
+color:#460000;
+background:url(../images/btn_aspa.png) no-repeat;
+text-indent:-9999px;
+outline:none;
+height:19px;
+width:19px;
+margin-left:0px;
+margin-right:5px;
+text-decoration:none;
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* DEFINICION DE LUGARES MARCADOS EN EL MAPA          */
+/* ************************************************** */
+/* ************************************************** */
+dl.mapa.on a{
+display: block;
+position: absolute;
+text-indent: -9999px;
+width: 36px;
+height: 36px;
+z-index: 10;
+text-decoration: none;
+}
+
+
+/* ************************************************** */
+/* ************************************************** */
+/* DEFINICION DE LA LEYENDA Y SUS SIMBOLOS            */
+/******************************************************/
+/* ************************************************** */
+#leyenda {
+  width: 1024px;
+  height: 50px;
+  list-style: none;
+  left:20px;   bottom:50px; 
+  position: absolute;
+}
+
+/* Importante text-indent = negative value (-900%), el texto no se muestra.
+  float=left para que se distribuyan los botones
+  posicion relative al div que lo contiene */
+#leyenda a {
+  display: inline;
+  position: absolute;
+  outline: none;
+  text-indent: -900%;
+}
+
+#leyenda a span{
+  display: block;
+  position: relative;top: +10px; left: +50px;
+} 
+ 
+
+/* ************************************************** */
+/* ************************************************** */
+/* DEFINICION DEL MENU DE BOTONES SECUNDARIO          */
+/* ************************************************** */
+/* ************************************************** */
+#menu_inferior { /* posicion absoluta respecto a areacentral */
+  width: 1024px;
+  height: 25px;
+  list-style: none;
+  left:50px;   bottom:5px; 
+  position: absolute;
+}
+
+
+
+/* Importante text-indent = negative value (-900%), el texto no se muestra.
+  float=left para que se distribuyan los botones
+  posicion relative al div que lo contiene */
+
+#menu_inferior a {
+  display: block;
+  position: absolute;
+  outline: none;
+  background: url(../images/vineta.png) no-repeat;
+  text-decoration: none;
+  color:black;
+  font-family: "Times",Helvetica,sans-serif;
+  font-weight: bold;
+  font-size:1.3em;
+}
+
+
+#menu_inferior a span{
+  display:block;
+  position: relative;left:18px;top:-11px;
+} 
+
+
+

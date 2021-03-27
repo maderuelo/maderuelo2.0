@@ -1,0 +1,190 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Maderuelo: Galería de la Ermita de la Veracruz (II)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_comun.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_cabecera.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_secciones.css">
+<link href="../stylesheet/estilo_galleria.css" rel="stylesheet" type="text/css" media="screen">
+<script type="text/javascript" src="../javascripts/jquery.js"></script>
+<script type="text/javascript" src="../javascripts/jquery_002.js"></script>
+
+<script type="text/javascript">
+	
+	jQuery(function($) {
+		
+		$('.gallery_demo_unstyled').addClass('gallery_demo'); // adds new class name to maintain degradability
+		
+		$('ul.gallery_demo').galleria({
+			history   : true, // activates the history object for bookmarking, back-button etc.
+			clickNext : true, // helper for making the image clickable
+			insert    : '#main_image', // the containing selector for our main image
+			onImage   : function(image,caption,thumb) { // let's add some image effects for demonstration purposes
+				
+				// fade in the image & caption
+				if(! ($.browser.mozilla && navigator.appVersion.indexOf("Win")!=-1) ) { // FF/Win fades large images terribly slow
+					image.css('display','none').fadeIn(1000);
+				}
+				caption.css('displ    Cuando las aguas descienden a principios de Agosto, dejan ver esta obra  de sólida sillería.  Algunos expertos creen que no es románico si no romano. Sus cinco ojos semienterrados por el lodo del embalse y sus recios espolones demuestran la fuerza de las crecidas del Riaza.  Este puente, por cuya travesía debían pagar pontazgo al Marqués de Villena, une el pueblo con su querida ermita de la Veracruz y las altas tierras del páramo. ay','none').fadeIn(1000);
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// fade out inactive thumbnail
+				_li.siblings().children('img.selected').fadeTo(500,0.3);
+				
+				// fade in active thumbnail
+				thumb.fadeTo('fast',1).addClass('selected');
+
+				
+				// add a title for the clickable image
+				image.attr('title','Next image >>');
+			},
+			onThumb : function(thumb) { // thumbnail effects goes here
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// if thumbnail is active, fade all the way.
+				var _fadeTo = _li.is('.active') ? '1' : '0.3';
+				
+				// fade in the thumbnail when finnished loading
+				thumb.css({display:'none',opacity:_fadeTo}).fadeIn(1500);
+				
+				// hover effects
+				thumb.hover(
+					function() { thumb.fadeTo('fast',1); },
+					function() { _li.not('.active').children('img').fadeTo('fast',0.3); } // don't fade out if the parent is active
+				)
+			}
+		});
+	});
+	
+	</script>
+
+</script>
+</head>
+<body>
+<!-- INICIO FONDO -->
+<div id="fondo">
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** INICIO CABECERA                      ****** -->
+<!-- ************************************************** -->
+
+<div id="cabecera">
+  <a class="escudo" href="/inicio.html"></a>
+  <div class="maderuelocom"></div>
+  <!-- MENU GRAFICO: DEFINIR BOTONES EN ORDEN DRCHA a IZDA -->
+  <ul id="menu_btn_grafico">
+    <li><a href="http://www.aemet.es/es/eltiempo/prediccion/localidades?l=40408"       class="icono_clima"
+           onclick="window.open(this.href,'newwin'); return false;"><span></span></a></li>
+    <li><a href="http://webmail.maderuelo.com/"                                        class="icono_arroba" 
+           onclick="window.open(this.href,'newwin'); return false;"><span></span></a></li>
+    <li><a href="http://madeforum.maderuelo.com/"                                      class="icono_foro"
+           onclick="window.open(this.href,'newwin'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/naturaleza/parque_natural/presen_ficha.html" class="icono_parque"
+           onclick="window.open(this.href,'newwin'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/principal/360/entrada.html"            class="icono_360"
+           onclick="window.open(this.href,'newwin'); return false;"><span></span></a></li>
+    <li><a href="/siglo12/siglo12.html"                        class="icono_siglo12"
+           onclick="window.open(this.href,'newwin'); return false;"><span></span></a></li>
+  </ul>
+<!-- MENU TEXTUAL DE CABECERA: DEFINIR BOTONES EN ORDEN IZDA A DRCHA -->
+  <ul id="menu_btn_horiz">
+    <li><a href="/turismo/turismo_visitando.html"  class="btn_turismo"     >Turismo<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_historia"    >Historia<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_arte"        >Arte<span></span></a></li>
+    <li><a href="/naturaleza/ind_natural.html"     class="btn_naturaleza"  >Naturaleza<span></span></a></li>
+    <li><a href="/festejos/ind_fiesta.html" class="btn_festejos"    >Festejos<span></span></a></li>
+    <li><a href="/ayuntamiento/ayto.html" class="btn_ayuntamiento">Ayuntamiento<span></span></a></li>
+    <li><a href=" " class="btn_anuncios"    >Anuncios<span></span></a></li>
+    <li><a href=" " class="btn_web"         >Web<span></span></a></li>
+  </ul>
+<!-- SUBMENU DE BOTONES TEXTO     -->
+<!-- ************************* -->
+<div id="submenu_texto" ></div>
+</div><!-- FIN CABECERA  -->
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA MAPA CENTRAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areamapa">
+
+<!-- ***** FONDO MAPA *****-->
+<div class="fondomapa">
+
+<h3 class="tit_galeria">Ermita de la Veracruz (II)</h3>
+<div class="demo">
+<div id="main_image"></div>
+<ul class="gallery_demo_unstyled">
+    <li class="active"><img src="/images/turismo/galeria/veracruz_21.jpg" alt="veracruz" title="Alero de canecillos románicos del ábside y de la nave"></li>
+    <li class="active"><img src="/images/turismo/galeria/veracruz_22.jpg" alt="veracruz" title="Algarada en la Veracruz en la fiesta medieval"></li>
+    <li class="active"><img src="/images/turismo/galeria/veracruz_23.jpg" alt="veracruz" title="Cabecera de la Veracruz"></li>
+    <li class="active"><img src="/images/turismo/galeria/veracruz_24.jpg" alt="veracruz" title="Canecillos románicos y taqueado jaqués del alero de la Veracruz"></li>
+    <li class="active"><img src="/images/turismo/galeria/veracruz_25.jpg" alt="veracruz" title="Detalle de canecillo románico de la Veracruz"></li>
+    <li class="active"><img src="/images/turismo/galeria/veracruz_26.jpg" alt="veracruz" title="Empalizada de troncos alrededor de la Veracruz colocada para la fiesta medieval"></li>
+    <li class="active"><img src="/images/turismo/galeria/veracruz_27.jpg" alt="veracruz" title="Ermita de la Veracruz al amanecer"></li>
+    <li class="active"><img src="/images/turismo/galeria/veracruz_28.jpg" alt="veracruz" title="Ermita de la Veracruz al atardecer"></li>    
+    <li class="active"><img src="/images/turismo/galeria/veracruz_29.jpg" alt="veracruz" title="Ermita de la Veracruz desde el restaurante Alfoz de Maderuelo"></li>
+    <li class="active"><img src="/images/turismo/galeria/veracruz_30.jpg" alt="veracruz" title="Ermita de la Veracruz en otoño"></li>
+    <li class="active"><img src="/images/turismo/galeria/veracruz_31.jpg" alt="veracruz" title="Ermita de la Veracruz un día nevado"></li>
+    <li class="active"><img src="/images/turismo/galeria/veracruz_32.jpg" alt="veracruz" title="Ermita de la Veracruz y Puente Viejo"></li>
+    <li class="active"><img src="/images/turismo/galeria/veracruz_33.jpg" alt="veracruz" title="Fachada oeste de la Veracruz desde el pueblo"></li>
+    <li class="active"><img src="/images/turismo/galeria/veracruz_34.jpg" alt="veracruz" title="La Veracruz desde el camino del Llanillo"></li>
+    <li class="active"><img src="/images/turismo/galeria/veracruz_35.jpg" alt="veracruz" title="La Veracruz desde el pueblo "></li>
+    <li class="active"><img src="/images/turismo/galeria/veracruz_36.jpg" alt="veracruz" title="La Veracruz en día de crecida del pantano por las lluvias"></li>
+    <li class="active"><img src="/images/turismo/galeria/veracruz_37.jpg" alt="veracruz" title="La Veracruz en fiestas medievales"></li>
+    <li class="active"><img src="/images/turismo/galeria/veracruz_38.jpg" alt="veracruz" title="La Veracruz en primavera"></li>
+    <li class="active"><img src="/images/turismo/galeria/veracruz_39.jpg" alt="veracruz" title="Rayo de sol penetrando en el interior de la Veracruz al amanecer"></li>
+    <li class="active"><img src="/images/turismo/galeria/veracruz_40.jpg" alt="veracruz" title="VRestos de frescos románicos en la Veracruz"></li>
+
+</ul>
+<p class="nav_galeria"><a href="#" onclick="$.galleria.prev(); return false;">&laquo; Anterior</a> | <a href="#texto"> Más INFO</a> | <a href="#" onclick="$.galleria.next(); return false;">Siguiente &raquo;</a></p>
+</div>
+
+
+
+</div> <!-- FIN FONDOMAPA  -->
+
+</div> <!-- FIN AREAMAPA -->
+
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA TEXTO FINAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areatexto"><a NAME = "texto"></a>
+
+<p class="big">
+  <span class="letracapital"><h7>D</h7></span>
+eclarada monumento nacional en 1924, esta sencilla ermita románica sorprendió al mundo por albergar uno de los mejores conjuntos de  frescos medievales castellanos.<br>
+En 1950, la construcción del embalse dió lugar a su expropiación y obligó a trasladar los frescos al Museo del Prado, quedando unas débiles improntas en los muros, apreciadas hoy como un tesoro por los vecinos.<br>
+<br>
+Salvo Santa Coloma, es el más antiguo templo y parece estar reedificada sobre una ermita visigótica anterior.  La tradición nos habla del culto ancestral a los muertos y algunos entendidos afirman que los templarios custodiaron aquí uno de los lignum crucis que llegaron a la península. 
+<br><br>
+Bien merece la pena, una visita a sus pinturas.  para mayor información, consulte en la oficina de turismo.
+</p>
+
+<p class="pie_galeria">
+<a href="/inicio.html">Maderuelo Home Page</a> | <a href="/inicio.html">Made by nosotros, de Maderuelo</a>
+</p>
+
+</div> <!-- FIN AREA TEXTO FINAL PAGINA -->
+
+
+
+</div><!-- FIN FONDO -->
+</body>
+
+
+</html>
+

@@ -1,0 +1,375 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>Naturaleza de Maderuelo y su Entorno. Indice</TITLE>
+	<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+	<META NAME="CREATED" CONTENT="20041229;9373000">
+	<META NAME="CHANGED" CONTENT="20041229;9375000">
+	<META NAME="ProgId" CONTENT="FrontPage.Editor.Document">
+
+<SCRIPT LANGUAGE="JavaScript1.2" type="text/javascript">
+
+
+<!--
+
+
+nereidFadeObjects = new Object();
+nereidFadeTimers = new Object();
+
+/* object - image to be faded (actual object, not name);
+ * destop - destination transparency level (ie 80, for mostly solid)
+ * rate   - time in milliseconds between trasparency changes (best under 100)
+ * delta  - amount of change each time (ie 5, for 5% change in transparency)
+ */
+
+function nereidFade(object, destOp, rate, delta){
+if (!document.all)
+return
+    if (object != "[object]"){  //do this so I can take a string too
+        setTimeout("nereidFade("+object+","+destOp+","+rate+","+delta+")",0);
+        return;
+    }
+        
+    clearTimeout(nereidFadeTimers[object.sourceIndex]);
+    
+    diff = destOp-object.filters.alpha.opacity;
+    direction = 1;
+    if (object.filters.alpha.opacity > destOp){
+        direction = -1;
+    }
+    delta=Math.min(direction*diff,delta);
+    object.filters.alpha.opacity+=direction*delta;
+
+    if (object.filters.alpha.opacity != destOp){
+        nereidFadeObjects[object.sourceIndex]=object;
+        nereidFadeTimers[object.sourceIndex]=setTimeout("nereidFade(nereidFadeObjects["+object.sourceIndex+"],"+destOp+","+rate+","+delta+")",rate);
+    }
+}
+
+
+
+function ocultar() {
+		obj_lechuza.style.visibility="hidden";
+		obj_seta.style.visibility="hidden";
+		obj_sabina.style.visibility="hidden";
+		
+	    nereidFade(document.images["obj_fauna"], 30, 30, 5);
+		nereidFade(document.images["obj_vegetacion"], 30, 30, 5);
+		nereidFade(document.images["obj_hongos"], 30, 30, 5);
+	
+		menu_fauna.style.visibility="hidden";
+		menu_vegetacion.style.visibility="hidden";		
+		menu_hongo.style.visibility="hidden";		
+}
+
+function fauna() {
+		ocultar();
+        obj_lechuza.style.visibility="visible";
+	    menu_fauna.style.visibility="visible";
+
+		nereidFade(document.images["obj_fauna"], 100, 30, 5);
+
+		nereidFade(document.images["obj_llavefauna"], 100, 30, 5);
+		nereidFade(document.images["obj_llavevegetacion"], 0, 30, 5);
+	    nereidFade(document.images["obj_llavesetas"], 0, 30, 5);  
+}
+
+function vegetacion() {
+		ocultar();
+        obj_sabina.style.visibility="visible";
+		menu_vegetacion.style.visibility="visible";
+        
+        nereidFade(document.images["obj_vegetacion"], 100, 30, 5);
+		
+		nereidFade(document.images["obj_llavefauna"], 0, 30, 5);
+		nereidFade(document.images["obj_llavevegetacion"], 100, 30, 5);
+		nereidFade(document.images["obj_llavesetas"], 0, 30, 5);  
+}
+
+
+function hongos() {
+		ocultar();
+	    obj_seta.style.visibility="visible";
+	    menu_hongo.style.visibility="visible";
+
+        nereidFade(document.images["obj_hongos"], 100, 30, 5);
+
+		nereidFade(document.images["obj_llavefauna"], 0, 30, 5);
+		nereidFade(document.images["obj_llavevegetacion"], 0, 30, 5);  
+		nereidFade(document.images["obj_llavesetas"], 100, 30, 5);  
+}
+
+
+
+function cargaobj_imagenes() {
+      fauna();
+      vegetacion();
+      hongos();
+}
+    </script>
+</head>
+
+
+
+<body bgcolor="#FFFFCC" background="../../images/historia_y_arte/historia/fondo_fibulas.gif" onload="cargaobj_imagenes();">
+<div align="left">
+    <table border="0" width="1024" cellspacing="0" cellpadding="0" style="border-collapse: collapse">
+      <tr>
+        <td width="800px">
+          <p align="center">
+          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="700" height="50" align="right">
+            <param name="movie" value="../cabecera.swf">
+            <param name="quality" value="High">
+            <param name="_cx" value="18521">
+            <param name="_cy" value="1323">
+            <param name="FlashVars" value="0">
+            <param name="Src" value="../cabecera.swf">
+            <param name="WMode" value="Window">
+            <param name="Play" value="0">
+            <param name="Loop" value="-1">
+            <param name="SAlign" value>
+            <param name="Menu" value="-1">
+            <param name="Base" value>
+            <param name="AllowScriptAccess" value="always">
+            <param name="Scale" value="ShowAll">
+            <param name="DeviceFont" value="0">
+            <param name="EmbedMovie" value="0">
+            <param name="BGColor" value>
+            <param name="SWRemote" value>
+            <embed src="../cabecera.swf" quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="700" height="50"></object>
+        </td>
+      </tr>
+    </table>
+</div>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"  width="1024" >
+<tr>
+<td height="600" align="right">
+    <div id="capa_menu" style="visibility:visible;position:absolute;top=80;z-index:2; left:10"> 
+         <map name="FPMap0">         
+         <area href="clima_introduccion.html" shape="rect" coords="221, 150, 314, 175" alt="mueve el ratón a la derecha del guerrero" >
+         <area href="clima_influencia.html" shape="rect" coords="0, 5, 190, 29">
+         <area href="clima_introduccion.html#lluvias" shape="rect" coords="1, 31, 70, 55">
+         <area href="clima_introduccion.html#termometrico" shape="rect" coords="1, 60, 143, 86">
+         <area href="clima_introduccion.html#vientos" shape="rect" coords="4, 90, 81, 114">
+         <area href="agua_cuenca.html" shape="rect" coords="21, 191, 192, 213">
+         <area href="agua_embalse.html#limnologia" shape="rect" coords="19, 216, 190, 241">
+         <area href="agua_embalse.html" shape="rect" coords="16, 247, 203, 273">
+         <area href="tierra_encuadregeologico.html#canon" shape="rect" coords="1, 429, 181, 455">         
+         <area href="tierra_encuadregeologico.html#litologia" shape="rect" coords="0, 400, 193, 428">
+         <area href="tierra_suelo.html" shape="rect" coords="0, 367, 193, 391">
+         <area href="parque_natural/presen_ficha.html" shape="rect" coords="86, 489, 320, 538">
+         <area href="../ayuntamiento/ambiente.html" shape="rect" coords="409, 491, 621, 540">
+         <area href="http://www.jcyl.es/jcyl-client/jcyl/cmaot?locale=es_ES&amp;textOnly=false" shape="rect" coords="728, 490, 978, 538">
+         <area href="tierra_encuadregeografico.html" shape="rect" coords="2, 342, 125, 366">
+         <area onMouseover="fauna()" alt="para saber más de la fauna maderolense" shape="rect" coords="373, 147, 513, 183">
+         <area onMouseover="vegetacion()" alt="para saber más de la flora maderolense" shape="rect" coords="370, 210, 578, 250">
+         <area onMouseover="hongos()" alt="para saber más de los hongos maderolense" shape="rect" coords="372, 272, 654, 316">
+         <area target="_blank" coords="0, 315, 162, 339" shape="rect" href="naturaleza_teledeteccion.html">
+         </map><span style="position: absolute; left: 0; top: 0; z-index: 3"><img  id="menu" border="0" src="../../images/naturaleza/fondo_menu_naturaleza.gif"  usemap="#FPMap0" alt="pincha sobre el enlace" width="1024" height="550" >                    
+    
+         </span>                    
+    
+       <img border="0" id="obj_lechuza" src="../../images/naturaleza/lechuza2.gif" style="visibility:visible;position:absolute;top=30;left=530;z-index:2;filter:alpha(opacity=100);-moz-opacity:1.0" width="150" height="185">
+       <img border="0" id="obj_sabina" src="../../images/naturaleza/sabina_p.gif" style="visibility:hidden;position:absolute;top=10;left=550;z-index:2;filter:alpha(opacity=100);-moz-opacity:1.0" width="99" height="253">
+       <img border="0" id="obj_seta" src="../../images/naturaleza/seta.gif" style="visibility:hidden;position:absolute;top=100;left=530;z-index:2;filter:alpha(opacity=100);-moz-opacity:1.0" width="136" height="130">
+       <img border="0" id="obj_fauna" src="../../images/naturaleza/fauna.gif" style="visibility:visible;position:absolute;top=155;left=393;z-index:2;filter:alpha(opacity=30);-moz-opacity:0.3"   width="92" height="22">
+       <img border="0" id="obj_vegetacion" src="../../images/naturaleza/vegetacion.gif"  style="visibility:visible;position:absolute;top=215;left=390;z-index:3;filter:alpha(opacity=30);-moz-opacity:0.3"  width="173" height="27">
+       <img border="0" id="obj_hongos" src="../../images/naturaleza/hongos.gif" style="visibility:visible;position:absolute;top=286;left=391;z-index:3;filter:alpha(opacity=30);-moz-opacity:0.3"  width="217" height="23">
+       <img border="0" id="obj_llavefauna" src="../../images/naturaleza/llave1.gif" style="visibility:visible;position:absolute;top=126;left=695;z-index:1;filter:alpha(opacity=0);-moz-opacity:0.0"  width="15" height="341" >
+       <img border="0" id="obj_llavevegetacion" src="../../images/naturaleza/llave2.gif" style="visibility:visible;position:absolute;top=126;left=695;z-index:1;filter:alpha(opacity=0);-moz-opacity:0.0"  width="15" height="341" >
+       <img border="0" id="obj_llavesetas" src="../../images/naturaleza/llave3.gif" style="visibility:visible;position:absolute;top=126;left=695;z-index:1;filter:alpha(opacity=0);-moz-opacity:0.0"  width="15" height="341" >
+    </div>
+        
+    
+    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;visibility:visible;position:absolute;top=100px;left=480px;z-index:3" width="100%" id="AutoNumber3">
+        <tr>
+        <td width="100%">
+            <div id="menus_fauna" style="visibility:hidden;position:absolute;top=75px;left=250px;z-index:24" >
+                 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="273" id="menu_fauna">
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left"><u>
+                                          <b><i>
+                                          <font face="Times New Roman" size="3" color="#800000" >FAUNA MADEROLENSE</font></i></b></u></p>
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left" style="line-height: 150%">
+                                          <i><b> <font face="Times New Roman" size="4" >Inventario de animales</font></b></i></p>
+                                        </td>
+                                    </tr>  
+                                    <tr>
+                                        <td width="273">
+                                        <p align="left" style="text-indent: 5; line-height: 150%"><i>  
+                                        <b>  
+                                        <ul>
+                                          <li><a target="_blank" href="fauna_inventario.html#Peces">Peces</a></li>
+                                          <li><a target="_blank" href="fauna_inventario.html#Anfibios">Anfibios</a></li>                                  
+                                          <li><a target="_blank" href="fauna_inventario.html#Reptiles">Reptiles</a></li>
+                                          <li><a target="_blank" href="fauna_mamiferos.html">Mamíferos</a></li>
+                                          <li><a target="_blank" href="fauna_aves.html">Aves</a></li>
+                                        </b></i>  
+                                        </ul>  
+                                        </td>
+                                    </tr>                                       
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left">
+                                          <font face="Times New Roman" size="4" >
+                                          <b><i>Ecosistemas de Maderuelo</i></b>
+                                          &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left" style="text-indent: 25; line-height: 150%"><i><b> 
+                                          <ul>
+                                          <li><a target="_blank" href="fauna_introduccion.html#humedales">Humedales</a></li>
+                                          <li><a target="_blank" href="fauna_introduccion.html#barrancos">Barrancos</a> y Riscos</li>
+                                          <li><a target="_blank" href="fauna_introduccion.html#paramos">Páramos</a> y Pedregales</li>
+                                          <li>Bosques de <a target="_blank" href="fauna_introduccion.html#quejigales"> quejigos</a></li>
+                                          <li><a target="_blank" href="fauna_introduccion.html#encinares">Encinares</a> y 
+                                              <a target="_blank" href="fauna_introduccion.html#sabinares">Sabinares</a></li>
+                                          <li><a target="_blank" href="fauna_introduccion.html#pinares">Pinares</a></font></li>
+                                          <li><a target="_blank" href="fauna_introduccion.html#cultivos">Cultivos</a> y setos</li>
+                                          <li>Zonas <a target="_blank" href="fauna_introduccion.html#habitadas">Habitadas</a></li>
+                                        </b></i>  
+                                        </ul>  
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="273">
+                                          <p align="left">
+                                          <i><b><font face="Times New Roman" size="4" ><a target="_blank" href="fauna_valoracion.html">Valoración</a> de la fauna actual</font></b></i></td>
+                                    </tr>                                    
+                 </table>
+            </div>
+        </td>
+        </tr>
+        <tr>
+        <td width="100%">
+            <div id="menus_vegetacion" style="visibility:hidden;position:absolute;top=75px;left=250px;z-index:3" >
+                 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"  width="272" id="menu_vegetacion">
+                                    <tr>
+                                        <td width="272">
+                                          <p align="left"><u>
+                                          <b><i>
+                                          <font face="Times New Roman" size="4" color="#800000" >FLORA MADEROLENSE</font></i></b></u></p>
+                                          </td>
+                                    </tr>                                             
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="4" >Periodos de Actividad <a target="_blank" href="vegeta_pav.html">vegetal</a></font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="4" >Vegetación <a target="_blank" href="vegeta_potencial.html">potencial</a></font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="4" >Ecosistemas en Maderuelo</font></b></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">   
+                                        <p align="left" style="text-indent: 5; line-height: 150%"><i>  
+                                        <b>  
+                                        <ul>
+                                          <li><a target="_blank" href="vegeta_matorral.html">Matorrales</a></li>
+                                          <li><a target="_blank" href="vegeta_bosque.html#sabinares">Sabinares</a></li>                                  
+                                          <li><a target="_blank" href="vegeta_bosque.html#quejigares">Quejigales</a></li>
+                                          <li><a target="_blank" href="vegeta_bosque.html#encinares">Encinares</a></li>
+                                          <li><a target="_blank" href="vegeta_bosque.html#pinares">Pinares</a></li>
+                                          <li>Vegetación de <a target="_blank" href="vegeta_ribera.html">ribera</a></li>
+                                          <li><a target="_blank" href="vegeta_cultivo.html">Cultivos</a></li>
+                                          <li>Zonas <a target="_blank" href="vegeta_habitadas.html">habitadas</a></li>
+                                        </b></i>  
+                                        </ul>                                        
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="4" >
+                                          <a target="_blank" href="vegeta_inventario.html">Inventario</a> de la Flora</font></b></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="4" >
+                                          <a target="_blank" href="vegeta_valoracion.html">Valoración</a> de la flora</font></b></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="4" >
+                                          Usos <a target="_blank" href="medicina\medicina_lista.html">Medicinales</a></font></b></i>
+                                        </td>
+                                    </tr>                                    
+                 </table>
+            </div>
+         </td>
+         </tr>
+         <tr>
+         <td width="100%">
+            <div id="menus_hongos" style="visibility:hidden;position:absolute;top=75px;left=250px;z-index:3" >
+                 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"  width="272" id="menu_hongo">
+                                    <tr>
+                                        <td width="272">
+                                          <p align="left"><u>
+                                          <b><i>
+                                          <font face="Times New Roman" size="4" color="#800000" >SETAS MADEROLENSES</font></i></b></u></p>
+                                          &nbsp;</td>
+                                    </tr>                                             
+                                    <tr>
+                                        <td width="272">
+                                          <i><b><font face="Times New Roman" size="4" >Inventario <a target="_blank" href="micologia/micologia_lista.html">de hongos</a></font></b></i></td>
+                                    </tr>
+                 </table>
+            </div>
+         </td>
+
+</table>
+ 
+
+      
+</tr>
+
+
+<div align="center">
+  <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse"  >
+    <tr>
+      <td width="100%">
+    <table border="0" width="1024" cellspacing="0" cellpadding="0" style="border-collapse: collapse">
+      <tr>
+        <td width="800px">
+          <p align="center">
+          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="700" height="50" align="right">
+            <param name="movie" value="../cabecera.swf">
+            <param name="quality" value="High">
+            <param name="_cx" value="18521">
+            <param name="_cy" value="1323">
+            <param name="FlashVars" value="0">
+            <param name="Src" value="../cabecera.swf">
+            <param name="WMode" value="Window">
+            <param name="Play" value="0">
+            <param name="Loop" value="-1">
+            <param name="SAlign" value>
+            <param name="Menu" value="-1">
+            <param name="Base" value>
+            <param name="AllowScriptAccess" value="always">
+            <param name="Scale" value="ShowAll">
+            <param name="DeviceFont" value="0">
+            <param name="EmbedMovie" value="0">
+            <param name="BGColor" value>
+            <param name="SWRemote" value>
+            <embed src="../cabecera.swf" quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="700" height="50"></object>
+        </td>
+      </tr>
+    </table>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</body>
+

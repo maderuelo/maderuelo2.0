@@ -1,0 +1,595 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Guía de Hostelería y Artesanía</title>
+
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_comun.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_cabecera.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_secciones.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_mapa.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_turismo_hosteleria.css">
+
+<script type="text/javascript" src="../javascripts/eventos_mapa.js"> </script>
+</head>
+<body>
+<!-- INICIO FONDO -->
+<div id="fondo">
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** INICIO CABECERA                      ****** -->
+<!-- ************************************************** -->
+
+<div id="cabecera">
+  <a class="escudo" href="/inicio.html"></a>
+  <div class="maderuelocom"></div>
+  <!-- MENU GRAFICO: DEFINIR BOTONES EN ORDEN DRCHA a IZDA -->
+  <ul id="menu_btn_grafico">
+    <li><a href="http://www.aemet.es/es/eltiempo/prediccion/municipios/maderuelo-id40115"       class="icono_clima"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com"                                        class="icono_arroba" 
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/"                                      class="icono_foro"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/naturaleza/parque_natural/presen_ficha.html" class="icono_parque"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/principal/360/entrada.html"            class="icono_360"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="/siglo12/siglo12.html"                        class="icono_siglo12"
+           onclick="window.open(this.href,'_blank'); return false;">s<span></span></a></li>
+  </ul>
+<!-- MENU TEXTUAL DE CABECERA: DEFINIR BOTONES EN ORDEN IZDA A DRCHA -->
+  <ul id="menu_btn_horiz">
+    <li><a href="/turismo/turismo_visitando.html"  class="btn_turismo"     >Turismo<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_historia"    >Historia<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_arte"        >Arte<span></span></a></li>
+    <li><a href="/naturaleza/ind_natural.html"     class="btn_naturaleza"  >Naturaleza<span></span></a></li>
+    <li><a href="/festejos/ind_fiesta.html" class="btn_festejos"    >Festejos<span></span></a></li>
+    <li><a href="/ayuntamiento/ayto.html" class="btn_ayuntamiento">Ayuntamiento<span></span></a></li>
+    <li><a href=" " class="btn_anuncios"    >Anuncios<span></span></a></li>
+    <li><a href=" " class="btn_web"         >Web<span></span></a></li>
+  </ul>
+
+<!-- SUBMENU DE BOTONES TEXTO     -->
+<!-- ************************* -->
+<div id="submenu_texto" ></div>
+</div><!-- FIN CABECERA  -->
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA MAPA CENTRAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areamapa">
+
+<!-- ***** FONDO MAPA *****-->
+<div class="fondomapa">
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** LEYENDA                              ****** -->
+<!-- ************************************************** -->
+<ul id="leyenda">
+<li><a href=" " class="bandera_restaurante"><span></span></a></li>
+<li><a href=" " class="bandera_bar"><span></span></a></li>
+<li><a href=" " class="bandera_casa"><span></span></a></li>
+<li><a href=" " class="bandera_artesania"><span></span></a></li>
+<li><a href="#texto" class="informacion" ><span></span></a></li>
+</ul> <!-- FIN LEYENDA -->
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** MENU INFERIOR                        ****** -->
+<!-- ************************************************** -->
+<ul id="menu_inferior">
+<li><a class="uno" href="/turismo/turismo_comollegar.html"><span>¿Cómo llegar?</span></a></li>
+<li><a class="dos" href="/turismo/turismo_visitando.html"><span>Callejeando</span></a></li>
+<li><a class="tres" href="/turismo/turismo_senderismo.html"><span>Senderismo</span></a></li>
+<li><a class="cuatro" href="/turismo/turismo_aguayocio.html" ><span>Agua y Ocio</span></a></li>
+<li><a class="cinco" href="/turismo/turismo_tierramaderuelo.html" ><span>Tierra de Maderuelo</span></a></li>
+</ul> <!-- FIN MENU INFERIOR -->
+
+<!-- ***** MAPA *****-->
+<dl class="mapa">
+<!-- ***************************************************************************** -->
+<!--  OFICINA DE TURISMO -->
+<!-- ***************************************************************************** -->
+<dt><a href="turismo_galeria.html" class="lugar_oficinaturismo" id="coord_oficinaturismo" 
+       onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/oficinaturismo.gif" id="img_oficinaturismo" >
+   <h7>Oficina de Turismo</h7><br>
+Maderuelo dispone de Oficina de Turismo donde podrá ser informado de qué visitar en esta Villa y sus alrededores.
+Los horarios de apertura son de Miércoles a Sábado,d e 10h a 17h<br>
+   <ul class="l_vineta">
+      <lh>A reseñar:</lh> 
+      <li>Visitas concertadas</li>
+      <li>Tfn: 921 55 60 89</li>
+   </ul>
+</dd>
+
+
+<!-- ***************************************************************************** -->
+<!--  POSADA DEL CASTILLO -->
+<!-- ***************************************************************************** -->
+<dt><a href="http://www.elsecretodelcastillo.es" class="lugar_alojamiento" id="coord_castillo_posada" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/posadacastillo.png" id="img_castillo_posada" >
+   <h7>El Secreto del Castillo</h7><br>
+Edificio de arquitectura medieval con impresionantes vistas sobre el pantano de Linares y la Sierra. 5 habitaciones dobles, con duchas hidromasaje y 2 suites con bañera doble de hidromasaje. Amplias zonas comunes, salón con gran chimenea y distintos ambientes. Trato personalizado.
+<br>
+   <ul class="l_vineta">
+      <lh>Servicios que ofrece:</lh> 
+      <li>Manutencion alojados</li>
+      <li>Hidromasaje y cromoterapia</li>
+      <li>Acceso minusválido y ascensor</li>
+      <li>Tradicional horno de leña</li>
+      <li>Jardín amurallado</li>
+      <li>Atencion las 24 horas</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Dirección:</lh>
+      <li>c/del Castillo nº22 </li>
+      <li>Maderuelo Segovia (40554)</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Tfno, email y página web</lh>
+      <li>921 556 303  </li>
+      <li>699 029 204  </li>
+      <li>elsecretodelcastillo@gmail.com</li>
+      <li><a href="http://www.elsecretodelcastillo.es" class="enlaceweb" 
+           onclick="window.open(this.href,'newwin'); return false;">www.elsecretodelcastillo.es</a></li>
+   </ul>
+
+
+</dd>
+
+<!-- ***************************************************************************** -->
+<!-- RESTAURANTE ALFOZ DE MADERUELO. -->
+<!-- ***************************************************************************** -->
+<dt><a href="http://www.alfozdemaderuelo.es" class="lugar_restaurante" id="coord_alfoz_restaurante" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/alfoz_restaurante.jpg" id="img_alfoz_restaurante">
+   <h7>Alfoz de Maderuelo</h7>
+<br><br><br><br><br><br>
+Restaurante situado en la entrada a Maderuelo.
+Disfrute de una comida de gran calidad a precios razonables,
+cómodamente sentado frente a unas vistas del rí­o Riaza y la villa amurallada
+incomparables. <br>
+No puede perderse nuestro lechazo asado en horno tradicional del leña
+ni el delicioso vino de la Ribera. <br>
+
+ <ul class="l_vineta">
+      <lh>Servicios que ofrece:</lh> 
+      <li>Horno castellano de leña </li>
+      <li>Vistas Panorámicas, Jardín y terraza</li>
+      <li>Acceso para minusválidos</li>
+      <li>Fácil aparcamiento</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Dirección:</lh>
+      <li>c/ Escuelas, 5 </li>
+      <li>Maderuelo Segovia (40554)</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Tfno, email y página web</lh>
+      <li>921 556 294 </li>
+      <li>alfoz@maderuelo.com</li>
+      <li><a href="http://www.alfozdemaderuelo.es" class="enlaceweb" 
+           onclick="window.open(this.href,'_blank'); return false;">www.alfozdemaderuelo.es</a></li>
+   </ul> 
+</dd>
+<!-- ***************************************************************************** -->
+<!-- BAR ALFOZ DE MADERUELO. -->
+<!-- ***************************************************************************** -->
+<dt><a href="http://alfoz.maderuelo.com" class="lugar_bar" id="coord_alfoz_bar" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/alfoz_bar.jpg" id="img_alfoz_bar" >
+   <h7>Alfoz de Maderuelo</h7>
+<br><br><br>
+Bar Cafeterí­a situado junto a la entrada a Maderuelo.<br>
+Saboree un aperitivo o refrigerio cómodamente sentado, bien en el jardín o en la cafeterí­a y disfrute del encanto de las vistas incomparables del rí­o Riaza y de la villa amurallada.<br>
+   <ul class="l_vineta">
+      <lh>Servicios que ofrece:</lh> 
+      <li>Vistas Panorámicas</li>
+      <li>Edificio monumental</li>     
+      <li>Jardín y terraza</li>
+      <li>Acceso para minusválidos</li>
+      <li>Fácil aparcamiento</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Dirección:</lh>
+      <li>c/ Escuelas, 5 </li>
+      <li>Maderuelo Segovia (40554)</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Tfno, email y página web</lh>
+      <li>921 556 294 </li>
+      <li>alfoz@maderuelo.com</li>
+      <li><a href="http://alfoz.maderuelo.com" class="enlaceweb" 
+           onclick="window.open(this.href,'_blank'); return false;">alfoz.maderuelo.com</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!-- RESTAURANTE POSADA DEL MEDIEVO -->
+<!-- ***************************************************************************** -->
+<dt><a href="http://www.laposadadelmedievo.com" class="lugar_restaurante" id="coord_medievo_restaurante" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/posadamedievo.jpg" id="img_medievo_restaurante">
+   <h7>Restaurante Posada del Medievo</h7><br>
+Restaurante situado en la entrada a Maderuelo.<br>
+<br>
+   <ul class="l_vineta">
+      <lh>Servicios que ofrece:</lh> 
+      <li>Cocina Tradicional</li>
+      <li>Edificio Histórico</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Dirección:</lh>
+      <li>Plaza de San Miguel </li>
+      <li>Maderuelo Segovia (40554)</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Tfno, email y página web</lh>
+      <li>921 556 107  </li>
+      <li>posada@laposadadelmedievo.com</li>
+      <li><a href="http://www.laposadadelmedievo.com" class="enlaceweb" 
+           onclick="window.open(this.href,'_blank'); return false;">www.laposadadelmedievo.com</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!-- POSADA DEL MEDIEVO -->
+<!-- ***************************************************************************** -->
+<dt><a href="http://www.laposadadelmedievo.com" class="lugar_alojamiento" id="coord_medievo_posada" onclick="window.open(this.href,'_blank'); return false;">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/posadamedievo.jpg" id="img_medievo_posada" >
+   <h7>Posada del Medievo</h7><br>
+Posada situado en la entrada a Maderuelo.<br>
+Cuenta con 9 habitaciones dobles con baño completo, todas diferentes entre si. La decoracion se ha basado en muebles de almoneda o artesanos, dotandola del caracter propio que exige un edificio de estas caracteristicas.
+<br>
+   <ul class="l_vineta">
+      <lh>Servicios que ofrece:</lh> 
+      <li>Jardín</li>
+      <li>Edificio Histórico</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Dirección:</lh>
+      <li>Plaza de San Miguel </li>
+      <li>Maderuelo Segovia (40554)</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Tfno, email y página web</lh>
+      <li>921 556 107  </li>
+      <li>posada@laposadadelmedievo..com</li>
+      <li><a href="http://www.laposadadelmedievo.com" class="enlaceweb" 
+           onclick="window.open(this.href,'_blank'); return false;">www.laposadadelmedievo.com</a></li>
+   </ul>
+</dd>
+<!-- ***************************************************************************** -->
+<!-- BAR MIRADOR DE LOS TEMPLARIOS -->
+<!-- ***************************************************************************** -->
+<dt><a href="http://www.laposadadelmedievo.com" class="lugar_bar" id="coord_mirador">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/mirador.jpg" id="img_mirador_bar" >
+   <h7>Mirador de los Templarios</h7><br>
+Bar situado en la entrada a Maderuelo.<br>
+Cuenta con bonitas vistas al Pantano del Riaza
+<br>
+   <ul class="l_vineta">
+      <lh>Servicios que ofrece:</lh> 
+      <li>Cafeterí­a</li>
+      <li>Edificio Tradicional</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Dirección:</lh>
+      <li>Plaza de San Miguel </li>
+      <li>Maderuelo Segovia (40554)</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Tfno, email y página web</lh>
+      <li>921 556 107  </li>
+      <li>posada@laposadadelmedievo..com</li>
+      <li><a href="http://www.laposadadelmedievo.com" class="enlaceweb" 
+           onclick="window.open(this.href,'_blank'); return false;">www.laposadadelmedievo.com</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!-- CAPITULO 13 -->
+<!-- ***************************************************************************** -->
+<dt><a href="http://www.capitulotrece.com" class="lugar_alojamiento" id="coord_capitulo13">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="../images/turismo/capitulo_13.jpg"  >
+   <h7>Hotel Capítulo 13</h7>
+<br><br>
+Te ofrecemos la posibilidad de conjugar, a través de los sentidos, verbos tan sugerentes como escapar, relajarse, descansar y soñar.
+<br><br>
+Este pequeño hotel con encanto tiene el confort y el carácter de una cuidada decoración llevada a cabo por sus jóvenes propietarios, los detalles y las texturas lo han dado un caracter único en la zona.
+<br>
+Rincones para conversar, leer, meditar y disfrutar plenamente de su estancia, alojarse en este hotel, es descubrir nuevas tendencias del turismo rural.
+<br><br>
+   <ul class="l_vineta">
+      <lh>Servicios que ofrece:</lh> 
+      <li>5 Habitaciones: 4 dobles y 1 Suite</li>
+      <li>Vinoteca</li>
+      <li>Restaurante</li>
+      <li>Sala de estar con chimenea</li>
+      <li>Spa y sauna</li>
+      <li>Terraza-jardín</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Dirección:</lh>
+      <li>c/San Miguel nº18</li>
+      <li>Maderuelo Segovia (40554)</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Tfno, email y página web</lh>
+      <li>921 556 395  </li>
+      <li><a href="http://www.capitulotrece.com" class="enlaceweb" 
+           onclick="window.open(this.href,'newwin'); return false;">www.capitulotrece.com</a></li>
+      <li><a href="http://www.toprural.com/hotel-rural/hotel-capitulo-trece_f-es-40-90645.htm" class="enlaceweb"  		   onclick="window.open(this.href,'newwin'); return false;">www.toprural.com</a></li>
+   </ul>
+</dd>
+<!-- ***************************************************************************** -->
+<!-- CASA BOTICA -->
+<!-- ***************************************************************************** -->
+<dt><a href="http://www.toprural.com" class="lugar_alojamiento" id="coord_casabotica">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/casabotica.jpg" id="img_casabotica" >
+   <h7>Casa Rural La Botica</h7><br>
+En el centro del conjunto histórico de la villa de Maderuelo, una antigua vivienda y antigua botica rehabilitada al estilo tradicional y las comodidades actuales. <br> Con seis habitaciones, un amplio hall, balcón con vistas al pantano de Maderuelo. Salón de reuniones, cocina, chimenea, sala lectura y juegos. Jardín,  Barbacoa,  Terraza,  Muebles de jardín,  Zona de aparcamiento.
+<br>
+<br>
+   <ul class="l_vineta">
+      <lh>Servicios que ofrece:</lh> 
+      <li>6 habitaciones con baño</li>
+      <li>Fácil aparcamiento</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Dirección:</lh>
+      <li>c/ Arriba 2 </li>
+      <li>Maderuelo Segovia (40554)</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Tfno, email y página web</lh>
+      <li>686 310 202 </li>
+      <li>rafagardel@hotmail.com</li>
+      <li><a href="http://www.toprural.com/Casa-rural-alquiler-íntegro/La-Botica-De-Maderuelo_111793_f.html" class="enlaceweb" 
+           onclick="window.open(this.href,'_blank'); return false;">www.toprural.com</a></li>
+   </ul>
+</dd>
+<!-- ***************************************************************************** -->
+<!-- CASA AURORA -->
+<!-- ***************************************************************************** -->
+<dt><a href="http://www.casaaurora.com" class="lugar_alojamiento" id="coord_casaaurora">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/casaaurora.jpg" id="img_casaaurora" >
+   <h7>Casa Rural Aurora</h7><br>
+En el centro del conjunto histórico de la villa de Maderuelo, una antigua vivienda de labranza rehabilitada al estilo tradicional y las comodidades actuales. <br>Conserva un tradicional patio empedrado donde disfrutar largas veladas veraniegas. Salón de reuniones, lectura y juegos. Dividida en dos alojamientos con salones con chimenea y cocinas totalmente equipadas.
+<br>
+<br>
+   <ul class="l_vineta">
+      <lh>Servicios que ofrece:</lh> 
+      <li>Cocina</li>
+      <li>Fácil aparcamiento</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Dirección:</lh>
+      <li>c/ Arriba </li>
+      <li>Maderuelo Segovia (40554)</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Tfno, email y página web</lh>
+      <li>921 556 222 </li>
+      <li>689 989 088 </li>
+      <li>caceres@airtel.net</li>
+      <li><a href="http://www.casaruralaurora.com" class="enlaceweb" 
+           onclick="window.open(this.href,'_blank'); return false;">www.casaruralaurora.com</a></li>
+   </ul>
+</dd>
+<!-- ***************************************************************************** -->
+<!-- CASA MADEROLUM -->
+<!-- ***************************************************************************** -->
+<dt><a href="http://www.maderolum.com" class="lugar_alojamiento" id="coord_maderolum">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/maderolum.jpg" id="img_casamaderolum" >
+   <h7>Casa Rural Maderolum</h7><br>
+Es Maderolum una casa rural de principios del siglo XVIII,rehabilitada y modernizada para ofrecer a sus huéspedes el máximo confort y
+un trato agradable, un rincón entrañable donde reposar y disfrutar.
+<br>
+<br>
+   <ul class="l_vineta">
+      <lh>Servicios que ofrece:</lh> 
+      <li>2 a 10 plazas</li>
+      <li>Fácil aparcamiento</li>
+      <li>Alojamiento, desayuno y cena</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Dirección:</lh>
+      <li>c/ Santa María, 10 </li>
+      <li>Maderuelo Segovia (40554)</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Tfno, email y página web</lh>
+      <li>921 55 61 49 </li>
+      <li>posada@casamaderolum.com</li>
+      <li><a href="http://www.maderolum.com" class="enlaceweb" 
+           onclick="window.open(this.href,'_blank'); return false;">http://www.maderolum.com</a></li>
+   </ul>
+</dd>
+<!-- ***************************************************************************** -->
+<!-- APARTAMENTOS PUERTA DE LA VILLA -->
+<!-- ***************************************************************************** -->
+<dt><a href="http://www.puertadelavilla.com" class="lugar_alojamiento" id="coord_puertavilla">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/puertadelavilla.jpg" id="img_puerta_casa" >
+   <h7>Apartamentos Puerta de la Villa</h7><br>
+9 Apartamentos  situado en la entrada a Maderuelo<br>
+Cuenta con  habitaciones dobles con baño completo.
+<br>
+   <ul class="l_vineta">
+      <lh>Servicios que ofrece:</lh> 
+      <li>Terraza</li>
+      <li>Vistas de Maderuelo</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Dirección:</lh>
+      <li>Puerta de la Villa s/n </li>
+      <li>Maderuelo Segovia (40554)</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Tfno, email y página web</lh>
+      <li>921 556 172 - 646 464 490 </li>
+      <li>puertadelavilla@yahoo.es </li>
+      <li><a href="http://www.puertadelavilla.com" class="enlaceweb" 
+           onclick="window.open(this.href,'_blank'); return false;">www.puertadelavilla.com</a></li>
+   </ul>
+</dd>
+<!-- ***************************************************************************** -->
+<!-- LESPICINIO ABAD -->
+<!-- ***************************************************************************** -->
+<dt><a href="http://www.maderolum.com" class="lugar_artesania" id="coord_l_abad">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/l_abad.jpg" id="img_l_abad" >
+   <h7>Artesanía en Cuero</h7><br>
+Lespicinio Abad es un artesano dedicado al trabajo del cuero<br>
+<br>
+   <ul class="l_vineta">
+      <lh>Servicios que ofrece:</lh> 
+      <li>Acabados a medida</li>
+      <li>Fácil aparcamiento</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Dirección:</lh>
+      <li>c/ Entrada de la Villa, 1 </li>
+      <li>Maderuelo Segovia (40554)</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Tfno, email y página web</lh>
+      <li>921 XXX XXX </li>
+      <li></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!-- BAR-RESTAURANTE VERACRUZ. -->
+<!-- ***************************************************************************** -->
+<dt><a href="http://www.restauranteveracruzmaderuelo.com" class="lugar_restaurante" id="coord_veracruz_rest">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/veracruz_restaurante.jpg" id="img_veracruz_restaurante">
+   <h7>Bar-Restaurante Veracruz</h7>
+<br><br>
+Restaurante situado junto al pantano,
+en el entorno de la Ermita de la Veracruz. <br>
+
+ <ul class="l_vineta">
+      <lh>Servicios que ofrece:</lh>
+      <li>Horno castellano de leña </li>
+      <li>Vistas Panorámicas, Jardín y terraza</li>
+      <li>Acceso para personas discapacitadas</li>
+      <li>Fácil aparcamiento</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Dirección:</lh>
+      <li>Paraje El Molino, s/n </li>
+      <li>Maderuelo Segovia (40554)</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Tfno, email y página web</lh>
+      <li>619 752 973 </li>
+      <li>restauranteveracruzmaderuelo@gmail.com</li>
+      <li><a href="http://www.restauranteveracruzmaderuelo.com" class="enlaceweb"
+           onclick="window.open(this.href,'_blank'); return false;">www.restauranteveracruzmaderuelo.com</a></li>
+   </ul>
+</dd>
+
+<!-- ***************************************************************************** -->
+<!-- BAR-RESTAURANTE VERACRUZ. -->
+<!-- ***************************************************************************** -->
+<dt><a href="http://www.restauranteveracruzmaderuelo.com" class="lugar_bar" id="coord_veracruz_bar">1</a></dt>
+<dd>
+   <a href="javascript:void(0);" class="cerrar">2</a>
+   <img src="/images/turismo/veracruz_restaurante.jpg" id="img_veracruz_restaurante">
+   <h7>Bar-Restaurante Veracruz</h7>
+<br><br>
+Restaurante situado junto al pantano,
+en el entorno de la Ermita de la Veracruz. <br>
+
+ <ul class="l_vineta">
+      <lh>Servicios que ofrece:</lh>
+      <li>Horno castellano de leña </li>
+      <li>Vistas Panorámicas, Jardín y terraza</li>
+      <li>Acceso para personas discapacitadas</li>
+      <li>Fácil aparcamiento</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Dirección:</lh>
+      <li>Paraje El Molino, s/n </li>
+      <li>Maderuelo Segovia (40554)</li>
+   </ul>
+   <ul class="l_sinvineta">
+      <lh>Tfno, email y página web</lh>
+      <li>619 752 973 </li>
+      <li>restauranteveracruzmaderuelo@gmail.com</li>
+      <li><a href="http://www.restauranteveracruzmaderuelo.com" class="enlaceweb"
+           onclick="window.open(this.href,'_blank'); return false;">www.restauranteveracruzmaderuelo.com</a></li>
+   </ul>
+</dd>
+
+
+</dl><!-- FIN MAPA  -->
+</div> <!-- FIN FONDO MAPA  -->
+
+
+
+
+</div> <!-- FIN AREACENTRAL -->
+
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA TEXTO FINAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areatexto"><a NAME = "texto"></a>
+
+
+<p class="big">
+  <h3><span class="letracapital">E</span>l transcurrir del tiempo...</h3>
+</p>
+<br><br><br><br>
+ha dado a Maderuelo un creciente atractivo, por su encanto como Villa amurallada rodeada de un espacio natural difícil de encontrar en nuestro mundo moderno y urbano.<br>
+Maderuelo te invita a visitarlo y pone a tu disposición restaurantes y bares de calidad, posadas y casas rurales donde disfrutar del encanto y belleza de los distintos rincones de la Villa.<br>
+Villa monumental, edificada sobre un alargado espolón rocoso que domina los meandros del Riaza en su descenso hacia el Duero, fue fortificada durante la Edad Media, época que nos legó sus murallas y trazado sinuoso de callejas y plazuelas.<br>
+<br>Las posibilidades para el turista son muy amplias: arte, historia, naturaleza, deportes...Sin olvidar la oferta hostelera, moderna y creciente, que abre las puertas de un turismo de calidad, tanto a la mesa, como en lo relativo al alojamiento.<br>
+<br>
+La gastronomía típica de la zona es el lechazo o lechal asado, siendo el cordero de esta zona muy apreciado por su exquisito sabor y suavidad, fruto de los aromáticos arbustos y pastizales en los que se alimenta el ganado. El buen chorizo de matanza, amén de otras viandas, era una de las costumbres más arraigadas, que reunían vecinos y familias para llevar a cabo la preparación de los sabrosos embutidos, entre los que destacaba el buen jamón curado.<br>
+<br>
+Esta tierra también gusta del buen vino, como atestiguan la gran cantidad de bodegas excavadas en la roca que rodean nuestra Villa.  No en vano, Maderuelo linda con la demarcación de la D.O. de Ribera del Duero, donde se producen muchos de los mejores caldos de nuestro país.<br>
+<br>Así pues, debemos alabar el buen gusto de nuestros antepasados, pioneros en una tierra que fue la Extremadura castellana, allá por el Siglo X , donde nadie se atrevía a habitar en aquella fronteriza y peligrosa tierra de nadie.  
+</p>
+</div>
+<!-- FIN AREA TEXTO FINAL PAGINA -->
+
+
+
+</div><!-- FIN FONDO -->
+</body>
+</html>

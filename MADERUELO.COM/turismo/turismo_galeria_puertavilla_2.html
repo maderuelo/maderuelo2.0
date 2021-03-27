@@ -1,0 +1,186 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Maderuelo: Galería De la Puerta de la Villa (II) </title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_comun.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_cabecera.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_secciones.css">
+<link href="../stylesheet/estilo_galleria.css" rel="stylesheet" type="text/css" media="screen">
+<script type="text/javascript" src="../javascripts/jquery.js"></script>
+<script type="text/javascript" src="../javascripts/jquery_002.js"></script>
+
+<script type="text/javascript">
+	
+	jQuery(function($) {
+		
+		$('.gallery_demo_unstyled').addClass('gallery_demo'); // adds new class name to maintain degradability
+		
+		$('ul.gallery_demo').galleria({
+			history   : true, // activates the history object for bookmarking, back-button etc.
+			clickNext : true, // helper for making the image clickable
+			insert    : '#main_image', // the containing selector for our main image
+			onImage   : function(image,caption,thumb) { // let's add some image effects for demonstration purposes
+				
+				// fade in the image & caption
+				if(! ($.browser.mozilla && navigator.appVersion.indexOf("Win")!=-1) ) { // FF/Win fades large images terribly slow
+					image.css('display','none').fadeIn(1000);
+				}
+				caption.css('display','none').fadeIn(1000);
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// fade out inactive thumbnail
+				_li.siblings().children('img.selected').fadeTo(500,0.3);
+				
+				// fade in active thumbnail
+				thumb.fadeTo('fast',1).addClass('selected');
+
+				
+				// add a title for the clickable image
+				image.attr('title','Next image >>');
+			},
+			onThumb : function(thumb) { // thumbnail effects goes here
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// if thumbnail is active, fade all the way.
+				var _fadeTo = _li.is('.active') ? '1' : '0.3';
+				
+				// fade in the thumbnail when finnished loading
+				thumb.css({display:'none',opacity:_fadeTo}).fadeIn(1500);
+				
+				// hover effects
+				thumb.hover(
+					function() { thumb.fadeTo('fast',1); },
+					function() { _li.not('.active').children('img').fadeTo('fast',0.3); } // don't fade out if the parent is active
+				)
+			}
+		});
+	});
+	
+	</script>
+
+</script>
+</head>
+<body>
+<!-- INICIO FONDO -->
+<div id="fondo">
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** INICIO CABECERA                      ****** -->
+<!-- ************************************************** -->
+
+<div id="cabecera">
+  <a class="escudo" href="/inicio.html"></a>
+  <div class="maderuelocom"></div>
+  <!-- MENU GRAFICO: DEFINIR BOTONES EN ORDEN DRCHA a IZDA -->
+  <ul id="menu_btn_grafico">
+    <li><a href="http://www.aemet.es/es/eltiempo/prediccion/localidades?l=40408"       class="icono_clima"
+           onclick="window.open(this.href,'newwin'); return false;"><span></span></a></li>
+    <li><a href="http://webmail.maderuelo.com/"                                        class="icono_arroba" 
+           onclick="window.open(this.href,'newwin'); return false;"><span></span></a></li>
+    <li><a href="http://madeforum.maderuelo.com/"                                      class="icono_foro"
+           onclick="window.open(this.href,'newwin'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/naturaleza/parque_natural/presen_ficha.html" class="icono_parque"
+           onclick="window.open(this.href,'newwin'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/principal/360/entrada.html"            class="icono_360"
+           onclick="window.open(this.href,'newwin'); return false;"><span></span></a></li>
+    <li><a href="/siglo12/siglo12.html"                        class="icono_siglo12"
+           onclick="window.open(this.href,'newwin'); return false;"><span></span></a></li>
+  </ul>
+<!-- MENU TEXTUAL DE CABECERA: DEFINIR BOTONES EN ORDEN IZDA A DRCHA -->
+  <ul id="menu_btn_horiz">
+    <li><a href="/turismo/turismo_visitando.html"  class="btn_turismo"     >Turismo<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_historia"    >Historia<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_arte"        >Arte<span></span></a></li>
+    <li><a href="/naturaleza/ind_natural.html"     class="btn_naturaleza"  >Naturaleza<span></span></a></li>
+    <li><a href="/festejos/ind_fiesta.html" class="btn_festejos"    >Festejos<span></span></a></li>
+    <li><a href="/ayuntamiento/ayto.html" class="btn_ayuntamiento">Ayuntamiento<span></span></a></li>
+    <li><a href=" " class="btn_anuncios"    >Anuncios<span></span></a></li>
+    <li><a href=" " class="btn_web"         >Web<span></span></a></li>
+  </ul>
+<!-- SUBMENU DE BOTONES TEXTO     -->
+<!-- ************************* -->
+<div id="submenu_texto" ></div>
+</div><!-- FIN CABECERA  -->
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA MAPA CENTRAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areamapa">
+
+<!-- ***** FONDO MAPA *****-->
+<div class="fondomapa">
+
+<h3 class="tit_galeria">Arco y Puerta de Entrada a la Villa (II)</h3>
+<div class="demo">
+<div id="main_image"></div>
+<ul class="gallery_demo_unstyled">
+
+    <li class="active"><img src="/images/turismo/galeria/puerta_21.jpg" alt="Puerta" title="Ambientación de la Entrada a la Villa para la fiesta medieval"></li>
+    <li class="active"><img src="/images/turismo/galeria/puerta_22.jpg" alt="Puerta" title="Arco de entrada a la Villa con la iglesia de San Miguel al fondo"></li>
+    <li class="active"><img src="/images/turismo/galeria/puerta_23.jpg" alt="Puerta" title="Buhedera de la Entrada a la Villa"></li>
+    <li class="active"><img src="/images/turismo/galeria/puerta_24.jpg" alt="Puerta" title="Caballero delante de la Entrada a la Villa en la fiesta medieval"></li>
+    <li class="active"><img src="/images/turismo/galeria/puerta_25.jpg" alt="Puerta" title="Entrada a la Villa en la fiesta medieval"></li>
+    <li class="active"><img src="/images/turismo/galeria/puerta_26.jpg" alt="Puerta" title="Entrada a la Villa en un día de lluvia"></li>
+    <li class="active"><img src="/images/turismo/galeria/puerta_27.jpg" alt="Puerta" title="Entrada a la Villa la noche de Reyes"></li>
+    <li class="active"><img src="/images/turismo/galeria/puerta_28.jpg" alt="Puerta" title="Entrada a la Villa nevada"></li>
+    <li class="active"><img src="/images/turismo/galeria/puerta_29.jpg" alt="Puerta" title="Entrada a la Villa y subida de la Calle de Arriba"></li>
+    <li class="active"><img src="/images/turismo/galeria/puerta_30.jpg" alt="Puerta" title="Foto nocturna de la Entrada a la Villa"></li>
+    <li class="active"><img src="/images/turismo/galeria/puerta_31.jpg" alt="Puerta" title="Foto nocturna de la Entrada a la Villa con casas circundantes"></li>
+    <li class="active"><img src="/images/turismo/galeria/puerta_32.jpg" alt="Puerta" title="Foto nocturna de la Entrada a la Villa Con la iglesia de San Miguel iluminada"></li>
+    <li class="active"><img src="/images/turismo/galeria/puerta_33.jpg" alt="Puerta" title="Foto nocturna de la Entrada a la Villa e iluminación de la Calle de Arriba"></li>
+    <li class="active"><img src="/images/turismo/galeria/puerta_34.jpg" alt="Puerta" title="Puerta en el frío Enero"></li>
+    <li class="active"><img src="/images/turismo/galeria/puerta_35.jpg" alt="Puerta" title="Interior de la Entrada a la Villa una noche de lluvia"></li>
+    <li class="active"><img src="/images/turismo/galeria/puerta_36.jpg" alt="Puerta" title="Interior de la Entrada a la Villa un día de verano"></li>
+    <li class="active"><img src="/images/turismo/galeria/puerta_37.jpg" alt="Puerta" title="Entrada a la Villa una mañana fría de invierno"></li>
+    <li class="active"><img src="/images/turismo/galeria/puerta_38.jpg" alt="Puerta" title="Entrada a la Villa una noche de lluvia"></li>
+    <li class="active"><img src="/images/turismo/galeria/puerta_39.jpg" alt="Puerta" title="Entrada a la Villa un día nevado"></li>
+    <li class="active"><img src="/images/turismo/galeria/puerta_40.jpg" alt="Puerta" title="Puerta de la Entrada a la Villa"></li>
+</ul>
+<p class="nav_galeria"><a href="#" onclick="$.galleria.prev(); return false;">&laquo; Anterior</a> | <a href="#texto"> Más INFO</a> | <a href="#" onclick="$.galleria.next(); return false;">Siguiente &raquo;</a></p>
+</div>
+
+
+
+</div> <!-- FIN FONDOMAPA  -->
+
+</div> <!-- FIN AREAMAPA -->
+
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA TEXTO FINAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areatexto"><a NAME = "texto"></a>
+
+<p class="big">
+  <span class="letracapital"><h7>E</h7></span>
+l Arco de la Villa de Maderuelo es ya un símbolo para nuestro pueblo y se ha convertido casi en un icono que lo hace cada vez más reconocible.  No obstante, persiste el riesgo ocasionado por la climatología y por el tráfico, que lo exponen cada vez más.<br>
+Desde aquí, rogamos a todos un esfuerzo por conservar esta puerta que da entrada a las calles de esta Villa, y nos conduce a nuestro pasado, un pasado auténtico, castellano y orgulloso, esforzado en los conflictos del pasado que llenaron a Maderuelo de cicatrices en sus paredes y muros
+<br><br>Cruza la puerta. Maderuelo es otra historia</p>
+
+<p class="pie_galeria">
+<a href="/inicio.html">Maderuelo Home Page</a> | <a href="/inicio.html">Made by nosotros, de Maderuelo</a>
+</p>
+
+</div> <!-- FIN AREA TEXTO FINAL PAGINA -->
+
+
+>
+</div><!-- FIN FONDO -->
+</body>
+
+
+</html>
+

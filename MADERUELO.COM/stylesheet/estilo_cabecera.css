@@ -1,0 +1,275 @@
+/* ***************************************** */
+/* DEFINICION DE  DE CABECERA                */
+/* contiene ESCUDO, menu de ICONOS y menu de */
+/* botones textuales                         */
+/* ***************************************** */
+
+
+#cabecera a.escudo {   /* esquina izda */
+position:relative;display: block;
+left:0px;top:10px; 
+width:79px;
+height:83px;
+background: url(../images/escudo.jpg) repeat scroll;
+}
+
+
+#cabecera .maderuelocom {   /* esquina izda */
+  padding: 0;
+  margin: 0;display: block;
+position:relative;
+left:92px;
+top:-20px; 
+width:260px;
+height:29px;
+background: #f8f8f8 url(../images/maderuelocom.jpg) repeat scroll;
+}
+
+/* ************************************************** */
+/* DEFINICION DE MENU HORIZONAL DE BOTONES de TEXTO   */
+/******************************************************/
+#menu_btn_horiz {
+  list-style: none;
+  width:1004px;  height:40px;
+  padding: 0;
+  margin: 0;
+  left:0px;   bottom:25px; 
+  background: black;
+  position: absolute;
+}
+
+#menu_btn_grafico {
+  list-style: none;
+  margin: 0;
+  padding:0 0 0 0;
+  width:530px;   height: 90px;
+  right:0px;    top:30px; 
+  background: black;
+  position: absolute; 
+}
+
+#submenu_texto { 
+  width: 1007px;
+  height: 15px;
+  background:  black; /* cambier el color al posicionarse */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  left:0px;   bottom:5px; 
+  position: absolute;
+}
+
+/* ************************************************** */
+/* CONTENIDO DEL MENU HORIZONAL DE  TEXTO   */
+/******************************************************/
+/* SPAN contiene un texto de ayuda descripcion asociada al boton
+position:absolute, así podemos ubicar el  mouseover image sobre la posicion exacta */
+#menu_btn_horiz span {
+  display: none;
+  position: relative;
+  float:left;
+}
+
+/* A contiene un enlace asociado al boton*/
+/* Importante text-indent = negative value (-900%), el texto no se muestra. */
+#menu_btn_horiz a {
+  display: block;
+  text-indent: -900%;
+  position: absolute;
+  outline: none;
+}
+
+/* Si mouseover entonces invierte la imagen from top to bottom */
+#menu_btn_horiz a:hover {  background-position: left bottom; }
+#menu_btn_horiz a:active {  background-position: left bottom; }
+
+/* Si mouseover entonces el span element que contiene la ayuda se muestra display:block */
+#menu_btn_horiz a:hover span {  display: block; }
+#menu_btn_horiz a:active span {  display: block; }
+
+
+/* definicion de cada boton */
+/* -------------------------*/
+#menu_btn_horiz .btn_turismo {
+  width: 94px;
+  height: 27px;
+  top:10px;
+  left:5px;
+  background: url('../images/btn_turismo.jpg') no-repeat;
+}
+
+#menu_btn_horiz .btn_historia {
+  width: 97px;
+  height: 19px;
+  top:10px;
+  left:124px;
+  background: url('../images/btn_historia.jpg') no-repeat;
+}
+
+#menu_btn_horiz .btn_arte {
+  width: 55px;
+  height: 27px;
+  top:10px;
+  left:241px;
+  background: url('../images/btn_arte.jpg') no-repeat;
+}
+
+#menu_btn_horiz .btn_naturaleza {
+  width: 142px;
+  height: 18px;
+  top:10px;
+  left:326px;
+  background: url('../images/btn_naturaleza.jpg') no-repeat;
+}
+
+#menu_btn_horiz .btn_festejos {
+  width: 89px;
+  height: 27px;
+  top:10px;
+  left:498px;
+  background: url('../images/btn_festejos.jpg') no-repeat;
+}
+#menu_btn_horiz .btn_ayuntamiento {
+  width: 163px;
+  height: 27px;
+  top:10px;
+  left:617px;
+  background: url('../images/btn_ayuntamiento.jpg')  no-repeat;
+}
+
+#menu_btn_horiz .btn_anuncios {
+  width: 103px;
+  height: 27px;
+  top:10px;
+  left:810px;
+  background: url('../images/btn_anuncios.jpg') no-repeat;
+}
+#menu_btn_horiz .btn_web {
+  width: 42px;
+  height: 19px;
+  top:10px;
+  left:943px;
+  background: url('../images/btn_web.jpg') no-repeat;
+}
+
+/* Texto-imagen de  de ayuda. 
+display:none (asi es invisible by default). */
+#menu_btn_horiz .btn_web span {
+display: none;  width: 427px;
+  height: 26px;
+  background: url('../images/help_web.jpg') no-repeat;
+  left: -350px;
+  top: -40px;
+}
+
+
+/* ************************************************** */
+/* CONTENIDO DEL MENU HORIZONAL DE  BOTONES GRAFICOS  */
+/******************************************************/
+/* SPAN contiene un texto de ayuda descripcion asociada al boton
+position:absolute, así podemos ubicar el  mouseover image sobre la posicion exacta */
+#menu_btn_grafico span {
+  display: inline;
+  position: absolute;
+}
+
+/* A contiene un enlace asociado al boton*/
+/* Importante text-indent = negative value (-900%), el texto no se muestra.*/
+#menu_btn_grafico a {
+  display: inline;
+  text-indent: -900%;
+  position: absolute;
+  width:100%;
+  outline: none;
+  margin-right:20px;
+  padding:0 0 0 0;
+}
+/* DEFINICION DE BOTON GRAFICO Y SUS ESTADOS*/
+/* Si mouseover entonces invierte la imagen from top to bottom */
+#menu_btn_grafico a:hover {  background-position: left bottom; }
+#menu_btn_grafico a:active {  background-position: left bottom; }
+
+/* Si mouseover entonces el span element que contiene la ayuda se muestra display:block */
+#menu_btn_grafico a:hover span {  display: block; }
+#menu_btn_grafico a:active span {  display: block; }
+
+/* width, height, background image*/
+#menu_btn_grafico .icono_siglo12 {
+  width: 88px;
+  height: 60px;
+  left:0px;top:0px;
+  background: url(../images/icono_siglo12.jpg) no-repeat;
+}
+#menu_btn_grafico .icono_siglo12 span {
+  width: 345px;
+  height: 27px;
+  background: url('../images/help_siglo12.jpg') no-repeat;
+ position:relative;
+ top:-35px;
+ left:-50px;
+}
+
+#menu_btn_grafico .icono_parque {
+  width: 68px;
+  height: 60px;
+  left:93px;top:0px;
+  background: url(../images/icono_parque.jpg) no-repeat;
+}
+#menu_btn_grafico .icono_parque span {
+  width: 374px;
+  height: 29px;
+  background: url('../images/help_parque.jpg') no-repeat;
+ position:relative;
+ top:-25px;
+ left:-50px;
+}
+
+#menu_btn_grafico .icono_foro {
+  width: 80px;
+  height: 60px;
+  left:170px;top:0px;
+  /*background: url(../images/icono_foros.jpg) no-repeat;*/
+}
+
+#menu_btn_grafico .icono_360 {
+  width:67px;
+  height: 60px;
+  left:257px;top:0px;
+  background: url(../images/icono_360.jpg) no-repeat;
+}
+#menu_btn_grafico .icono_360 span {
+  width: 389px;
+  height: 27px;
+  background: url('../images/help_360.jpg') no-repeat;
+ position:relative;
+ top:-25px;
+ left:-150px;
+}
+
+#menu_btn_grafico .icono_clima {
+  width: 70px;
+  height: 60px;
+  left:333px;top:0px;
+  background: url(../images/icono_solynube.jpg) no-repeat;
+}
+#menu_btn_grafico .icono_clima span {
+  width: 321px;
+  height: 28px;
+  background: url('../images/help_solynube.jpg') no-repeat;
+ position:relative;
+ top:-25px;
+ left:-230px;
+}
+
+#menu_btn_grafico .icono_arroba {
+  width: 77px;
+  height: 60px;
+  left:420px;top:0px;
+  background: url(../images/icono_arroba.jpg) no-repeat;
+}
+
+/* ************************************************** */
+/* DEFINICION DE SUBMENU HORIZONAL DE TEXTO   */
+/******************************************************/
+
+

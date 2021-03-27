@@ -1,0 +1,185 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Maderuelo: Galería del Puente Nuevo</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_comun.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_cabecera.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_secciones.css">
+<link href="../stylesheet/estilo_galleria.css" rel="stylesheet" type="text/css" media="screen">
+<script type="text/javascript" src="../javascripts/jquery.js"></script>
+<script type="text/javascript" src="../javascripts/jquery_002.js"></script>
+
+<script type="text/javascript">
+	
+	jQuery(function($) {
+		
+		$('.gallery_demo_unstyled').addClass('gallery_demo'); // adds new class name to maintain degradability
+		
+		$('ul.gallery_demo').galleria({
+			history   : true, // activates the history object for bookmarking, back-button etc.
+			clickNext : true, // helper for making the image clickable
+			insert    : '#main_image', // the containing selector for our main image
+			onImage   : function(image,caption,thumb) { // let's add some image effects for demonstration purposes
+				
+				// fade in the image & caption
+				if(! ($.browser.mozilla && navigator.appVersion.indexOf("Win")!=-1) ) { // FF/Win fades large images terribly slow
+					image.css('display','none').fadeIn(1000);
+				}
+				caption.css('display','none').fadeIn(1000);
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// fade out inactive thumbnail
+				_li.siblings().children('img.selected').fadeTo(500,0.3);
+				
+				// fade in active thumbnail
+				thumb.fadeTo('fast',1).addClass('selected');
+
+				
+				// add a title for the clickable image
+				image.attr('title','Next image >>');
+			},
+			onThumb : function(thumb) { // thumbnail effects goes here
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// if thumbnail is active, fade all the way.
+				var _fadeTo = _li.is('.active') ? '1' : '0.3';
+				
+				// fade in the thumbnail when finnished loading
+				thumb.css({display:'none',opacity:_fadeTo}).fadeIn(1500);
+				
+				// hover effects
+				thumb.hover(
+					function() { thumb.fadeTo('fast',1); },
+					function() { _li.not('.active').children('img').fadeTo('fast',0.3); } // don't fade out if the parent is active
+				)
+			}
+		});
+	});
+	
+	</script>
+
+</script>
+</head>
+<body>
+<!-- INICIO FONDO -->
+<div id="fondo">
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** INICIO CABECERA                      ****** -->
+<!-- ************************************************** -->
+
+<div id="cabecera">
+  <a class="escudo" href="/inicio.html"></a>
+  <div class="maderuelocom"></div>
+  <!-- MENU GRAFICO: DEFINIR BOTONES EN ORDEN DRCHA a IZDA -->
+  <ul id="menu_btn_grafico">
+    <li><a href="http://www.aemet.es/es/eltiempo/prediccion/localidades?l=40408"       class="icono_clima"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://webmail.maderuelo.com/"                                        class="icono_arroba" 
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://madeforum.maderuelo.com/"                                      class="icono_foro"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/naturaleza/parque_natural/presen_ficha.html" class="icono_parque"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/principal/360/entrada.html"            class="icono_360"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="/siglo12/siglo12.html"                        class="icono_siglo12"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+  </ul>
+<!-- MENU TEXTUAL DE CABECERA: DEFINIR BOTONES EN ORDEN IZDA A DRCHA -->
+  <ul id="menu_btn_horiz">
+    <li><a href="/turismo/turismo_visitando.html"  class="btn_turismo"     >Turismo<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_historia"    >Historia<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_arte"        >Arte<span></span></a></li>
+    <li><a href="/naturaleza/ind_natural.html"     class="btn_naturaleza"  >Naturaleza<span></span></a></li>
+    <li><a href="/festejos/ind_fiesta.html" class="btn_festejos"    >Festejos<span></span></a></li>
+    <li><a href="/ayuntamiento/ayto.html" class="btn_ayuntamiento">Ayuntamiento<span></span></a></li>
+    <li><a href=" " class="btn_anuncios"    >Anuncios<span></span></a></li>
+    <li><a href=" " class="btn_web"         >Web<span></span></a></li>
+  </ul>
+<!-- SUBMENU DE BOTONES TEXTO     -->
+<!-- ************************* -->
+<div id="submenu_texto" ></div>
+</div><!-- FIN CABECERA  -->
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA MAPA CENTRAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areamapa">
+
+<!-- ***** FONDO MAPA *****-->
+<div class="fondomapa">
+
+<h3 class="tit_galeria">El Puente Nuevo</h3>
+<div class="demo">
+<div id="main_image"></div>
+<ul class="gallery_demo_unstyled">
+    <li class="active"><img src="/images/turismo/galeria/puentenuevo_1.jpg" alt="puente nuevo" title="Una mañana otoñal.  Temprano"></li>
+    <li class="active"><img src="/images/turismo/galeria/puentenuevo_2.jpg" alt="puente nuevo" title="Por la tarde, tras una nevada en invierno"></li>
+    <li class="active"><img src="/images/turismo/galeria/puentenuevo_3.jpg" alt="puente nuevo" title="Final de la primavera en un día tormentoso."></li>
+    <li class="active"><img src="/images/turismo/galeria/puentenuevo_4.jpg" alt="puente nuevo" title="Por la mañana, tras la nevada"></li>
+    <li class="active"><img src="/images/turismo/galeria/puentenuevo_5.jpg" alt="puente nuevo" title="Puentes Viejo y Nuevo.  Pasado y presente en el año 1979."></li>
+    <li class="active"><img src="/images/turismo/galeria/puentenuevo_6.jpg" alt="puente nuevo" title="Puentes viejo y nuevo, bajo el implacable sol estival"></li>
+    <li class="active"><img src="/images/turismo/galeria/puentenuevo_7.jpg" alt="puente nuevo" title="Detalle de los pilares. Al fondo San Millan y el Puente Viejo"></li>
+    <li class="active"><img src="/images/turismo/galeria/puentenuevo_8.jpg" alt="puente nuevo" title="La bajada de nivel del embalse, descubre los pilares del puente"></li>    
+<li class="active"><img src="/images/turismo/galeria/puentenuevo_9.jpg" alt="puente nuevo" title="El puente trata de unir a Maderuelo con aquello que el embalse separó"></li>
+    <li class="active"><img src="/images/turismo/galeria/puentenuevo_10.jpg" alt="puente nuevo" title="El puente solo tiene ojos para su querida Veracruz"></li>
+    <li class="active"><img src="/images/turismo/galeria/puentenuevo_11.jpg" alt="puente nuevo" title="Las aguas , crecidas y revueltas. Al fondo, las Hazas."></li>
+    <li class="active"><img src="/images/turismo/galeria/puentenuevo_12.jpg" alt="puente nuevo" title="Máximo nivel de las aguas en Junio."></li>
+    <li class="active"><img src="/images/turismo/galeria/puentenuevo_13.jpg" alt="puente nuevo" title="Maderuelo en la entrada del otoño amenazando lluvia"></li>
+    <li class="active"><img src="/images/turismo/galeria/puentenuevo_14.jpg" alt="puente nuevo" title="Las nieves del invierno precedidas por un año falto de lluvia"></li>
+    <li class="active"><img src="/images/turismo/galeria/puentenuevo_15.jpg" alt="puente nuevo" title="La niebla otoñal se retira del puente"></li>
+    <li class="active"><img src="/images/turismo/galeria/puentenuevo_16.jpg" alt="puente nuevo" title="La niebla otoñal se retira hacia las Hazas y la Rivilla"></li>
+    <li class="active"><img src="/images/turismo/galeria/puentenuevo_17.jpg" alt="puente nuevo" title="La niebla otoñal confinada tras Maderuelo"></li>
+    <li class="active"><img src="/images/turismo/galeria/puentenuevo_18.jpg" alt="puente nuevo" title="Puente desde el cruce de carreteras C114/SGV9112"></li>
+    <li class="active"><img src="/images/turismo/galeria/puentenuevo_19.jpg" alt="puente nuevo" title="Puente y Maderuelo en 1985"></li>
+    <li class="active"><img src="/images/turismo/galeria/puentenuevo_20.jpg" alt="puente nuevo" title="Puente visto desde El Llanillo"></li>
+</ul>
+<p class="nav_galeria"><a href=" " onclick="$.galleria.prev(); return false;">&laquo; Anterior</a> | <a href="#texto"> Más INFO</a> | <a href=" " onclick="$.galleria.next(); return false;">Siguiente &raquo;</a></p>
+</div>
+
+
+
+</div> <!-- FIN FONDOMAPA  -->
+
+</div> <!-- FIN AREAMAPA -->
+
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA TEXTO FINAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areatexto"><a NAME = "texto"></a>
+
+<p class="big">
+  <span class="letracapital"><h7>C</h7></span>
+omo un remedo al daño causado, a Maderuelo le dieron un bonito y estilizado puente.  Y con él, un bonito paseo desde la Solana hasta la Veracruz, ahora incluso iluminado por la noche.  Sólo en las noches de viento, entre la baranda, se oye el lamento de Maderuelo por lo mucho perdido bajo las aguas.
+<br><br>
+Bien merece la pena, una visita y asomarse a su larga baranda, volver la vista atrás y sentir la presencia de Maderuelo sobre nuestras cabezas.
+</p>
+
+<p class="pie_galeria">
+<a href="/inicio.html">Maderuelo Home Page</a> | <a href="/inicio.html">Made by nosotros, de Maderuelo</a>
+</p>
+
+</div> <!-- FIN AREA TEXTO FINAL PAGINA -->
+
+
+</div><!-- FIN FONDO -->
+</body>
+
+
+</html>
+

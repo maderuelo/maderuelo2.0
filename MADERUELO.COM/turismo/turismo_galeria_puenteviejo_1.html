@@ -1,0 +1,190 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Maderuelo: Galería del Puente Viejo</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_comun.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_cabecera.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_secciones.css">
+<link href="../stylesheet/estilo_galleria.css" rel="stylesheet" type="text/css" media="screen">
+<script type="text/javascript" src="../javascripts/jquery.js"></script>
+<script type="text/javascript" src="../javascripts/jquery_002.js"></script>
+
+<script type="text/javascript">
+	
+	jQuery(function($) {
+		
+		$('.gallery_demo_unstyled').addClass('gallery_demo'); // adds new class name to maintain degradability
+		
+		$('ul.gallery_demo').galleria({
+			history   : true, // activates the history object for bookmarking, back-button etc.
+			clickNext : true, // helper for making the image clickable
+			insert    : '#main_image', // the containing selector for our main image
+			onImage   : function(image,caption,thumb) { // let's add some image effects for demonstration purposes
+				
+				// fade in the image & caption
+				if(! ($.browser.mozilla && navigator.appVersion.indexOf("Win")!=-1) ) { // FF/Win fades large images terribly slow
+					image.css('display','none').fadeIn(1000);
+				}
+				caption.css('display','none').fadeIn(1000);
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// fade out inactive thumbnail
+				_li.siblings().children('img.selected').fadeTo(500,0.3);
+				
+				// fade in active thumbnail
+				thumb.fadeTo('fast',1).addClass('selected');
+
+				
+				// add a title for the clickable image
+				image.attr('title','Next image >>');
+			},
+			onThumb : function(thumb) { // thumbnail effects goes here
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// if thumbnail is active, fade all the way.
+				var _fadeTo = _li.is('.active') ? '1' : '0.3';
+				
+				// fade in the thumbnail when finnished loading
+				thumb.css({display:'none',opacity:_fadeTo}).fadeIn(1500);
+				
+				// hover effects
+				thumb.hover(
+					function() { thumb.fadeTo('fast',1); },
+					function() { _li.not('.active').children('img').fadeTo('fast',0.3); } // don't fade out if the parent is active
+				)
+			}
+		});
+	});
+	
+	</script>
+
+</script>
+</head>
+<body>
+<!-- INICIO FONDO -->
+<div id="fondo">
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** INICIO CABECERA                      ****** -->
+<!-- ************************************************** -->
+
+<div id="cabecera">
+  <a class="escudo" href="/inicio.html"></a>
+  <div class="maderuelocom"></div>
+  <!-- MENU GRAFICO: DEFINIR BOTONES EN ORDEN DRCHA a IZDA -->
+  <ul id="menu_btn_grafico">
+    <li><a href="http://www.aemet.es/es/eltiempo/prediccion/localidades?l=40408"       class="icono_clima"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://webmail.maderuelo.com/"                                        class="icono_arroba" 
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://madeforum.maderuelo.com/"                                      class="icono_foro"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/naturaleza/parque_natural/presen_ficha.html" class="icono_parque"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/principal/360/entrada.html"            class="icono_360"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="/siglo12/siglo12.html"                        class="icono_siglo12"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+  </ul>
+<!-- MENU TEXTUAL DE CABECERA: DEFINIR BOTONES EN ORDEN IZDA A DRCHA -->
+  <ul id="menu_btn_horiz">
+    <li><a href="/turismo/turismo_visitando.html"  class="btn_turismo"     >Turismo<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_historia"    >Historia<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_arte"        >Arte<span></span></a></li>
+    <li><a href="/naturaleza/ind_natural.html"     class="btn_naturaleza"  >Naturaleza<span></span></a></li>
+    <li><a href="/festejos/ind_fiesta.html" class="btn_festejos"    >Festejos<span></span></a></li>
+    <li><a href="/ayuntamiento/ayto.html" class="btn_ayuntamiento">Ayuntamiento<span></span></a></li>
+    <li><a href=" " class="btn_anuncios"    >Anuncios<span></span></a></li>
+    <li><a href=" " class="btn_web"         >Web<span></span></a></li>
+  </ul>
+<!-- SUBMENU DE BOTONES TEXTO     -->
+<!-- ************************* -->
+<div id="submenu_texto" ></div>
+</div><!-- FIN CABECERA  -->
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA MAPA CENTRAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areamapa">
+
+<!-- ***** FONDO MAPA *****-->
+<div class="fondomapa">
+
+<h3 class="tit_galeria">El Puente Viejo (I)</h3>
+<div class="demo">
+<div id="main_image"></div>
+<ul class="gallery_demo_unstyled">
+    <li class="active"><img src="/images/turismo/galeria/puenteviejo_1.jpg" alt="puente viejo" title="Puente Viejo conquistado por la cola del embalse"></li>
+    <li class="active"><img src="/images/turismo/galeria/puenteviejo_2.jpg" alt="puente viejo" title="Puente Viejo aflorando al bajar las aguas durante el estío"></li>
+    <li class="active"><img src="/images/turismo/galeria/puenteviejo_3.jpg" alt="puente viejo" title="Recios tajamares triangulares aguas arriba para reforzar los pilares"></li>
+    <li class="active"><img src="/images/turismo/galeria/puenteviejo_4.jpg" alt="puente viejo" title="Puente Viejo y Veracruz en el año 1979"></li>
+    <li class="active"><img src="/images/turismo/galeria/puenteviejo_5.jpg" alt="puente viejo" title="La estructura es de buena piedra de sillería"></li>
+    <li class="active"><img src="/images/turismo/galeria/puenteviejo_6.jpg" alt="puente viejo" title="Detalle de la albardilla anterior a la reposición. Año 1985"></li>
+    <li class="active"><img src="/images/turismo/galeria/puenteviejo_7.jpg" alt="puente viejo" title="El Puente Viejo fue usado hasta los años 50"></li>
+    <li class="active"><img src="/images/turismo/galeria/puenteviejo_8.jpg" alt="puente viejo" title="Puentes Viejo y Nuevo, ambos bajo la nevada"></li>    
+<li class="active"><img src="/images/turismo/galeria/puenteviejo_9.jpg" alt="puente viejo" title="El río Riaza crece a su paso por Maderuelo"></li>
+    <li class="active"><img src="/images/turismo/galeria/puenteviejo_10.jpg" alt="puente viejo" title="las nevadas alimentan al río Riaza"></li>
+    <li class="active"><img src="/images/turismo/galeria/puenteviejo_11.jpg" alt="puente viejo" title="Puente, los Chorrillos y la Sierra al fondo"></li>
+    <li class="active"><img src="/images/turismo/galeria/puenteviejo_12.jpg" alt="puente viejo" title="Vista de Maderuelo desde el puente Romano"></li>
+    <li class="active"><img src="/images/turismo/galeria/puenteviejo_13.jpg" alt="puente viejo" title="Puente Viejo desde el puente Nuevo"></li>
+    <li class="active"><img src="/images/turismo/galeria/puenteviejo_14.jpg" alt="puente viejo" title="Escudos en piedra de los Enríquez, Marqueses de Villena, a los que perteneció el pontazgo"></li>
+    <li class="active"><img src="/images/turismo/galeria/puenteviejo_15.jpg" alt="puente viejo" title="Lecho del embalse, seco después de una pertinaz escasez de lluvias "></li>
+    <li class="active"><img src="/images/turismo/galeria/puenteviejo_16.jpg" alt="puente viejo" title="Detalle de tajamar con sillería original y mamposterías de la reparacion del XIX"></li>
+    <li class="active"><img src="/images/turismo/galeria/puenteviejo_17.jpg" alt="puente viejo" title="Merma estival del caudal embalsado en el pantano"></li>
+    <li class="active"><img src="/images/turismo/galeria/puenteviejo_18.jpg" alt="puente viejo" title="Puente Viejo y Veracruz, año 1983"></li>
+    <li class="active"><img src="/images/turismo/galeria/puenteviejo_19.jpg" alt="puente viejo" title="Puente viejo o románico, año 1983"></li>
+    <li class="active"><img src="/images/turismo/galeria/puenteviejo_20.jpg" alt="puente viejo" title="Puente Viejo a punto de desaparecer bajo el agua"></li>
+
+</ul>
+<p class="nav_galeria"><a href=" " onclick="$.galleria.prev(); return false;">&laquo; Anterior</a> | <a href="#texto"> Más INFO</a> | <a href=" " onclick="$.galleria.next(); return false;">Siguiente &raquo;</a></p>
+</div>
+
+
+
+</div> <!-- FIN FONDOMAPA  -->
+
+</div> <!-- FIN AREAMAPA -->
+
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA TEXTO FINAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areatexto"><a NAME = "texto"></a>
+
+<p class="big">
+  <span class="letracapital"><h7>C</h7></span>
+uando las aguas descienden a principios de Agosto, dejan ver esta obra  de sólida sillería.<br>
+Algunos expertos creen que no es románico si no, de origen romano. Siembre fue un paso importante del rio Riaza y el único vadeadero con puente de puiedra en muchos kilómetros.<br>
+Sus cinco ojos, ahora semienterrados por el lodo arrastrado por el embalse y sus recios tajamares demuestran la fuerza de las crecidas del Riaza.<br>
+Este puente, por cuya travesía debían pagar pontazgo al Marqués de Villena, como atestiguan los blasones de la balaustrada, une el pueblo con su querida ermita de la Veracruz y las altas tierras del páramo. 
+<br><br>
+Bien merece la pena, una visita y asomarse, cuando las aguas lo permitan.
+</p>
+
+<p class="pie_galeria">
+<a href="/inicio.html">Maderuelo Home Page</a> | <a href="/inicio.html">Made by nosotros, de Maderuelo</a>
+</p>
+
+</div> <!-- FIN AREA TEXTO FINAL PAGINA -->
+
+
+
+</div><!-- FIN FONDO -->
+</body>
+
+
+</html>
+

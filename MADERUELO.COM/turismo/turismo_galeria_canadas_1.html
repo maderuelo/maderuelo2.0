@@ -1,0 +1,192 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Maderuelo: Galería de lass Cañadas</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="imagetoolbar" content="false">
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_comun.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_cabecera.css">
+<link rel="STYLESHEET" type="text/css" href="../stylesheet/estilo_secciones.css">
+<link href="../stylesheet/estilo_galleria.css" rel="stylesheet" type="text/css" media="screen">
+<script type="text/javascript" src="../javascripts/jquery.js"></script>
+<script type="text/javascript" src="../javascripts/jquery_002.js"></script>
+
+<script type="text/javascript">
+	
+	jQuery(function($) {
+		
+		$('.gallery_demo_unstyled').addClass('gallery_demo'); // adds new class name to maintain degradability
+		
+		$('ul.gallery_demo').galleria({
+			history   : true, // activates the history object for bookmarking, back-button etc.
+			clickNext : true, // helper for making the image clickable
+			insert    : '#main_image', // the containing selector for our main image
+			onImage   : function(image,caption,thumb) { // let's add some image effects for demonstration purposes
+				
+				// fade in the image & caption
+				if(! ($.browser.mozilla && navigator.appVersion.indexOf("Win")!=-1) ) { // FF/Win fades large images terribly slow
+					image.css('display','none').fadeIn(1000);
+				}
+				caption.css('display','none').fadeIn(1000);
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// fade out inactive thumbnail
+				_li.siblings().children('img.selected').fadeTo(500,0.3);
+				
+				// fade in active thumbnail
+				thumb.fadeTo('fast',1).addClass('selected');
+
+				
+				// add a title for the clickable image
+				image.attr('title','Next image >>');
+			},
+			onThumb : function(thumb) { // thumbnail effects goes here
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// if thumbnail is active, fade all the way.
+				var _fadeTo = _li.is('.active') ? '1' : '0.3';
+				
+				// fade in the thumbnail when finnished loading
+				thumb.css({display:'none',opacity:_fadeTo}).fadeIn(1500);
+				
+				// hover effects
+				thumb.hover(
+					function() { thumb.fadeTo('fast',1); },
+					function() { _li.not('.active').children('img').fadeTo('fast',0.3); } // don't fade out if the parent is active
+				)
+			}
+		});
+	});
+	
+	</script>
+
+</script>
+</head>
+<body>
+<!-- INICIO FONDO -->
+<div id="fondo">
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** INICIO CABECERA                      ****** -->
+<!-- ************************************************** -->
+
+<div id="cabecera">
+  <a class="escudo" href="/inicio.html"></a>
+  <div class="maderuelocom"></div>
+  <!-- MENU GRAFICO: DEFINIR BOTONES EN ORDEN DRCHA a IZDA -->
+  <ul id="menu_btn_grafico">
+    <li><a href="http://www.aemet.es/es/eltiempo/prediccion/localidades?l=40408"       class="icono_clima"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://webmail.maderuelo.com/"                                        class="icono_arroba" 
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://madeforum.maderuelo.com/"                                      class="icono_foro"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/naturaleza/parque_natural/presen_ficha.html" class="icono_parque"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="http://www.maderuelo.com/principal/360/entrada.html"            class="icono_360"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+    <li><a href="/siglo12/siglo12.html"                        class="icono_siglo12"
+           onclick="window.open(this.href,'_blank'); return false;"><span></span></a></li>
+  </ul>
+<!-- MENU TEXTUAL DE CABECERA: DEFINIR BOTONES EN ORDEN IZDA A DRCHA -->
+  <ul id="menu_btn_horiz">
+    <li><a href="/turismo/turismo_visitando.html"  class="btn_turismo"     >Turismo<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_historia"    >Historia<span></span></a></li>
+    <li><a href="/historia_y_arte/historia_y_arte.html"  class="btn_arte"        >Arte<span></span></a></li>
+    <li><a href="/naturaleza/ind_natural.html"     class="btn_naturaleza"  >Naturaleza<span></span></a></li>
+    <li><a href="/festejos/ind_fiesta.html" class="btn_festejos"    >Festejos<span></span></a></li>
+    <li><a href="/ayuntamiento/ayto.html" class="btn_ayuntamiento">Ayuntamiento<span></span></a></li>
+    <li><a href=" " class="btn_anuncios"    >Anuncios<span></span></a></li>
+    <li><a href=" " class="btn_web"         >Web<span></span></a></li>
+  </ul>
+<!-- SUBMENU DE BOTONES TEXTO     -->
+<!-- ************************* -->
+<div id="submenu_texto" ></div>
+</div><!-- FIN CABECERA  -->
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA MAPA CENTRAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areamapa">
+
+<!-- ***** FONDO MAPA *****-->
+<div class="fondomapa">
+
+<h3 class="tit_galeria">Las Cañadas</h3>
+<div class="demo">
+<div id="main_image"></div>
+<ul class="gallery_demo_unstyled">
+    <li class="active"><img src="/images/turismo/galeria/canadas_1.jpg" alt="Las Cañadas" title="Chopera de las Cañadas "></li>
+    <li class="active"><img src="/images/turismo/galeria/canadas_2.jpg" alt="Las Cañadas" title="Chopera de las cañadas desde el camino de acceso"></li>
+    <li class="active"><img src="/images/turismo/galeria/canadas_3.jpg" alt="Las Cañadas" title="Camino de subida de las Cañadas con la estación a la derecha"></li>
+    <li class="active"><img src="/images/turismo/galeria/canadas_4.jpg" alt="Las Cañadas" title="Chopos al borde del pantano en las Cañadas"></li>
+    <li class="active"><img src="/images/turismo/galeria/canadas_5.jpg" alt="Las Cañadas" title="El pantano de Linares desde el camino de bajada a las Cañadas"></li>
+    <li class="active"><img src="/images/turismo/galeria/canadas_6.jpg" alt="Las Cañadas" title="Estación del tren desde el comienzo del camino de bajada a las Cañadas"></li>
+    <li class="active"><img src="/images/turismo/galeria/canadas_7.jpg" alt="Las Cañadas" title="Entrada de las aguas del pantano hacia la chopera de las Cañadas"></li>
+    <li class="active"><img src="/images/turismo/galeria/canadas_8.jpg" alt="Las Cañadas" title="Pantano desde las Cañadas"></li>   
+    <li class="active"><img src="/images/turismo/galeria/canadas_9.jpg" alt="Las Cañadas" title="Pantano desde la chopera"></li>
+    <li class="active"><img src="/images/turismo/galeria/canadas_10.jpg" alt="Las Cañadas" title="Prohibido el paso a vehículos a las Cañadas"></li>
+    <li class="active"><img src="/images/turismo/galeria/canadas_11.jpg" alt="Las Cañadas" title="Subida del camino de las Cañadas con sembrados"></li>
+    <li class="active"><img src="/images/turismo/galeria/canadas_12.jpg" alt="Las Cañadas" title="Pescadores en las Cañadas"></li>
+    <li class="active"><img src="/images/turismo/galeria/canadas_13.jpg" alt="Las Cañadas" title="Matrícula de la CHD para poder meter las piraguas en el pantano"></li>
+    <li class="active"><img src="/images/turismo/galeria/canadas_14.jpg" alt="Las Cañadas" title="Caseta de alquiler de piraguas"></li>
+    <li class="active"><img src="/images/turismo/galeria/canadas_15.jpg" alt="Las Cañadas" title="Piraguas al borde del pantano "></li>
+    <li class="active"><img src="/images/turismo/galeria/canadas_16.jpg" alt="Las Cañadas" title="Piraguas y caseta de alquiler"></li>
+    <li class="active"><img src="/images/turismo/galeria/canadas_17.jpg" alt="Las Cañadas" title="Camino de bajada a las Cañadas con cartel de alquiler de piraguas"></li>
+    <li class="active"><img src="/images/turismo/galeria/canadas_18.jpg" alt="Las Cañadas" title="Aparcamiento para coches en las Cañadas"></li>
+    <li class="active"><img src="/images/turismo/galeria/canadas_19.jpg" alt="Las Cañadas" title="Camino de acceso a la chopera"></li>
+    <li class="active"><img src="/images/turismo/galeria/canadas_20.jpg" alt="Las Cañadas" title="Camino de bajada a las Cañadas"></li>
+</ul>
+<p class="nav_galeria"><a href=" " onclick="$.galleria.prev(); return false;">&laquo; Anterior</a> | <a href="#texto"> Más INFO</a> | <a href=" " onclick="$.galleria.next(); return false;">Siguiente &raquo;</a></p>
+</div>
+
+
+
+</div> <!-- FIN FONDOMAPA  -->
+
+</div> <!-- FIN AREAMAPA -->
+
+
+
+<!-- ************************************************** -->
+<!-- ************************************************** -->
+<!-- ****** AREA TEXTO FINAL DE LA PAGINA            ****** -->
+<!-- ************************************************** -->
+<div id="areatexto"><a NAME = "texto"></a>
+
+<p class="big">
+  <h3><span class="letracapital">L</span>as Cañadas,...</h3>
+</p>
+<p>
+<br><br><br><br>
+Partiendo de la Puerta del Barrio, descendemos junto a las viejas bodegas por el camino de la Umbría hacia el Arroyo y atravesamos la carretera que desciende hacia el pantano.<br>
+Llegados a los huertos del Arroyo, tomaremos el camino hacia el oeste, hacia la Vega.<br>  
+Toparemos con la carretera de la Estación al cabo de 1 km y la seguiremos con dirección a las vías del ferrocarril.
+<br>
+Al cabo de 3 km, la carretera muere en la vieja estación y tomaremos el camino de la derecha, que desciende hacia el Pantano, hacia las Cañadas.<br>
+El retorno se hará desandando el camino o bordeando el embalse, dejando el agua a nuestra izquierda,
+<br></p>
+
+<p class="pie_galeria">
+<a href="/inicio.html">Maderuelo Home Page</a> | <a href="/inicio.html">Made by nosotros, de Maderuelo</a>
+</p>
+
+</div> <!-- FIN AREA TEXTO FINAL PAGINA -->
+
+
+
+</div><!-- FIN FONDO -->
+</body>
+
+
+</html>
+

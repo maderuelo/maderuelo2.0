@@ -1,0 +1,61 @@
+/* ************************************************** */
+/* ************************************************** */
+/* FONDO DEL MAPA PARA COMOLLEGAR */
+/* ************************************************** */
+/* ************************************************** */
+#areamapa .fondomapa {
+width: 718px;
+height: 546px;
+background:  url(../images/turismo/comollegar.jpg) no-repeat ; 
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* ************************************************** */
+/* CAMBIA LA ANCHURA DE LUGARES MARCADOS EN EL MAPA   */
+/* ************************************************** */
+/* ************************************************** */
+dl.mapa.on a{
+width: 180px;
+}
+
+
+/* ************************************************** */
+/* ************************************************** */
+/* IDENTIFICADORES DE LOS SIMBOLOS DEL MAPA           */
+/* ************************************************** */
+/* ************************************************** */a.ciudad{
+background: transparent url(../images/transparente.png) no-repeat scroll 0px 0px;
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* ************************************************** */
+/* CAMBIA LA ANCHURA DE LUGARES MARCADOS EN EL MAPA   */
+/* ************************************************** */
+/* ************************************************** */
+dl.mapa.on a{
+width: 180px;
+}
+
+/* *************************************************** */
+/* IDENTIFICADORES DE COORDENADAS DE LUGARES           */
+/* *************************************************** */
+#coord_madrid       {top: 480px; left: 270px;}
+#coord_segovia      {top: 310px;left: 90px;}
+#coord_valladolid   {top: 100px;left: 80px;}
+#coord_burgos       {top: 72px;left: 389px;}
+#coord_soria        {top: 131px;left:640px;}
+#coord_guadalajara  {top: 450px;left:552px;}
+
+
+
+/* *************************************************** */
+/* IDENTIFICADORES DE BOTONES DEL MENU INFERIOR*/
+/* *************************************************** */
+#menu_inferior .uno   {width:180px;left:0px;top:10px;}
+#menu_inferior .dos   {width:180px;left:180px;top:10px;}
+#menu_inferior .tres  {width:280px;left:360px;top:10px;}
+#menu_inferior .cuatro {width:80px;left:540px;top:10px;}
+
+

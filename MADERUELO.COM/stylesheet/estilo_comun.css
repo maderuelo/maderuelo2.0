@@ -1,0 +1,114 @@
+/* DEFINICION DE ELEMENTOS COMUNES DE PAGINA */
+/* ***************************************** */
+
+* {border:0; padding:0; margin:0;}/* Set everything to "zero" */
+
+body, html {margin:0; padding:0; border:0;}
+
+
+/* ***************************************** */
+/* ESTILOS DE PARRAFO             */
+/* ***************************************** */
+p {font-size: 100%;
+   line-height:1.3em;
+font-family: "Times New Roman",Times,serif;
+margin:12px 10px 2px 10px;
+text-align: justify;
+}
+
+/* ***************************************** */
+/* ESTILOS DE PARRAFO             */
+/* ***************************************** */
+/*
+p.programa {font-size: 1.2em;color: #470000;text-align: left;font-weight: bold;
+line-height:1.2em;
+font-family: "T3imes New Roman",Times,serif;
+margin:12px 10px 2px 10px;
+}
+*/
+
+
+/* ***************************************** */
+/* ESTILOS DE TITULOS Y HEADERS              */
+/* ***************************************** */
+h1, h2, h3, h4, h5, h6, h7, h8 {
+font-family: 'times new roman', arial, verdana, serif; 
+font-style:normal; 
+font-variant:normal; 
+font-weight:normal; 
+margin:14px 0 4px 10px;
+text-align: left;
+color: black;
+}
+
+h1{font-size: 1.93em;}
+h2{font-size: 1.72em;color: #460000;text-align: left;font-weight: bold;}
+h3{font-size: 1.62em;color: #460000;text-align: left;font-weight: bold;}
+h4{font-size: 1.42em; color: #460000;text-align: left;font-weight: bold;}
+h5{font-size: 1.32em;  color: #460000;text-align: left;font-weight: bold;}
+h6{font-size: 1.21em;color: #470000;text-align: left;font-weight: bold;}
+h7{font-size: 1em;color: #470000;text-align: left;font-weight: bold;}
+h8{font-size: .4em;line-height:.4em;color: #470000;text-align: left;font-weight: bold;}
+/* ***************************************** */
+/* ESTILOS DE LETRACAPITAL              */
+/* ***************************************** */
+span.letracapital {
+  border-width: 2px;
+  float: left;
+  width: auto;
+  font-size: 500%;
+  line-height: 70%;
+  font-family: "Times New Roman",Times,serif;
+  color: #430000;;
+  margin:0px 4px 4px 4px;
+    border: 1px solid #990000;;padding: 4px;
+}
+span.letracapital_2 {
+  border-width: 2px;
+  float: left;
+  width: auto;
+  font-size: 150%;
+  line-height: 70%;
+  font-family: "Times New Roman",Times,serif;
+  color: #430000;;
+  margin:0px 4px 4px 4px;
+    border: 1px solid #990000;;padding: 4px;
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* DEFINICION DE LISTAS     */
+/* ************************************************** */
+/* ************************************************** */
+ul.l_rombo {
+text-align: justify;
+list-style-image: url(../images/vineta_p.png);
+font-size: 100%;
+line-height:1.3em;
+font-family: "Times New Roman",Times,serif;
+margin:12px 0 2px 0; 
+}
+
+ul.l_rombo lh {font-weight: bold; }
+ul.l_rombo li { margin-left:20px;}
+
+/* ************************************************** */
+/* ************************************************** */
+/* DEFINICION DE LISTAS CONTENIDAS EN EL RESUMEN      */
+/* ************************************************** */
+/* ************************************************** */
+ul.l_vineta {
+text-align: left;
+list-style-image: url(../images/vineta_p.png);
+}
+ul.l_vineta lh { font-size: 100%; font-weight: bold;color: #470000; }
+ul.l_vineta li { font-size: 100%; margin-left:20px;}
+
+ul.l_sinvineta {
+text-align: left;
+list-style-type: none;
+}
+
+ul.l_sinvineta lh { font-size: 100%; font-weight: bold; color: #470000;}
+ul.l_sinvineta li { font-size: 100%; margin-left:20px;}
+

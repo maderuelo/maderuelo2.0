@@ -1,0 +1,64 @@
+/* ************************************************** */
+/* ************************************************** */
+/* FONDO DEL MAPA PARA TIERRA DE MADERUELO */
+/* ************************************************** */
+/* ************************************************** */
+#areamapa .fondomapa {
+width: 652px;
+height: 551px;
+background:  url(../images/turismo/tierramaderuelo.jpg) no-repeat ; 
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* IDENTIFICADORES DE LOS SIMBOLOS DEL MAPA           */
+/* ************************************************** */
+/* ************************************************** */a.torre    {background: transparent url(../images/torre.png) no-repeat scroll 0px 0px;}
+a.espadana    {background: transparent url(../images/espadana.png) no-repeat scroll 0px 0px;}
+a.arco    {background: transparent url(../images/arco.png) no-repeat scroll 0px 0px;}
+a.ruina    {background: transparent url(../images/ruina.png) no-repeat scroll 0px 0px;}
+
+
+
+/* *************************************************** */
+/* IDENTIFICADORES DE COORDENADAS DE LUGARES           */
+/* *************************************************** */
+#coord_valdevarnes           {top: 260px; left: 220px;}
+#coord_fuentemizarra          {top: 285px;left: 175px;}
+#coord_campo             {top: 335px;left: 150px;}
+#coord_cilleruelo          {top: 335px;left: 105px;}
+#coord_cedillo           {top: 320px;left: 70px;}
+#coord_carabias           {top: 265px;left: 20px;}
+#coord_moral    {top: 235px;left:120px;}
+#coord_hornuez    {top: 185px;left:110px;}
+#coord_linares    {top: 230px;left:240px;}
+#coord_maluque    {top: 220px;left:335px;}
+#coord_valdeconejos    {top: 200px;left:410px;}
+#coord_valdeperal    {top: 250px;left:570px;}
+#coord_aldehuela    {top: 250px;left:345px;}
+#coord_aldealengua    {top: 350px;left:560px;}
+#coord_alconada    {top: 400px;left:345px;}
+#coord_alconadilla    {top: 335px;left:340px;}
+#coord_riaguas    {top: 460px;left:270px;}
+#coord_ventosilla    {top: 320px;left:390px;}
+#coord_villamayor    {top: 310px;left:230px;}
+#coord_briongos    {top: 450px;left:345px;}
+#coord_maderuelo    {top: 260px;left:310px;}
+
+/* *************************************************** */
+/* IDENTIFICADORES DE SIMBOLOS DE LA LEYENDA           */
+/* *************************************************** */
+
+#leyenda .informacion { width: 45px; height: 46px;   left:606px;top:0px; background: url(../images/informacion.png) no-repeat;}
+#leyenda .informacion   span { width: 109px; height: 27px;   background: url('/images/txt_mas_info.png') no-repeat;}
+
+
+/* *************************************************** */
+/* IDENTIFICADORES DE BOTONES DEL MENU INFERIOR*/
+/* *************************************************** */
+#menu_inferior .uno   {width:210px;left:0px;top:10px;}
+#menu_inferior .dos   {width:210px;left:220px;top:10px;}
+#menu_inferior .tres  {width:210px;left:480px;top:10px;}
+#menu_inferior .cuatro {width:180px;left:670px;top:10px;}
+#menu_inferior .cinco {width:200px;left:720px;top:10px;}
+
