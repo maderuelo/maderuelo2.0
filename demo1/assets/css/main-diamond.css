@@ -1166,12 +1166,6 @@ input, select, textarea {
 			background-repeat: no-repeat;
 			z-index: 1;
 		}
-		@media only screen and (min-width: 400px) {
-  			body {
-    			background-image: url("../../images/IMG_7391.jpg");
-			}
-		}
-			
 		body.is-article-visible #bg:after {
 			-moz-transform: scale(1.0825);
 			-webkit-transform: scale(1.0825);
@@ -1623,3 +1617,7 @@ input, select, textarea {
 
 		}
 
+
+@media screen and (max-device-width: 450px) {
+	#bg:after {background-image: url("../../images/IMG_7391.jpg");}
+}
