@@ -911,6 +911,7 @@ input, select, textarea {
 			}
 
 			ul.icons li a {
+				font-weight: bold;
 				border-radius: 100%;
 				box-shadow: inset 0 0 0 1px #ffffff;
 				display: inline-block;
@@ -1139,7 +1140,7 @@ input, select, textarea {
 			-webkit-transition-delay: 0.75s;
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
-			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
+			
 			background-size: auto,
  256px 256px;
 			background-position: center,
@@ -1254,10 +1255,6 @@ input, select, textarea {
 		-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
 		-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
 		transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-		background-image: -moz-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-		background-image: -webkit-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-		background-image: -ms-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-		background-image: radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
 		max-width: 100%;
 		text-align: center;
 	}
@@ -1272,7 +1269,6 @@ input, select, textarea {
 		}
 
 			#header > *:before {
-				content: '';
 				display: block;
 				position: absolute;
 				top: calc(-3.5rem - 1px);
@@ -1294,7 +1290,6 @@ input, select, textarea {
 			width: 5.5rem;
 			height: 5.5rem;
 			line-height: 5.5rem;
-			border: solid 1px #ffffff;
 			border-radius: 100%;
 		}
 
@@ -1303,7 +1298,6 @@ input, select, textarea {
 			}
 
 		#header .content {
-			border-style: solid;
 			border-color: #ffffff;
 			border-top-width: 1px;
 			border-bottom-width: 1px;
