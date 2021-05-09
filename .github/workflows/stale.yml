@@ -23,4 +23,6 @@ jobs:
         stale-pr-label: 'no-pr-activity'
     - name: prueba
       run: curl https://www.instagram.com/faunamaderuelo/?__a=1 > instagram_fauna.json
+    - name: prueba
+      run: curl https://www.instagram.com/faunamaderuelo/?__a=1
       
